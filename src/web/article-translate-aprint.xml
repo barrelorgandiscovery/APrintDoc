@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<page>
+	<head>
+		<meta xml:lang="fr" name="keywords" content="article,traduction,messages,java,properties"/>
+		<meta xml:lang="en" name="keywords" content="article,translate,language,java,properties"/>
+		<link href="../site.css" type="text/css" media="screen" rel="StyleSheet"/>
+		<title xml:lang="fr">Traduction du logiciel APrint dans une autre langue</title>
+		<title xml:lang="en">Translate APrint in your language</title>
+	</head>
+	<body>
+		<a href="articles.html">
+			<span xml:lang="fr">
+[Retour]</span>
+			<span xml:lang="en">
+[Back]</span>
+		</a>
+		<br/>
+		<h1 xml:lang="fr">Traduire APrint dans une autre langue
+		</h1>
+		<h1 xml:lang="en">Translate APrint in your language
+		</h1>
+		
+		<p xml:lang="en">APrint beta, and later the release version has a translation tool added to the help menu.
+		 This new functionnality help people to translate the software in your language.
+		</p>
+		<p xml:lang="fr">La version Beta d'APrint a une fonctionnalité permettant de faciliter la traduction du logiciel dans différentes langues.
+		Cette nouvelle fonctionnalité est accessible à partir du menu d'aide ...
+		</p>
+		
+		<img src="../common/article-traduction-1.png" />
+		
+		<p xml:lang="fr">Cette fonctionnalité permet de redéfinir les libellés du logiciel pour l'adapter dans différentes langues.
+		Chaque libellé du logiciel a une traduction anglaise, française et des correspondances peuvent être réalisées dans d'autres langues.
+		Par modification des libellés, un fichier de traduction personnel est ainsi sauvé dans le répertoire personnel de l'utilisateur et utilisé par défaut.
+		Ce fichier peut nous être transmis pour etre intégré dans les futures version d'APrint.
+		</p>
+		
+		<p xml:lang="en"> This functionnality permit to translate every label in the severals Windows. If you modified the labels, thoses are saved in a personnal file read by aprint in the relaunch of the application.
+		if you send us the file, this will be available for every one.
+		</p>
+		
+		<img src="../common/article-traduction-2.png" />
+		
+		<p xml:lang="fr">La fonction propose les libellés dans la langue Anglaise et propose de modifier sa traduction dans la partie inférieure. Chaque libellé a une clef, laquelle permet de repérer le message texte pouvant être traduit.
+		</p>
+		<p xml:lang="en">The dialog show the labels in english and propose to translate it in the current language in the bottom of the window.
+		Every label is referenced with a key that permit to localize it in the Gui (Graphic user interface).
+		</p>
+		
+		<img src="../common/article-traduction-1b.png" />
+		
+		
+		<p xml:lang="fr">une boite à cocher permet lors du redémarrage d'aprint, d'afficher la clef de traduction dans les messages, facilitant ainsi le repérage d'un message en particulier.
+		</p>
+
+		<p xml:lang="en">a check box permit the user to display (after a relaunch) the keys of the message for ease the translation.
+		</p>
+
+		<img xml:lang="en" src="../common/article-traduction-3.png"  title="checkbox that activate the message key display"/>
+		<img xml:lang="fr" src="../common/article-traduction-3.png"  title="la boite à cocher permettant l'affichage des clefs de message"/>
+		
+		<br/>
+		<img xml:lang="en" src="../common/article-traduction-4.png" title="the keys are displayed in the software" alt="the keys are displayed in the software"/>
+		<img xml:lang="fr" src="../common/article-traduction-4.png" title="les clefs de traduction sont affichées en tête du message" alt="les clefs de traduction sont affichées en tête du message"/>
+
+		
+<p xml:lang="fr">Toutes les modification, une fois que l'utilisateur a appuyé sur le bouton de sauvegarde, sont sauvegardées dans un fichier situé dans le répertoire personnel de l'utilisateur
+		
+</p>
+		
+		
+<p xml:lang="en">Once the user has saved the modification using the save button, the new overrided messages are saved in the personnal folder
+		
+</p>
+		
+		
+<img xml:lang="fr" src="../common/article-traduction-5.png"  title="emplacement du fichier de traduction"/>
+		
+<img xml:lang="en" src="../common/article-traduction-5.png"  title="location of the translation file"/>
+	
+		
+<p xml:lang="en">When the user restart the application, the new overrided messages will be taken into account before the standards ones ...
+		
+</p>
+		
+
+<p xml:lang="fr">Après le redémarrage de l'application, les nouveaux messages de traductions seront pris en compte.
+		
+</p>
+		
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-1958863-2";
+urchinTracker();
+</script>
+	</body>
+</page>

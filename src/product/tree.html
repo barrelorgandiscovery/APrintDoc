@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <meta charset="UTF-8">
+
+    <title id='Description'>In this demo the jqxTree is built from JSON data.</title>
+    <link rel="stylesheet" href="../scripts/skin-lion/ui.easytree.css" type="text/css" /> 
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+   <!-- <script type="text/javascript" src="http://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>-->
+    <script type="text/javascript" src="../scripts/jquery.easytree.js"></script>
+</head>
+<body>
+<h5>Table des matières</h5>
+<div id="demo2_menu">
+  [{
+    "href": "mdwiki.html#!index.md",
+          "isFolder":true,
+    "hrefTarget": "content",
+    "isExpanded":true,
+    "text":"Aide en ligne",
+    "children": [
+      {
+        "href": "mdwiki.html#!documentation_utilisateur_welcome.md",
+        "text":"Documentation utilisateur",
+        "isFolder":true,
+        "hrefTarget": "content",
+        "children": [
+          {
+            "href": "mdwiki.html#!1-premiers-pas.md",
+            "text":"Premiers pas",
+            "hrefTarget": "content"
+          },
+          {
+            "href": "mdwiki.html#!2-exportmidi.md",
+            "text":"Export Midi",
+            "hrefTarget": "content"
+          },
+          {
+            "href": "mdwiki.html#!3-piloterinstrumentmidi.md",
+            "text":"Piloter des instruments MIDI",
+            "hrefTarget": "content"
+          }
+        ]
+      },
+      {
+        "href": "mdwiki.html#!concepts_introduction.md",
+        "text":"Concepts",
+          "isFolder":true,
+        "hrefTarget": "content",
+        "children": [
+          {
+            "href": "mdwiki.html#!repositories.md",
+            "text":"Gestion des instruments",
+            "hrefTarget": "content"
+          },
+          {
+            "href": "mdwiki.html#!CartonVirtuel.md",
+            "text":"Carton Virtuel",
+            "hrefTarget": "content"
+          }
+        ]
+      },
+      {
+        "href": "mdwiki.html#!CreationInstrument.md",
+        "text":"Creation d'instruments",
+          "isFolder":true,
+        "hrefTarget": "content",
+        "children": {
+          "href": "mdwiki.html#!CreationInstrumentTechniqueAPrint.md",
+          "hrefTarget": "content"
+        }
+      },
+      {
+        "href": "mdwiki.html#!scripting.md",
+          "isFolder":true,
+          "text":"Scripting",
+        "hrefTarget": "content",
+        "children": [
+          {
+            "href": "mdwiki.html#!scripting_groovy.md",
+            "text":"Scripting Groovy",
+          "isFolder":true,
+            "hrefTarget": "content",
+            "children": [
+              {
+                "href": "mdwiki.html#!scripting_midiscripts.md",
+                "text":"Scripts midi",
+                "hrefTarget": "content"
+              },
+              {
+                "href": "mdwiki.html#!scripting_notehelper.md",
+                "text":"Note Helper",
+                "hrefTarget": "content"
+              },
+              {
+                "href": "mdwiki.html#!scripting_scalehelper.md",
+                "text":"Scale Helper",
+                "hrefTarget": "content"
+              },
+              {
+                "href": "mdwiki.html#!TransformerCarton.md",
+                "text":"Transformer un carton",
+                "hrefTarget": "content"
+              },
+              {
+                "href": "mdwiki.html#!scripting_gui.md",
+                "text":"Creer une fenêtre",
+                "hrefTarget": "content"
+              }
+            ]
+          },
+          {
+            "href": "mdwiki.html#!scripting_extended_using_java.md",
+            "text":"Scripting étendu avec Java",
+            "hrefTarget": "content",
+          "isFolder":true,
+            "children": {
+              "href": "scriptexamples",
+              "hrefTarget": "content"
+            }
+          },
+          {
+            "text": "API Reference",
+            "isFolder":true,
+            "href": "mdwiki.html#!referenceapi.md",
+            "hrefTarget": "content",
+            "children": [
+              {
+                "href": "../groovydoc/overview-summary.html",
+                "hrefTarget": "content",
+                "text": "APrint Groovy Scripting Documentation"
+              },
+              {
+                "href": "../javadoc/overview-summary.html",
+                "hrefTarget": "content",
+                "text": "APrint Developement Documentation"
+              },
+              {
+                "href": "../groovyhelp/api/overview-summary.html",
+                "hrefTarget": "content",
+                "text": "Groovy Std API documentation"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "href": "mdwiki.html#!dev.md",
+        "text":"Developpement",
+          "isFolder":true,
+        "hrefTarget": "content",
+        "children": [
+          {
+            "href": "mdwiki.html#!Technology.md",
+            "text":"Technologie",
+            "hrefTarget": "content",
+            "text": "Choix dans le developpement du logiciel"
+          },
+          {
+            "href": "mdwiki.html#!dev-extension.md",
+            "hrefTarget": "content",
+            "text": "Développement d'extensions"
+          },
+          {
+            "href": "mdwiki.html#!dev-extension-import.md",
+            "hrefTarget": "content",
+            "text": "Développement d'extensions d'import / transformation de carton"
+          }
+        ]
+      }
+    ]
+  }]
+</div>
+
+<script>
+    $('#demo2_menu').easytree();
+</script>
+        
+</body>
+</html>

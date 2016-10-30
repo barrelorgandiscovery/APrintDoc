@@ -1,0 +1,523 @@
+
+= Asciidoctor Gradle Plugin
+Andres Almiray <https://github.com/aalmiray[@aalmiray]>
+:version: 1.6.0-SNAPSHOT
+:version-published: 1.5.3
+:asciidoc-url: http://asciidoc.org
+:asciidoctor-url: http://asciidoctor.org
+:issues: https://github.com/asciidoctor/asciidoctor-maven-plugin/issues
+:gradle-url: http://gradle.org/
+:asciidoctor-maven-plugin: https://github.com/asciidoctor/asciidoctor-maven-plugin
+:lightguard: https://github.com/LightGuard
+:asciidoctorj: https://github.com/asciidoctor/asciidoctorj
+:lordofthejars: https://github.com/lordofthejars
+:asciidoctor-docs: http://asciidoctor.org/docs/
+:project-name: asciidoctor-gradle-plugin
+:project-full-path: asciidoctor/asciidoctor-gradle-plugin
+:github-branch: development
+:linkattrs:
+ifndef::env-github[:icons: font]
+ifdef::env-github,env-browser[]
+:toc: preamble
+:toclevels: 2
+endif::[]
+ifdef::env-github[]
+:status:
+:outfilesuffix: .adoc
+:!toc-title:
+:note-caption: :paperclip:
+:important-caption: :exclamation:
+endif::[]
+
+ifdef::status[]
+image:http://img.shields.io/travis/{project-full-path}/{github-branch}.svg[Build Status, link=https://travis-ci.org/{project-full-path}]
+image:https://ci.appveyor.com/api/projects/status/db102rphsu5lviv6/branch/{github-branch}?svg=true&passingText={github-branch}%20-%20OK&failingText={github-branch}%20-%20Fails&pendingText={github-branch}%20-%20Pending[Build Status, link=https://ci.appveyor.com/project/{project-full-path}/branch/{github-branch}]
+image:http://img.shields.io/coveralls/{project-full-path}/{github-branch}.svg[Coverage Status, link=https://coveralls.io/r/{project-full-path}]
+image:http://img.shields.io/badge/license-ASF2-blue.svg[Apache License 2, link=http://www.apache.org/licenses/LICENSE-2.0.txt]
+image:https://api.bintray.com/packages/asciidoctor/maven/{project-name}/images/download.svg[Download, link=https://bintray.com/asciidoctor/maven/{project-name}]
+endif::[]
+
+The {doctitle} is the official means of using {asciidoctor-url}[Asciidoctor] to convert all your {asciidoc-url}[AsciiDoc] documentation using {gradle-url}[Gradle].
+
+NOTE: This is a port of the {asciidoctor-maven-plugin}[Asciidoctor Maven Plugin] project founded by {lightguard}[@LightGuard] and relies on {asciidoctorj}[AsciidoctorJ] founded by {lordofthejars}[@lordofthejars].
+
+ifndef::env-site[]
+== Contributing
+
+Are you interested in contributing to this project? If so please read link:HACKING.adoc[HACKING] before sending in a patch.
+Thank you!
+endif::[]
+
+== Installation
+
+Use the following snippet inside a Gradle build file:
+
+[source,groovy]
+[subs=attributes+]
+.build.gradle
+----
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'org.asciidoctor:{project-name}:{version-published}'
+    }
+}
+
+apply plugin: 'org.asciidoctor.convert'
+----
+
+== Usage
+
+The plugin adds a new task named *asciidoctor*.
+You can configure this task using the following configuration properties and methods.
+
+.Properties
+[horizontal]
+logDocuments:: a boolean specifying if documents being processed should be logged on console. Type: boolean. Default: `false`.
+separateOutputDirs:: specifies whether each backend should use a separate subfolder under `outputDir`.
+  Default: `true`
+
+.Methods
+[horizontal]
+sourceDir:: where the asciidoc sources are.
+  Use either `sourceDir path`, `setSourceDir path` or `sourceDir=path`
+  Type: File, but any object convertible with `project.file` can be passed.
+  Default: `src/docs/asciidoc`.
+sources:: specify which Asciidoctor source files to include by using an
+  http://www.gradle.org/docs/current/javadoc/org/gradle/api/tasks/util/PatternSet.html[Ant-style PatternSet].
+resources:: specify which additional files (image etc.) must be copied to output directory using a
+  http://www.gradle.org/docs/current/javadoc/org/gradle/api/file/CopySpec.html[CopySpec].
+outputDir:: where generated docs go.
+  Use either `outputDir path`, `setOutputDir path` or `outputDir=path`
+  Type: File, but any object convertible with `project.file` can be passed.
+  Default: `$buildDir/asciidoc`.
+backends:: the backends to use.
+  Use `backends` to append. Use `setBackends` or `backends=[]` to overwrite
+  Type: Set<String>, but any type can be converted to String can be used.
+  Default: [`html5`].
+gemPath:: one or more gem installation directories (separated by the system path separator).
+  Use `gemPath` to append. Use `setGemPath` or `gemPath='path` to overwrite.
+  Use `asGemPath` to obtain a path string, separated by platform-specific separator.
+  For backwards-compatibility, `setGemPath` and `gePath='string'` will accept a path string containing the
+  platform-specific separator.
+  Type: FileCollection, but any collection of objects convertible with `project.files` can be passed
+  Default: empty
+requires:: a set of Ruby modules to be included.
+  Use `requires` to append. Use `setRequires` or `requires='name'` to overwrite.
+  Type: Set<String>.
+  Default: empty.
+options:: a Map specifying different options that can be sent to Asciidoctor.
+  Use `options` to append, Use `setOptions` or `options=` to overwrite.
+attributes:: a Map specifying various document attributes that can be sent to Asciidoctor
+  Use `attributes` to append, Use `setAttributes` or `attributes=` to overwrite.
+
+To see examples of many of these configuration options used in practice, refer to the http://asciidoctor.github.io/asciidoctor-gradle-examples[Asciidoctor Gradle Examples] project.
+
+=== Defining Sources
+
+The plugin will search for sources under `sourceDir`. Sources may have any of the following extensions in
+order to be discovered:
+
+* .adoc _(preferred)_
+* .asciidoc
+* .ad
+* .asc
+
+To select only certain files, use the `sources` method. This method takes a closure as an argument, which in turn configures an internal
+http://www.gradle.org/docs/current/javadoc/org/gradle/api/tasks/util/PatternSet.html[PatternSet].
+
+To specify a custom output folder, use the `outputDir` method.
+
+[source,groovy]
+.build.gradle
+----
+asciidoctor {
+  sourceDir = file('docs')
+  sources {
+    include 'toplevel.adoc', 'another.adoc', 'third.adoc'
+  }
+  outputDir = file('build/docs')
+}
+----
+
+Paths defined in this PatternSet are resolved relative to the `sourceDir`.
+
+=== Processing Auxiliary Files
+
+Some backends require that additional files be copied across. The most common example are images for HTML backends. For
+this the `resources` method is used. It is provided with a closure that configures an internal
+http://www.gradle.org/docs/current/javadoc/org/gradle/api/file/CopySpec.html[CopySpec]
+
+[source,groovy]
+.build.gradle
+----
+resources {
+  from('src/resources/images') {
+    include 'images/**/*.png'
+    exclude 'images/**/notThisOne.png'
+  }
+
+  from( "${buildDir}/downloads" ) {
+    include 'deck.js/**'
+  }
+  
+  into './images'
+}
+----
+
+Files will be copied to below `+${outputDir}/${backend}+` (or just `+${outputDir}+` if `separateOutputDirs=false`)
+
+Unlike `sourceDir` files can be copied from anywhere in the filesystem.
+
+If `resources` is never set, the default behaviour is as if the following was called
+[source,groovy]
+.build.gradle
+----
+resources {
+  from(sourceDir) {
+    include 'images/**'
+  }
+}
+----
+
+If you do not want this behaviour, then it can be turned off by doing
+[source,groovy]
+.build.gradle
+----
+resources {}
+----
+
+=== Options & Attributes
+
+The following options may be set using the task's `options` property
+
+ * header_footer - boolean
+ * template_dirs - List<String>
+ * template_engine - String
+ * doctype - String
+
+Any key/values set on `attributes` is sent as is to Asciidoctor. You may use this Map to specify
+a stylesheet for example. The following snippet shows a sample configuration defining attributes.
+
+[source,groovy]
+.build.gradle
+----
+asciidoctor { <1>
+    outputDir "${buildDir}/docs"
+    options doctype: 'book', ruby: 'erubis'
+
+    attributes 'source-highlighter': 'coderay',
+                toc                 : '',
+                idprefix            : '',
+                idseparator         : '-'
+}
+----
+<1> append below the line: `apply plugin: 'org.asciidoctor.convert'`
+
+The following attributes are automatically set by the `asciidoctor` task:
+
+ * project-name : matches `$project.name`
+ * project-version: matches `$project.version` (if defined). Empty String value if undefined
+ * project-group: matches `$project.group` (if defined). Empty String value if undefined
+
+These attributes may be overridden by explicit user input.
+
+You may need to include extra content into the head of the exported document.
+For example, you might want to include jQuery inside the `<head>` element of the HTML export.
+To do so, first create a docinfo file `src/docs/asciidoc/docinfo.html` containing the content to include, in this case the `<script>` tag to load jQuery.
+
+[source,html]
+.src/docs/asciidoc/docinfo.html
+----
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
+----
+
+Then, add the `docinfo1` attribute to the attributes list in the previous example:
+
+[source,groovy]
+.build.gradle
+----
+attributes docinfo1: ''
+----
+
+Refer to the {asciidoctor-docs}[Asciidoctor documentation] to learn more about these options and attributes.
+
+.Note
+
+Attribute values defined on the build file will win over values defined on the documents themselves. You can change
+this behavior by appending an `@` at the end of the value when defined in the build file. Please refer to
+link:http://asciidoctor.org/docs/user-manual/#attribute-assignment-precedence[Attribute assignment precedence, window="_blank"]
+for more information.
+
+== Configuration
+
+This plugin uses `asciidoctorj-1.5.3.2` by default, however, you can change this by
+defining a value on the `asciidoctorj` extension, like so
+
+[source,groovy]
+.build.gradle
+----
+asciidoctorj {
+    version = '1.6.0-SNAPSHOT'
+}
+----
+
+Do not forget to add an entry to the `repositories` block pointing to Maven local if you'd like to run a local version
+of Asciidoctorj (such as an snapshot build for testing bleeding edge features). The following snippet is all you need.
+
+[source,groovy]
+.build.gradle
+----
+repositories {
+    mavenLocal() // <1>
+    jcenter()    // <2>
+}
+
+asciidoctorj {
+    version = '1.6.0-MY_SNAPSHOT'
+}
+----
+<1> resolves artifacts in your local Maven repository
+<2> resolves artifacts in Bintray's jcenter (where all other dependencies are found)
+
+The plugin also adds Bintray's JCenter as a default repository as the place to looks for `asciidocotorj`. In some contexts
+this behaviour can be considered detrimental or unwanted. In such cases this behaviour can be turned off by doing
+
+[source,groovy]
+----
+asciidoctorj {
+  noDefaultRepositories = true
+}
+----
+
+== Adding Custom Extensions
+
+Starting with version 1.5.0 you'll be able to write your own Asciidoctor extensions in Groovy, or any other JVM language
+for that matter. There are several options for you to make it happen.
+
+=== As External Library
+
+This is the most versatile option, as it allows you to reuse the same extension in different projects. An external library
+is just like any other Java/Groovy project. You simply define a dependency using the `asciidoctor` configuration.
+
+[source,groovy]
+.build.gradle
+----
+dependencies {
+    asciidoctor 'com.acme:asciidoctor-extensions:x.y.z'
+}
+----
+
+=== As Project Dependency
+
+The next option is to host the extension project in a multi-project build. This allows for a much quicker development cycle
+as you don't have to publish the jar to a repository every time you make adjustments to the code. Take for example the
+following setup:
+
+[source]
+----
+.
++-- build.gradle
++-- core
+¦   +-- build.gradle
+¦   +-- src
+¦       +-- asciidoc
+¦       ¦   +-- index.adoc
+¦       +-- main
+¦           +-- java
++-- extension
+¦   +-- build.gradle
+¦   +-- src
+¦       +-- main
+¦           +-- groovy
+¦           ¦   +-- org
+¦           ¦       +-- asciidoctor
+¦           ¦           +-- example
+¦           ¦               +-- ExampleExtensionRegistry.groovy
+¦           ¦               +-- YellBlock.groovy
+¦           +-- resources
+¦               +-- META-INF
+¦                   +-- services
+¦                       +-- org.asciidoctor.extension.spi.ExtensionRegistry
++-- settings.gradle
+----
+
+The `extension` project is a sibling for `core`. The build file for the latter looks like this:
+
+[source,groovy]
+[subs=attributes+]
+.build.gradle
+----
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'org.asciidoctor:asciidoctor-gradle-plugin:{version-published}'
+    }
+}
+
+apply plugin: 'org.asciidoctor.convert'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    asciidoctor project(':extension')
+}
+----
+
+=== As Inline Script
+
+The next option is to define extensions directly in the build script.
+This approach is based on the project asciidoctorj-groovy-dsl that allows to define Asciidoctor extensions in Groovy.
+An extension is registered via the `extensions` element.
+
+[source,groovy]
+.build.gradle
+----
+asciidoctor {
+    extensions {
+        block(name: "BIG", contexts: [":paragraph"]) {
+            parent, reader, attributes ->
+            def upperLines = reader.readLines()
+                .collect {it.toUpperCase()}
+                .inject("") {a, b -> a + '\n' + b}
+
+            createBlock(parent, "paragraph", [upperLines], attributes, [:])
+        }
+    }
+}
+----
+
+http://github.com/asciidoctor/asciidoctorj-groovy-dsl contains a description of the DSL itself.
+
+Groovy extensions can also be included as files.
+
+[source,groovy]
+.build.gradle
+----
+asciidoctor {
+    extensions new File('big.groovy')
+}
+----
+
+[source,groovy]
+.big.groovy
+----
+block(name: "BIG", contexts: [":paragraph"]) {
+    parent, reader, attributes ->
+    def upperLines = reader.readLines()
+        .collect {it.toUpperCase()}
+        .inject("") {a, b -> a + '\n' + b}
+
+    createBlock(parent, "paragraph", [upperLines], attributes, [:])
+}
+----
+
+=== As Build Dependency
+
+The last option is to move the `extension` project into Gradle's `buildSrc` directory. There are no additional dependencies
+to be defined on the consuming projects, as the extension will be automatically picked up by the `asciidoctor` task,
+as the compiled extension is already in the task's classpath.
+
+[appendix]
+== Compatibility With Previous Releases
+
+=== Task Properties
+
+The following properties have been marked as deprecated. Developers are encouraged to migrate ASAP to the alternate
+properties.
+
+[horizontal]
+sourceDocumentNames:: an override to process multiple source files, which are relative to `sourceDir`.
+  Use `sources { include 'name' }` instead.
+sourceDocumentName:: an override to process a single source file. Use `sources { include 'name' }` instead.
+backend:: the backend to use. Use `backends` instead.
+
+=== Behavior
+
+* The default value for `sourceDir` has changed from `src/asciidoc` to `src/docs/asciidoc`.
+* Files specified in `sourceDocumentNames` must be relative to `sourceDir` and fully contained in `sourceDir`, in other words,
+it's no longer possible to process documents placed outside of the project's sources. Attempts will be made to convert absolute paths
+to relative paths  but conversion will not be guaranteed. Do not pass FileCollections as they will not convert correctly.
+* Source files that are not reachable from `sourceDir`, will no longer cause a build exception, they will just be silently ignored.
+* For backwards compatibility with older version, embedding `attributes` within `options` are still allowed, including legacy forms.
+* Non-source files are no longer automatically copied, unless they are in the `images` folder and `resources` was never
+called.
+* Each backend will now write to a separate subfolder under `outputDir`. To have the old behaviour use
+`separateOutputDirs = false`.
+
+=== Options & Attributes
+
+[source,groovy]
+.build.gradle
+----
+// Map notation
+attributes: toc: 'right',
+            'source-highlighter': 'coderay',
+            'toc-title': 'Table of Contents'
+
+// List notation
+attributes: [
+    'toc=right',
+    'source-highlighter=coderay',
+    'toc-title=Table of Contents'
+]
+
+// String notation
+attributes: 'toc=right source-highlighter=coderay toc-title=Table\\ of\\ Contents'
+----
+
+IMPORTANT: Do not forget to transform Groovy strings into Strings (by explicitly invoking `.toString()` on them) when
+used as option values, otherwise the Ruby runtime will throw an exception.
+
+Notice how spaces are escaped in the last key/value pair.
+
+[appendix]
+== Tips & Tricks
+
+=== Pre-process and post-process
+
+To make your own custom actions before or after asciidoctor processing, use `doFirst` and `doLast`. Check out chapters https://docs.gradle.org/current/userguide/tutorial_using_tasks.html[14] and https://docs.gradle.org/current/userguide/more_about_tasks.html[17] in the Gradle docs to learn about the various actions you can perform.
+
+[source,groovy]
+.build.gradle
+----
+asciidoctor.doFirst {
+  // pre-process
+}
+asciidoctor.doLast {
+  // post-process
+}
+----
+
+As an example, here's how to copy the generated `index.html` file to the root of the project. This is useful in Windows systems where asciidoctor can't output directly to the root.
+
+[source,groovy]
+.build.gradle
+----
+asciidoctor.doLast {
+    copy {
+        from 'build/docs/html5'
+        into "$projectDir"
+        include 'index.html'
+    }
+}
+----
+
+=== Force processing
+
+If Gradle detects that there were no changes, asciidoctor processing will be skipped as `UP-TO-DATE`. To force asciidoctor processing even if there were no changes:
+
+[source,groovy]
+.build.gradle
+----
+asciidoctor.outputs.upToDateWhen { false }
+----
+

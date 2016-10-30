@@ -1,0 +1,237 @@
+<html>
+   	
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <meta name="robots" content="all, index, follow">
+      <meta name="revisit-after" content="14 days">
+      <link href="../site.css" type="text/css" media="screen" rel="StyleSheet">
+      		
+      		
+      <meta content="article,web,xml,xsl,managing multiligue site,static,xmlproc" name="keywords">
+      		
+      <link href="../site.css" media="screen" rel="StyleSheet" type="text/css">
+      		
+      		
+      <title>Internationalized web site</title>
+      	
+   </head>
+   	
+   <body>
+      		<a href="articles.html">
+         			
+         			<span>
+            [Back]</span>
+         		</a>
+      		<br>
+      		
+      		
+      <h1>Internationalized web site
+         		
+      </h1>
+      		
+      		
+      <p>This site is maintained in two language French and English, i whished not having to manage it with a dynamic language (php,
+         ...) and wish to have the two languages in the same page to maintain it more easily.
+         		In this case, a simple solution has been used : XML. With a XSL stylesheet i can filter the language. The xml offer also
+         to ease the manipulation of the content by bots (robots) for automatic translation by google or babelfish.
+         		
+      </p>
+      		
+      		
+      		
+      <h2>Web site organisation
+         		
+      </h2>
+      		
+      		
+      		
+      <p>The organisation is simple, two subfolder are used for the localized pages (/en fo english, /fr for french). Common items
+         are put in
+         		the /common subfolder.
+         		
+      </p>
+      		
+      		
+      		
+      <h2>Content definition in an XML file
+         		
+      </h2>
+      
+      		
+      		
+      <p>Each page is written in an xml file (using editix) this xml is in XHTML format.
+         		
+      </p>
+      		
+      		
+      		
+      		<pre>
+		&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;page&gt;
+&lt;head&gt;
+
+&lt;title xml:lang="fr"&gt;Informations sur le d&eacute;veloppement de l'application&lt;/title&gt;
+&lt;title xml:lang="en"&gt;Information about APrint development&lt;/title&gt;
+
+&lt;meta xml:lang="en" name="keywords"
+	content="dev,progress,aprint,news,road map, improvements" /&gt;
+&lt;meta xml:lang="fr" name="keywords"
+	content="developpement,logiciel,aprint,nouvelles,plan de d&eacute;veloppement,am&eacute;liorations" /&gt;
+	
+	
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;a href="aprint.html"&gt; &lt;span xml:lang="fr"&gt;
+[Retour]&lt;/span&gt; &lt;span xml:lang="en"&gt;[Back]
+&lt;/span&gt;&lt;/a&gt;
+
+&lt;h1 xml:lang="fr"&gt;Information sur le d&eacute;veloppement du logiciel&lt;/h1&gt;
+&lt;h1 xml:lang="en"&gt;Information about the software development&lt;/h1&gt;
+
+&lt;h2 xml:lang="fr"&gt;O&ugrave; en somme nous, le travail d&eacute;ja r&eacute;alis&eacute;&lt;/h2&gt;
+
+&lt;h2 xml:lang="en"&gt;Where are we and the work done&lt;/h2&gt;
+
+&lt;p xml:lang="fr"&gt;APrint a beaucoup &eacute;volu&eacute;. Il contient maintenant un ensemble de
+composants permettant de r&eacute;soudre des problematiques associ&eacute;es aux orgues
+de barbarie / boites &agrave; musique&lt;/p&gt;
+
+&lt;p xml:lang="en"&gt;APrint has a lot evolved. it now contains a lot of components that permit to solve common domain related issues.&lt;/p&gt;
+
+&lt;p xml:lang="fr"&gt;Une attention particuli&eacute;re a &eacute;t&eacute; port&eacute;e sur l'architecture pour
+permettre un r&eacute;utilisation simple des diff&eacute;rents composants&lt;/p&gt;
+
+&lt;p xml:lang="en"&gt;A Special attention has been the main concern for the component usage in several contexts&lt;/p&gt;
+
+&lt;p xml:lang="fr"&gt;Ce framework est toujours en &eacute;volution.&lt;/p&gt;
+&lt;p xml:lang="en"&gt;This framework is still in constant evolution&lt;/p&gt;
+
+
+&lt;h3 xml:lang="fr"&gt;Documentation des composants du logiciel&lt;/h3&gt;
+&lt;h3 xml:lang="en"&gt;Components Documentation&lt;/h3&gt;
+
+
+&lt;p xml:lang="fr"&gt;
+La page
+&lt;a href="javadoc/index.html"&gt;Javadoc&lt;/a&gt;
+d&eacute;crit l'ensemble des composants du framework, et la documentation d&eacute;veloppeur 
+associ&eacute;e.
+
+&lt;/p&gt;
+
+
+&lt;p xml:lang="en"&gt;
+this page :
+&lt;a href="javadoc/index.html"&gt;Javadoc&lt;/a&gt;
+describe the components and the developper associated documentation.
+
+&lt;/p&gt;
+
+
+&lt;h3 xml:lang="fr"&gt;APrint source&lt;/h3&gt;
+
+&lt;h3 xml:lang="en"&gt;APrint software source&lt;/h3&gt;
+
+
+&lt;p xml:lang="fr"&gt;Vous pouvez t&eacute;l&eacute;charger les sources du logiciel &agrave; cette &lt;a
+	href="src.zip"&gt;page&lt;/a&gt;. Les sources vous permettent de pouvoir
+adapter, modifier et faire evoluer le logiciel &agrave; votre guise.&lt;/p&gt;
+
+&lt;p xml:lang="en"&gt;You can download the software source at this pointer &lt;a
+	href="src.zip"&gt;pointer to the sources&lt;/a&gt;. The sources permit you to see, learn and adapt the software to your own usage.&lt;/p&gt;
+
+
+&lt;p xml:lang="fr"&gt;Si vous souhaitez contribuer plus pr&eacute;cisement sur le logiciel,
+contactez nous pour voir un acc&egrave;s &agrave; la forge d'APrint&lt;/p&gt;
+
+&lt;p xml:lang="en"&gt;If you wish to contribute, please contact us to have a source forge access.&lt;/p&gt;
+
+
+&lt;h2 xml:lang="fr"&gt;Propositions pour les version futures d'APrint&lt;/h2&gt;
+
+&lt;h2 xml:lang="en"&gt;Proposal for the future version of APrint&lt;/h2&gt;
+
+
+&lt;p xml:lang="fr"&gt;Toujours en cours d'&eacute;volution :-)&lt;/p&gt;
+&lt;p xml:lang="en"&gt;Still in constant evolution :-)&lt;/p&gt;
+
+&lt;h3 xml:lang="fr"&gt;Objectifs du logiciel&lt;/h3&gt;
+&lt;h3 xml:lang="en"&gt;Software goals&lt;/h3&gt;
+
+&lt;p xml:lang="fr"&gt;APrint a deux utilisations principales :
+&lt;ul&gt;
+	&lt;li&gt;pour des non musiciens qui souhaitent d&eacute;couvrir d'anciens
+	instruments, ou des morceaux de musique pouvant &ecirc;tre sur carton.&lt;/li&gt;
+	&lt;li&gt;pour les sp&eacute;cialistes qui souhaitent pouvoir travailler sur le
+	rendu, l'arrangement des cartons&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+
+
+&lt;p xml:lang="en"&gt;APrint has two main usage :
+&lt;ul&gt;
+	&lt;li&gt;one for the non musician who wish to discover old instruments of pieces of music that could be barrelized&lt;/li&gt;
+	&lt;li&gt;fo specialists, who wish to have a more precise opinion on the arrangement&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+
+
+&lt;p xml:lang="fr"&gt;Nous souhaitons que APrint reste simple d'utilisation, et
+efficace dans l'utilisation. (Ce qui ne veux pas dire simpliste !). Des
+extensions &agrave; APrint ont &eacute;t&eacute; d&eacute;velopp&eacute;es pour permettre l'evaluation de
+transposition d'un carton sur un autre instrument, per&ccedil;er le carton avec
+des machines sp&eacute;ciales, et ajouter d'autres fonctionnalit&eacute;s &eacute;volu&eacute;es.&lt;/p&gt;
+
+
+&lt;p xml:lang="en"&gt;We want aprint to be simple to use, and efficient. Some application extension have been setup to permit add and test new functionnalities.&lt;/p&gt;
+
+
+
+&lt;h3 xml:lang="fr"&gt;Am&eacute;lioration du logiciel&lt;/h3&gt;
+&lt;h3 xml:lang="en"&gt;Software improvements&lt;/h3&gt;
+
+
+
+&lt;p xml:lang="fr"&gt;APrint peut &eacute;voluer et s'am&eacute;liorer sur pas mal de points
+(n&eacute;cessitant des comp&eacute;tences diff&eacute;rentes, sans &ecirc;tre d&eacute;veloppeur
+informatique).&lt;/p&gt;
+
+&lt;p xml:lang="en"&gt;APrint can evolve and be improved on lot of points. (needing several skills without being a developper)&lt;/p&gt;
+
+&lt;ul xml:lang="fr"&gt;
+	&lt;li&gt;Nous aider dans la mise en place d'instruments (cr&eacute;er les
+	fichiers de gammes, enregistrer des instruments)&lt;/li&gt;
+	&lt;li&gt;Concevoir et proposer des fonctionnalit&eacute;s int&eacute;ressantes pour
+	les utilisateurs (sous formes d'extensions, ou ajout&eacute;e au logiciel
+	standard), des documents, dessins peuvent grandement aider &agrave; la
+	conception, choix des fonctionnalit&eacute;s :-)&lt;/li&gt;
+	&lt;li&gt;Dessiner des logos, images, travailler sur le site web&lt;/li&gt;
+	&lt;li&gt;En traduisant le logiciel dans diff&eacute;rentes langues (une fonctionnalit&eacute;s permettant la traduction a &eacute;t&eacute; int&eacute;gr&eacute;e dans la derni&egrave;re version beta)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul xml:lang="en"&gt;
+	&lt;li&gt;create your instrument, by recording the samples, builing the instrument&lt;/li&gt;
+	&lt;li&gt;Design and manage functionnalities, (plugins or included in the software), tests or software validation ..&lt;/li&gt;
+	&lt;li&gt;Design the graphical rendering of the web site of the software.&lt;/li&gt;
+	&lt;li&gt;Translate the software in several languages, a specific functionnality has been included in the latest beta version&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/body&gt;
+&lt;/page&gt;
+
+		
+		</pre>
+      		
+      		
+      		
+      		
+      		
+      		
+      		
+      		
+      	</body>
+   
+</html>
