@@ -1,9 +1,11 @@
+
 Premiers pas avec APrint studio
 ===============================
 
 APrint studio est un outil proposé aux arrangeurs de carton d'orgue de barbarie, celui-ci concerne et se concentre sur les dernières étapes de création de carton. L'ensemble de l'arrangement musical est réalisé avec un autre logiciel musical (Harmony Assistant, Cubase, Sibellius ... etc). Pour pouvoir être ensuite utilisée dans APrint Studio, il est alors nécessaire de passer par le format Pivot MIDI pour pouvoir être transformer en carton virtuel sous APrint Studio.
 
 La première étape du logiciel est donc la récupération d'une composition musicale réalisée avec un instrument à un logiciel d'arrangement, que l'on souhaite finaliser en carton.
+
 
 Premier Import à partir d'un fichier MIDI
 -----------------------------------------
@@ -17,7 +19,26 @@ Pour réaliser l'import , le logiciel utilise la définition d'un instrument. Da
 Dans son fonctionnement, plusieures transformations sont réalisées au préalable, afin de simplifier la récupération.
 
 -   **Une première tranformation est donc la fusion de l'ensemble des pistes du fichier MIDI**, ainsi les notes sont reconnues indépendemment de leur organisation dans le fichier MIDI, (cette stratégie donne le plus de résultats)
+
 -   **La seconde transformation concerne les percussions**, en effet certaines percussions sont décalées par rapport à leur pilotage. Ceci est pris en charge par le logiciel dans la définition de la percussion (retard + longueur fixe).
+
+    ​
+
+    Glissez le fichier midi sur la fenetre principale
+
+![](pp1.png)
+
+La fenetre de choix de l'instrument apparait
+
+![](pp2.png)
+
+Clickez sur le bouton "Afficher le carton", pour terminer la transformation du fichier MIDI
+
+![](pp3.png)
+
+Le carton associé au fichier midi est créé.
+
+
 
 ### Premier résultat d'import
 

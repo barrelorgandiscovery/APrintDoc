@@ -1,8 +1,8 @@
+
 Réaliser des exports MIDI pour les instruments automatisés
 ==========================================================
 
-Export MIDI files for Midified instruments
-==========================================
+
 
 APrint Studio permet l'export des fichiers de carton, en fichiers MIDI adaptés à l'utilisation par des outils automatiques. Que ce puisse être des perforatrices ou des instruments MIDIfiés.
 
