@@ -1,12 +1,15 @@
+
 Description de la fonction d'Export DXF
 =======================================
 
 Patrice Freydiere - 04/01/2014
 
+
 Introduction
 ------------
 
 Cette extension permet l'export d'un carton au format DXF pour une perforation avec une machine LASER.
+
 
 Description de l'export
 -----------------------
@@ -19,23 +22,25 @@ Le fichier DXF est divisé en calques. Les calques permettent de regroupper un e
 
 L'export propose deux modes de fonctionnement : un export pour les orgues mécaniques et un export pour les orgues pneumatiques. le traitement du carton est différent suivant ces deux cas d'utilisation.
 
+
 Export Pour les cartons mécaniques
 ----------------------------------
 
 L'export pour les cartons mécaniques ne modifie pas le carton, le carton est pris tel quel et les trous presents dans le cartons, sont dessinés au format carré dans le fichier DXF. Il n'y a pas de mise en place de ponts ou de réduction de la taille de trous.
+
 
 Export pour les cartons pneumatiques
 ------------------------------------
 
 L'export en mode pneumatique effectue des modifications sur le carton, car les instruments pneumatiques utilisent un support papier. Le support papier accepte mal les trous longs, fragilisant le support. Il y a donc dans ce cas une transformation réalisée sur le "carton", pour transformer les trous longs en une serie de trous. La transformation est décrite ci dessous :
 
-![](localizedresources/fr/SchemaTransformationPneumatique.png)
+![](SchemaTransformationPneumatique.png)
 
 Le trou d'origine du carton est découpé en petit trous séparés par des ponts. La taille des trous et la dimension des ponts est paramétré dans l'export.
 
 Deux cas peuvent se présenter pour l'export des fins de trous, le schema ci dessous montre les deux cas possibles:
 
-![](localizedresources/fr/SchemaTransformationPneumatique_dernier_trou.png)
+![](SchemaTransformationPneumatique_dernier_trou.png)
 
 Un paramètre d'export 'Pas de pont s'il reste' permet la non création d'un pont et d'un trou à la fin si la taille du trou restant est inférieure au paramètre.
 
@@ -43,12 +48,13 @@ Ainsi, si la taille du dernier trou est supérieure au paramètre, on se situe d
 
 Si la taille du dernier trou est inférieure au paramètre, on se situe dans le cas numero 2 du schema ci dessus.
 
+
 Paramètres de l'export
 ----------------------
 
 L'export propose les paramètres suivants :
 
-![](localizedresources/fr/PerfoDXFparametres.png)
+![](PerfoDXFparametres.png)
 
 <table>
 <caption>Description des paramètres</caption>
@@ -78,6 +84,7 @@ L'export propose les paramètres suivants :
 </tbody>
 </table>
 
+
 Résultat de l'export
 --------------------
 
@@ -91,7 +98,7 @@ un fichier \_CARTON.DXF contenant les calques et le contenu suivant :
 
 - Les trous (TROUS) : les traits associés aux découpes des trous.
 
-<img src="localizedresources/fr/dxf_resultat_carton.png" height="200" />
+<img src="dxf_resultat_carton.png"  />
 
 Un second fichier \_pliuresverso est egalement créé contenant les pliures verso, espacées de 2 \* la taille de la page du carton et décalé d'une page par rapport aux pliures recto.
 

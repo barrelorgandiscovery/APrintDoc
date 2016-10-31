@@ -3,8 +3,6 @@ Developper des extensions logicielles en Java
 =============================================
 
 
-Develop Java Software Extension
-===============================
 
 Le développement d'extensions logicielles permet D'ajouter des fonctionnalités qui peuvent être distribuées séparément du logiciel.
 
@@ -80,52 +78,53 @@ Commençons par créer une classe squelette avec l'implémentation de la premiè
 
     package aprintextension;
 
-    import java.awt.event.ActionEvent;
-    import java.awt.event.ActionListener;
-    
-    import javax.swing.JMenu;
-    import javax.swing.JMenuItem;
-    import javax.swing.JOptionPane;
-    import javax.swing.JToolBar;
-    
-    import org.barrelorgandiscovery.gui.aedit.JVirtualBookScrollableComponent;
-    import org.barrelorgandiscovery.gui.aprintng.helper.BaseVirtualBookExtension;
-    
-    public class MyExtension extends BaseVirtualBookExtension {
-    
-    public MyExtension() throws Exception {
-       super();
-    }
-    
-    @Override
-    public void addHelpMenuItem(JMenu helpMenu) {
-    
-      JMenuItem it = helpMenu.add("Hello Extension " + getName());
-      it.addActionListener(new ActionListener(){
-             @Override
-             public void actionPerformed(ActionEvent e) {
-                     JOptionPane.showMessageDialog(null, "Hello Extension");
-             }
-      });
-    }
-    
-    @Override
-    public String getName() {
-    
-    return "Mon Extension";
-    }
-    
-    @Override
-    public void addLayers(JVirtualBookScrollableComponent c) {
-    
-    }
-    
-    @Override
-    public JToolBar[] addToolBars() {
-       return null;
-    }
-    
-    }
+```java
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
+import javax.swing.JToolBar;
+
+import org.barrelorgandiscovery.gui.aedit.JVirtualBookScrollableComponent;
+import org.barrelorgandiscovery.gui.aprintng.helper.BaseVirtualBookExtension;
+
+public class MyExtension extends BaseVirtualBookExtension {
+
+  public MyExtension() throws Exception {
+     super();
+  }
+
+  @Override
+  public void addHelpMenuItem(JMenu helpMenu) {
+
+    JMenuItem it = helpMenu.add("Hello Extension " + getName());
+    it.addActionListener(new ActionListener(){
+           @Override
+           public void actionPerformed(ActionEvent e) {
+                   JOptionPane.showMessageDialog(null, "Hello Extension");
+           }
+    });
+  }
+
+  @Override
+  public String getName() {
+      return "Mon Extension";
+  }
+
+  @Override
+  public void addLayers(JVirtualBookScrollableComponent c) {
+
+  }
+
+  @Override
+  public JToolBar[] addToolBars() {
+     return null;
+  }
+
+}
+```
 
 
 2 - Renseigner le fichier de propriétés

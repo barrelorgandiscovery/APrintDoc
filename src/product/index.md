@@ -4,19 +4,18 @@ Bienvenue dans l'aide en ligne du programme APrint Studio
 
 
 
-Cette aide en ligne vise à donner des informations sur le fonctionnement, l'utilisation et le paramétrage du programme APrint Studio.
-
 ![Ecran d'accueil](firstsc.png)
+
 
 
 APrint / Studio
 ---------------------------
 
-APrint Studio a été concu comme un environnement de travail pour les arrangeurs d'orgues de barbrie pour faciliter la création et récupération de morceux de musique, il permet entre autre, la vérification de musique vis à vis des capacités des instruments de musique mécanique. Une attention toute particulière est donnée à l'installation et l'utilisation pour le plus grand nombre d'utilisateurs (grand public / amateur / professionnel).
+APrint Studio a été concu comme un **environnement de travail** pour les arrangeurs **d'orgues de barbarie** pour faciliter la **création** et **récupération** de morceaux de musique, il permet entre autre, la vérification de musique vis à vis des capacités des instruments de musique mécanique. Une attention toute particulière est donnée à la simplicité d'utilisation (grand public / amateur / professionnel).
 
 APrint Studio est réalisé en tant que logiciel Libre, permettant aux utilisateurs de pouvoir adapter le programme en fonction de leurs besoins. Le code source du programme est accessible dans chaque installation, dans le fichier .jar.
 
-Un mécanisme d'extension permet d'ajouter facilement des fonctionnalités dans le logiciel sans avoir à connaitre fondamentalement tous les détails du fonctionnement du programme. Et permettre d'ajouter la ou les fonctions manquantes sans avoir à tout implémenter.
+Un mécanisme d'extension et de scripts permet d'ajouter facilement des fonctionnalités dans le logiciel sans avoir à connaitre fondamentalement tous les détails du fonctionnement du programme. Et permettre d'ajouter la ou les fonctions manquantes assez simplement.
 
 
 Concepts
@@ -32,6 +31,6 @@ J'espère pouvoir offrir les fonctionnalités permettant aux arrangeurs / amateu
 Utilisation
 -----------
 
-APrint Studio a été testée et fonctionne sur les OS suivants (Windows XP/Vista/8/10, Linux, Mac).
+APrint Studio a été testée et est utilisé sur les OS suivants (Windows XP/Vista/8/10, Linux, Mac).
 
 APrint Studio utilise Java 8
