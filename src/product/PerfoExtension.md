@@ -32,7 +32,7 @@ L'export pour les cartons mécaniques ne modifie pas le carton, le carton est pr
 Export pour les cartons pneumatiques
 ------------------------------------
 
-L'export en mode pneumatique effectue des modifications sur le carton, car les instruments pneumatiques utilisent un support papier. Le support papier accepte mal les trous longs, fragilisant le support. Il y a donc dans ce cas une transformation réalisée sur le "carton", pour transformer les trous longs en une serie de trous. La transformation est décrite ci dessous :
+L'export en mode pneumatique effectue des modifications sur le carton. Il est indispensable de mettre des ponts sur des supports fins afin de ne pas fragiliser ces derniers. Il y a donc dans ce cas une transformation réalisée sur le "carton", pour transformer les trous longs en une serie de trous. La transformation est décrite ci dessous :
 
 ![](SchemaTransformationPneumatique.png)
 
