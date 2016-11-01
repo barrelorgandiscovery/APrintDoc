@@ -4,24 +4,24 @@ Travailler avec les fichiers midi en scripts
 Introduction
 ------------
 
-L'Environnement groovy permet de travailler sur le contenu des fichiers midi. Cette manipulation de fichier midi permet de retravailler le contenu des fichiers midi, et de mieux les adapter aux capacités de l'instrument d'orgue de barbarie.
+L'Environnement groovy permet de travailler sur le contenu des fichiers midi. Cette manipulation de fichier midi permet de retravailler le contenu des fichiers midi et de mieux les adapter aux capacités de l'orgue de barbarie.
 
-En effet, certains fichiers midi sont utilisés comme "commande" pour piloter des instruments midifiés, par exemple certaines notes ou evenements n'ont rien à voir avec la musique elle même, mais plus sur des commandes ayant été cablées sur des notes de musiques.
+En effet, certains fichiers midi sont utilisés comme "commande" pour piloter des instruments midifiés, par exemple certaines notes ou évènements n'ont rien à voir avec la musique elle-même mais plus sur des commandes ayant été câblées sur des notes de musique.
 
-La notion de carton virtuel est donc ici pour permettre une description adaptée de la musique avec les notions prises en charge par les instruments d'orgue de barbarie (registres, percussions ... etc ..)
+La notion de carton virtuel est donc ici pour permettre une description adaptée de la musique avec les notions prises en charge par les instruments d'orgue de barbarie (registres, percussions etc ..)
 
 Deux approches sont disponibles avec le logiciel :
 
 -   Transformer le fichier midi en carton virtuel
 -   Transformer le fichier midi pour un autre instrument
 
-Nous presenterons dans la suite, la méthode simplifiée, le dernier chapitre précisera comment revenir à une utilisation plus rigoureuse du fichier midi.
+Nous présenterons dans la suite, la méthode simplifiée, le dernier chapitre précisera comment revenir à une utilisation plus rigoureuse du fichier midi.
 
 ### Lire un fichier midi en scripting
 
-un ensemble d'objet permettent de lire et écrire le contenu d'un fichier midi de façon simplifiée, ces outils simplifiées ne donne pas accès à l'ensemble des possibilités du midi mais permettent de couvrir beaucoup de cas d'utilisation
+Un ensemble d'objets permet de lire et d'écrire le contenu d'un fichier midi de façon simplifiée, ces outils simplifiés ne donne pas accès à l'ensemble des possibilités du midi mais permettent de couvrir beaucoup de cas d'utilisation.
 
-L'objet **MidiFileIO** du package **org.barrelorgandiscovery.virtualbook.transformation.importer** permet d'effectuer des lecture et écriture de fichiers midi
+L'objet **MidiFileIO** du package **org.barrelorgandiscovery.virtualbook.transformation.importer** permet d'effectuer des lectures et écritures de fichiers midi
 
 la méthode "**read**" permet la lecture du fichier midi.
 
@@ -39,7 +39,7 @@ la méthode "**read**" permet la lecture du fichier midi.
 
 Le script ci dessus retourne dans la variable **m** un objet **MidiFile** contenant la liste des éléments du fichier midi
 
-ci dessous le resultat de la console après éxécution du programme
+ci dessous le résultat de la console après exécution du programme
 
      
     >> start script execution
@@ -74,7 +74,7 @@ L'environnement de script affiche le contenu de l'objet MidiFile retourné
 
 ### Manipulation du fichier midi ...
 
-l'objet MidiFile est une collection d'objet **MidiNote** qui peut être manipulée directement.
+l'objet MidiFile est une collection d'objets **MidiNote** qui peut être manipulée directement.
 
 exemple de parcours de la liste des notes
 
@@ -85,7 +85,7 @@ exemple de parcours de la liste des notes
         println "Note : " +  it.midiNote + " Channel : " + it.channel + " track : " + it.track + " debut : " + it.timeStamp + " longueur : " + it.length
     }
 
-On parcours ici, l'ensemble des notes, en affichant le code midi, le "channel" de restitution, et le track , le timing de début de la note (timestamp) en microseconde et la longueur de la note en microseconde.
+On parcourt ici l'ensemble des notes, en affichant le code midi, le "channel" de restitution et le track, le timing de début de la note (timestamp) en microsecondes et la longueur de la note en microsecondes.
 
 Les propriétés de chaque note peuvent être modifiées comme suit.
 
@@ -95,11 +95,11 @@ Les propriétés de chaque note peuvent être modifiées comme suit.
 
     }
 
-Ici nous rajoutons une octave à chaque note (une octave est constituée de 12 demis tons)
+Ici nous rajoutons une octave à chaque note (une octave est constituée de 12 demi tons)
 
 ### Enregistrement du fichier midi
 
-une fois l'objet **MidiFile** modifié, il est possible de l'enregistrer. la méthode "**write\_midi\_0**" de l'objet **MidiFileIO** permet d'enregistrer le resultat dans un fichier midi au format Midi 0
+une fois l'objet **MidiFile** modifié, il est possible de l'enregistrer. La méthode "**write\_midi\_0**" de l'objet **MidiFileIO** permet d'enregistrer le résultat dans un fichier midi au format Midi 0
 
     def m = MidiFileIO.read(new File(folder, fichier_original))
 
@@ -112,15 +112,15 @@ une fois l'objet **MidiFile** modifié, il est possible de l'enregistrer. la mé
 
     MidiFileIO.write_midi_0(m, new File("c:\\monnouveaufichier.mid"))
 
-Le fichier "**monnouveaufichier.mid**" a ete sauvegardé.
+Le fichier "**monnouveaufichier.mid**" a été sauvegardé.
 
 ### Outils supplémentaires pour la manipulation des fichiers midi
 
-D'autre outils sont disponibles pour faciliter la manipulation de fichiers midi.
+D'autres outils sont disponibles pour faciliter la manipulation de fichiers midi.
 
 La classe **MidiHelper** permet de faciliter la manipulation des notes
 
-ci dessous un exemple d'utilisation des différentes méthodes :
+Ci dessous un exemple d'utilisation des différentes méthodes :
 
 
     import org.barrelorgandiscovery.tools.*
@@ -134,7 +134,7 @@ ci dessous un exemple d'utilisation des différentes méthodes :
     println "getOctave " + MidiHelper.getOctave(35)
 
 
-L'execution de ce script retourne :
+L'exécution de ce script retourne :
 
     >> start script execution
     getMidiNote :A#
@@ -148,4 +148,4 @@ L'execution de ce script retourne :
 
 ### Aller plus loin dans l'utilisation fine Midi à partir de l'API Standard Java
 
-L'environnement java contient un modèle objet associé à l'utilisation des fichier midi, ceci est porté par le package javax.sound.midi des exemples sont disponible dans le javadoc associé à l'API Java
+L'environnement Java contient un modèle objet associé à l'utilisation des fichiers midi, ceci est porté par le package javax.sound.midi. Des exemples sont disponibles dans le javadoc associé à l'API Java
