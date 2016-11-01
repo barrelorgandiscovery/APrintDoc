@@ -7,7 +7,7 @@ Exemples de scripts
 Lister les instruments présents
 -------------------------------
 
-List instruments
+Liste instruments
 ----------------
 
 Dans la console générale
@@ -47,7 +47,7 @@ in the book console
       
       
 
-deplacer les trous selectionnés de 10 mm
+déplacer les trous sélectionnés de 10 mm
 ----------------------------------------
 
 move selected hole by 10 mm
@@ -105,7 +105,7 @@ in the book console
       
       
 
-Rechercher tous les trous supérieur à 20mm pour diviser leur longueur par 2
+Rechercher tous les trous supérieurs à 20mm pour diviser leur longueur par 2
 ---------------------------------------------------------------------------
 
 Search all holes greater than 20mm and divide its length by 2
