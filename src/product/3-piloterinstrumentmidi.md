@@ -14,7 +14,7 @@ APrint Studio permet le pilotage d'un instrument midi à partir du jeu de la vue
 Transcription par défaut en MIDI d'un Carton Virtuel
 ----------------------------------------------------
 
-Par défaut, la transcription en MIDI est effectuée à partir de la gamme de l'instrument, celle ci donne par défaut une correspondance MIDI pour : les notes (le code midi est utilisé), et les percussions (le code midi et nom de la percussion est utilisé pour la correspondance), les percussions sont envoyées sur le canal 10.
+Par défaut, la transcription en MIDI est effectuée à partir de la gamme de l'instrument, celle ci donne par défaut une correspondance MIDI pour : les notes (le code midi est utilisé) et les percussions (le code midi et nom de la percussion est utilisé pour la correspondance), les percussions sont envoyées sur le canal 10.
 
 
 Transcription MIDI personnalisée par script dans un instrument
@@ -22,7 +22,7 @@ Transcription MIDI personnalisée par script dans un instrument
 
 La transcription de carton vers midi peut être personnalisé pour s'adapter à la commande réelle de l'instrument. Il s'agit ici de faire la correspondance entre les pistes du carton et les ordres MIDI envoyés vers l'instrument.
 
-Cette transcription personnalisé prend la forme d'un script associé à l'instrument et sauvegardé dans l'instrument utilisé avec le carton virtuel. Si plusieurs scripts existent, un choix de la transcription est proposé à l'utilisateur. Ces scripts peuvent être étendus et adaptés en fonction du pilotage de l'instrument.
+Cette transcription personnalisée prend la forme d'un script associé à l'instrument et sauvegardé dans l'instrument utilisé avec le carton virtuel. Si plusieurs scripts existent, un choix de la transcription est proposé à l'utilisateur. Ces scripts peuvent être étendus et adaptés en fonction du pilotage de l'instrument.
 
 Ci dessous un exemple de script réalisé pour piloter un instrument et ses registres avec des commandes MIDI spécifiques :
 
