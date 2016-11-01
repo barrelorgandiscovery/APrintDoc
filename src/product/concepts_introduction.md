@@ -1,5 +1,5 @@
 
-Concepts - Articles non directements liés au logiciel
+Concepts - Articles non directement liés au logiciel
 =====================================================
 
 
