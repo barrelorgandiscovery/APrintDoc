@@ -11,21 +11,21 @@ Bienvenue dans l'aide en ligne du programme APrint Studio
 APrint / Studio
 ---------------------------
 
-APrint Studio a été concu comme un **environnement de travail** pour les arrangeurs **d'orgues de barbarie** pour faciliter la **création** et **récupération** de morceaux de musique, il permet entre autre, la vérification de musique vis à vis des capacités des instruments de musique mécanique. Une attention toute particulière est donnée à la simplicité d'utilisation (grand public / amateur / professionnel).
+APrint Studio a été concu comme un **environnement de travail** pour les arrangeurs **d'orgues de barbarie** pour faciliter la **création** et **récupération** de morceaux de musique, il permet entre autres, la vérification de musique vis à vis des capacités des instruments de musique mécanique. Une attention toute particulière est donnée à la simplicité d'utilisation (grand public / amateur / professionnel).
 
-APrint Studio est réalisé en tant que logiciel Libre, permettant aux utilisateurs de pouvoir adapter le programme en fonction de leurs besoins. Le code source du programme est accessible dans chaque installation, dans le fichier .jar.
+APrint Studio est réalisé en tant que logiciel Libre, permettant aux utilisateurs d'adapter le programme en fonction de leurs besoins. Le code source du programme est accessible dans chaque installation, dans le fichier .jar.
 
-Un mécanisme d'extension et de scripts permet d'ajouter facilement des fonctionnalités dans le logiciel sans avoir à connaitre fondamentalement tous les détails du fonctionnement du programme. Et permettre d'ajouter la ou les fonctions manquantes assez simplement.
+Un mécanisme d'extension et de scripts permet d'ajouter facilement des fonctionnalités dans le logiciel sans avoir à connaitre fondamentalement tous les détails du fonctionnement du programme et permettre d'ajouter la ou les fonctions manquante(s) assez simplement.
 
 
 Concepts
 ------------------------
 
-Même si le format MIDI reste très utilisé pour le format numerique de définition de carton, ce format n'est pas bien adapté à la musique mécanique traditionnelle. En effet, la composition et la registration de cartons d'orgues de barbarie requiert des spécificités qu'il est difficile d'inclure dans le format MIDI, en effet, il peut y avoir plusieurs interprétations possibles sur la façon de mettre en place ces spécificités (registres, commandes diverses).
+Même si le format MIDI reste très utilisé pour le format numérique de définition de carton, ce format n'est pas bien adapté à la musique mécanique traditionnelle. En effet, la composition et la registration de cartons d'orgues de barbarie requiert des spécificités qu'il est difficile d'inclure dans le format MIDI. Il peut y avoir plusieurs interprétations possibles sur la façon de mettre en place ces spécificités (registres, commandes diverses).
 
-L'utilisation des sons reels d'instrument influe également de façon importante sur la composition ou l'arrangement de morceaux spécifiquement écrits pour les orgues de barbarie.
+L'utilisation des sons réels d'instruments influe également de façon importante sur la composition ou l'arrangement de morceaux spécifiquement écrits pour les orgues de barbarie.
 
-J'espère pouvoir offrir les fonctionnalités permettant aux arrangeurs / amateurs de pouvoir utiliser au mieux toutes les capacités des instruments d'orgue de barbarie. Et eventuellement déclencher des vocations pour faire vivre ces instruments merveilleux.
+J'espère pouvoir offrir les fonctionnalités permettant aux arrangeurs / amateurs de pouvoir utiliser au mieux toutes les capacités des instruments d'orgue de barbarie et éventuellement déclencher des vocations pour faire vivre ces instruments merveilleux.
 
 
 Utilisation
