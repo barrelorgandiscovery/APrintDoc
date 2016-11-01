@@ -1,7 +1,7 @@
 Manipuler des fichiers MIDI par script groovy
 =============================================
 
-On souhaite parfois effectuer des manipulations de fichiers MIDI, pour effectuer différentes opérations (transposition, comptage de notes, voir d'adéquation d'un morceau par rapport à une gamme d'instrument).
+On souhaite parfois effectuer des manipulations de fichiers MIDI pour effectuer différentes opérations (transposition, comptage de notes, voir d'adéquation d'un morceau par rapport à une gamme d'instrument).
 
 Le logiciel propose un ensemble de fonctions facilitant la manipulation des fichiers MIDI en quelques lignes de script (donc accessible par un non développeur). Ces scripts peuvent également être stockés dans la définition de l'instrument pour proposer des imports MIDI spécifiques.
 
@@ -21,9 +21,9 @@ Sommaire
 []()Introduction
 ----------------
 
-Le logiciel est implémenté en Java. Java propose des objets standard de manipulation de fichiers midi, cependant leur modification n'est pas très aisée du fait de la présence d'"Evènements" pouvant être liés. Par exemple les notes sont décrites par un évènement NoteOn puis un second évènement NoteOff. Les date ou timestamp de debut de notes ne sont pas codés en absolue (c'est à dire par rapport au début du morceau), mais en relatif. Chaque évènement est référencé dans le temps par rapport à l'évènement précédent (tick).
+Le logiciel est implémenté en Java. Java propose des objets standards de manipulation de fichiers midi, cependant leur modification n'est pas très aisée du fait de la présence d'"Evènements" pouvant être liés. Par exemple les notes sont décrites par un évènement NoteOn puis un second évènement NoteOff. Les dates ou timestamp de début de notes ne sont pas codés en absolu (c'est à dire par rapport au début du morceau) mais en relatif. Chaque évènement est référencé dans le temps par rapport à l'évènement précédent (tick).
 
-Des objets plus simple ont été mis en place pour permettre une manipulation plus simple des fichiers midi, du filtrage et de l'interprétation des éléments contenus dans le fichiers. Des exemple suivent sur l'utilisation de ces objets, avec des exemples de mise en oeuvre.
+Des objets plus simples ont été mis en place pour permettre une manipulation plus simple des fichiers midi, du filtrage et de l'interprétation des éléments contenus dans le fichier. Des exemples suivent sur l'utilisation de ces objets, avec des exemples de mise en oeuvre.
 
 []()Lecture d'un fichier MIDI en 5 Lignes
 -----------------------------------------
@@ -36,12 +36,12 @@ Des objets plus simple ont été mis en place pour permettre une manipulation pl
 
     }
 
-Le Résultat de la console affiche la collection d'évènement MIDI lu dans le fichier
+Le Résultat de la console affiche la collection d'évènements MIDI lus dans le fichier
 
 []()Filtrage d'un fichier Midi
 ------------------------------
 
-Le bout de script suivant lit un fichier midi et filtre les notes du canal numéros 1
+Le bout de script suivant lit un fichier midi et filtre les notes du canal numéro 1
 
     import groovy.aprint.midi.*
 
@@ -58,7 +58,7 @@ Le bout de script suivant lit un fichier midi et filtre les notes du canal numé
 
     }
 
-le résultat est un fichier MDI test.mid ne contenant que les évènements associés au canal 1. la fonction filterChannel filtre les evenements associés au canal concerné.
+Le résultat est un fichier MDI test.mid ne contenant que les évènements associés au canal 1. La fonction filterChannel filtre les évènements associés au canal concerné.
 
 D'autres fonctions de filtrage sont disponibles :
 
@@ -128,9 +128,9 @@ use (MidiCategory, MidiFileCategory)
 []()Fonctions d'évaluation du fichier midi
 ------------------------------------------
 
-il est parfois intéressant de pouvoir évaluer les notes présentes dans le fichier MIDI pour effectuer une comparaison avec la gamme et permettre l'évaluation de transpositions.
+Il est parfois intéressant de pouvoir évaluer les notes présentes dans le fichier MIDI pour effectuer une comparaison avec la gamme et permettre l'évaluation de transposition.
 
-Des fonctions on été ajoutées pour cela.
+Des fonctions ont été ajoutées pour cela.
 
 ### listDistinctNotes()
 
@@ -154,7 +154,7 @@ Cette fonction permet de lister les notes distinctes d'un fichier midi
 
     }
 
-Le resultat affiche ceci :
+Le résultat affiche ceci :
 
     >> start script execution
     E3
@@ -211,7 +211,7 @@ Cette fonction permet de lister les pistes d'un fichier MIDI
 
     }
 
-Le resultat affiché est le suivant :
+Le résultat affiché est le suivant :
 
     >> start script execution
     1
@@ -221,7 +221,7 @@ Le resultat affiché est le suivant :
 
      Script executed in  0: 0:846 
 
-Les pistes sont identifiées par rapport à un numéros, c'est le numéro présent dans le fichier MIDI. le nom de la piste est ensuite contenu dans un évènement associé à la piste.
+Les pistes sont identifiées par rapport à un numéro, c'est le numéro présent dans le fichier MIDI. Le nom de la piste est ensuite contenu dans un évènement associé à la piste.
 
 ### countDistinctNotes()
 
@@ -283,7 +283,7 @@ Outil de transformation de fichiers MIDI en carton
 
 Il est possible à partir du fichier midi d'effectuer une transformation en carton, la transformation commence par la lecture du fichier midi, en fonction de la gamme et de la capacité de l'instrument, certaines notes, percussions ou registres sont convertis en trous.
 
-L' association entre les deux peut être réalisé à la main en script, en parcourant les notes du fichier midi et en créant les trous dans le carton virtuel. Une autre façon plus évoluée et décrite ici permet de créer des associations entre les notes midi et les pistes du cartons, les trous sont alors créés automatiquement en fonction des temps et des longueurs des notes dans le fichier MIDI.
+L'association entre les deux peut être réalisé à la main en script, en parcourant les notes du fichier midi et en créant les trous dans le carton virtuel. Une autre façon plus évoluée et décrite ici permet de créer des associations entre les notes midi et les pistes du carton, les trous sont alors créés automatiquement en fonction des temps et des longueurs des notes dans le fichier MIDI.
 
     // exemple simple de script d'import de fichier midi
     import groovy.aprint.midi.*
