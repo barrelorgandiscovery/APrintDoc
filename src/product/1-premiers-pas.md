@@ -18,7 +18,7 @@ Pour réaliser l'import, le logiciel utilise la définition d'un instrument. Dan
 
 Dans son fonctionnement, plusieurs transformations sont réalisées au préalable, afin de simplifier la récupération.
 
--   **Une première tranformation est donc la fusion de l'ensemble des pistes du fichier MIDI**, ainsi les notes sont reconnues indépendemment de leur organisation dans le fichier MIDI, (cette stratégie donne le plus de résultats)
+-   **Une première transformation est donc la fusion de l'ensemble des pistes du fichier MIDI**, ainsi les notes sont reconnues indépendemment de leur organisation dans le fichier MIDI, (cette stratégie donne le plus de résultats)
 
 -   **La seconde transformation concerne les percussions**, en effet certaines percussions sont décalées par rapport à leur pilotage. Ceci est pris en charge par le logiciel dans la définition de la percussion (retard + longueur fixe).
 
