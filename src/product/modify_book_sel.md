@@ -1,6 +1,6 @@
 # Utiliser la sélection
 
-La barre d'outil d'édition comprends deux outils permettant de sélectionner des trous sur le carton. Cette sélection, permet de supprimer un ensemble de trous (en utilisant la touche "Suppr"), ou utiliser les trous dans un script.
+La barre d'outil d'édition comprend deux outils permettant de sélectionner des trous sur le carton. Cette sélection permet de supprimer un ensemble de trous (en utilisant la touche "Suppr") ou utiliser les trous dans un script.
 
 ![](edit/toolbar_edit.png)
 
@@ -20,7 +20,7 @@ Pour sélectionner un ensemble de trous, utiliser l'outil de sélection.
 
 ## Modifier une sélection
 
-En utilisant les touche "Majuscule" et "Control" du clavier lors de l'action de sélection, il est possible d'unitairement modifier la sélection en ajoutant des trous.
+En utilisant les touches "Majuscule" et "Control" du clavier lors de l'action de sélection, il est possible d'unitairement modifier la sélection en ajoutant des trous.
 
 
 
