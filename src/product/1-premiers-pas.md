@@ -48,4 +48,4 @@ Plusieurs tentatives peuvent être nécessaires pour un bon résultat final.
 
 ### Adaptation des contraintes de l'instrument
 
-Dans le panneau de droite, les contraintes associées à l'instrument (à partir de sa gamme) sont affchées, celles ci peuvent être recalculées au fur et à mesure de la progression du travail.
+Dans le panneau de droite, les contraintes associées à l'instrument (à partir de sa gamme) sont affichées, celles ci peuvent être recalculées au fur et à mesure de la progression du travail.
