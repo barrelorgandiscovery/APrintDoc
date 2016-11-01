@@ -32,7 +32,7 @@ La fenêtre de choix de l'instrument apparaît
 
 ![](pp2.png)
 
-Clickez sur le bouton "Afficher le carton", pour terminer la transformation du fichier MIDI
+Cliquez sur le bouton "Afficher le carton", pour terminer la transformation du fichier MIDI
 
 ![](pp3.png)
 
