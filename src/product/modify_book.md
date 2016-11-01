@@ -42,6 +42,6 @@ Les pistes ont certaines significations, (Basses, Accompagnement, Chant) une inf
 
 ## Attirance magnétique
 
-Lors des opération de modification de trous, il est possible de s'aligner sur les trous environnement. Lorsque la touche "Majuscule" est appuyée, le curseur se magnétise et se cale sur le début des trous situés sur les même timing.
+Lors des opération de modification de trous, il est possible de s'aligner sur les trous environnant. Lorsque la touche "Majuscule" est appuyée, le curseur se magnétise et se cale sur le début des trous situés sur les même timing.
 
 Ceci permet de garantir l'alignement des trous sur un même temps.
