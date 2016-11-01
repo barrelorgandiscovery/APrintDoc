@@ -2,9 +2,9 @@
 Travailler en scripting avec le Scale Helper
 ============================================
 
-Lorsque l'on manipule les fichiers MIDI, que l'on fait des transformations sur les cartons, il est parfois nécessaire de pouvoir travailler sur la définition de la gamme d'un instrument. Le scale helper permet de faire des recherches de notes dans une gamme ou de pistes assez aisement.
+Lorsque l'on manipule les fichiers MIDI, que l'on fait des transformations sur les cartons, il est parfois nécessaire de pouvoir travailler sur la définition de la gamme d'un instrument. Le scale helper permet de faire des recherches de notes dans une gamme ou de pistes assez aisément.
 
-Celui ci permet de gagner beaucoup de temps dans les transformations ou transposition d'un instrument à un autre.
+Celui ci permet de gagner beaucoup de temps dans les transformations ou transpositions d'un instrument à un autre.
 
 Le scale helper est une category groovy ajoutant la propriété helper aux objet "scale" ou gamme. Ci dessous un exemple de mise en oeuvre :
 
@@ -20,7 +20,7 @@ Le scale helper est une category groovy ajoutant la propriété helper aux objet
 
     }
 
-Que peut on alors demander au scale helper ? Si l'instrument possède une définition de partie Basse / Accompagnement / Chant, il est possible d'avoir les informations suivantes :
+Que peut-on alors demander au scale helper? Si l'instrument possède une définition de partie Basse / Accompagnement / Chant, il est possible d'avoir les informations suivantes :
 
 
 Lister les pistes
@@ -40,7 +40,7 @@ Lister les pistes
 
     }
 
-On recupère la définition de la gamme :
+On récupère la définition de la gamme :
 
     >> start script execution
     Track no 0 -> PercussionDef - 35 fixed length : 6.0 retard : 6.0
@@ -99,7 +99,7 @@ On recupère la définition de la gamme :
 
      Script executed in  0: 1:  8 
 
-Décrire les notes des sections de registre
+Décrire les notes des sections de registres
 ------------------------------------------
 
 Dans le cas où l'instrument dispose de section de registres, les informations peuvent être récupérées par section de registres.
@@ -171,7 +171,7 @@ Il est possible de faire des recherches de notes sur la gamme :
 
     }
 
-Diverses autres variantes sont également disponibles pour effectuer des recherches. La fonction track peut prendre en parametre la section de registre :
+Diverses autres variantes sont également disponibles pour effectuer des recherches. La fonction track peut prendre en paramètre la section de registre :
 
     import groovy.aprint.transform.*
     import groovy.aprint.midi.*
