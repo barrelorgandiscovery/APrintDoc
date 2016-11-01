@@ -24,11 +24,11 @@ Dans son fonctionnement, plusieurs transformations sont réalisées au préalabl
 
     ​
 
-    Glissez le fichier midi sur la fenetre principale
+    Glissez le fichier midi sur la fenêtre principale
 
 ![](pp1.png)
 
-La fenetre de choix de l'instrument apparait
+La fenêtre de choix de l'instrument apparaît
 
 ![](pp2.png)
 
