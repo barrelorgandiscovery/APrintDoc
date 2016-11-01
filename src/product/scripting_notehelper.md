@@ -3,7 +3,7 @@
 
 Lorsque l'on manipule les fichiers MIDI ou lorsque l'on évalue un fichier MIDI pour le mettre en carton, on travaille souvent avec les notes en scripting.
 
-Creer une note à partir d'une chaine de caractère.
+Créer une note à partir d'une chaine de caractère.
 
 ```
 import groovy.aprint.midi.*
@@ -15,7 +15,7 @@ use (NoteCategory)
 }
 ```
 
-Créer un tableau de note (une plage de note) à partir de deux notes
+Créer un tableau de notes (une plage de notes) à partir de deux notes
 
 ```
 import groovy.aprint.midi.*
@@ -27,7 +27,7 @@ use (NoteCategory)
 }
 ```
 
-les objets Note peuvent être modifiés avec un ajout de demis tons et moins de demis tons
+les objets Note peuvent être modifiés avec un ajout de demi tons et moins de demi tons
 
 ```
 import groovy.aprint.midi.*
