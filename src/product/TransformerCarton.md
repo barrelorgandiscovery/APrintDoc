@@ -6,9 +6,9 @@ Travailler avec les cartons en scripting
 Introduction
 ------------
 
-Il est frequent de vouloir effectuer des transformations de fichiers midi / ou de cartons d'un instrument à un autre. Le language de scripting d'APrint propose un ensemble de fonctions permettant de largement simplifier ces actions, nous présentons ci dessous des exemples d'utilisation de ces fonctions
+Il est fréquent de vouloir effectuer des transformations de fichiers midi / ou de cartons d'un instrument à un autre. Le langage de scripting d'APrint propose un ensemble de fonctions permettant de largement simplifier ces actions, nous présentons ci dessous des exemples d'utilisation de ces fonctions
 
-    Nous Considérons dans les exemple ci dessous que les actions sont réalisée dans une console de type "Quickscript", donc associée à un carton, et ayant une variable "virtualbook" prédéfinie.
+    Nous considérons dans les exemples ci dessous que les actions sont réalisées dans une console de type "Quickscript", donc associée à un carton et ayant une variable "virtualbook" prédéfinie.
 
 ### Jouer avec la gamme d'un carton pour transformation
 
@@ -153,7 +153,7 @@ use (NoteCategory, ScaleCategory, HoleCategory)
         /*
          Resultat ---------------------------------------------------------
     
-        Liste les pistes de percussion Track no 0 -> PercussionDef - 35 fixed length : 6.0 retard : 6.0
+        Liste des pistes de percussion Track no 0 -> PercussionDef - 35 fixed length : 6.0 retard : 6.0
     Track no 1 -> PercussionDef - 35 fixed length : 6.0 retard : 6.0
     Track no 44 -> PercussionDef - 35 fixed length : 6.0 retard : 6.0
     Track no 45 -> PercussionDef - 81 fixed length : 4.0 retard : 4.0
@@ -185,7 +185,7 @@ use (NoteCategory, ScaleCategory, HoleCategory)
         def t = h.transformFor(ins.scale)
         def d = ins.scale.helper
         
-        // on fait la correspondance entre les basses et les basses trouvées dans le 27/29, en montant d'un demis ton
+        // on fait la correspondance entre les basses et les basses trouvées dans le 27/29, en montant d'un demi ton
     
         def pistesnotesbasse = h.tracks(h.bass.notes, h.bass.name) 
         println "Piste des notes de basse origine : " +  pistesnotesbasse.join("\n")
@@ -220,7 +220,7 @@ use (NoteCategory, ScaleCategory, HoleCategory)
         
         def nonTrouvee = t.map( pistesnotesbasse, d.tracks(notesBasseOrigineDontOnAjouteUnTon as Note[] ,null ))
     
-        def result = t.transform(virtualbook) // on transform le carton, result contient le carton transformé, et la liste des erreurs de transcriptions
+        def result = t.transform(virtualbook) // on transform le carton, result contient le carton transformé et la liste des erreurs de transcriptions
         services.newVirtualBook(result.virtualbook, ins); // affiche le carton dont on a 
         
         println " Erreurs de transcription : " + result.untransposedholes.size()
