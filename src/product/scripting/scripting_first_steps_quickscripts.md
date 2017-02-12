@@ -36,7 +36,7 @@ la fonction appelée retourne une liste contenant tous les trous, les trous sont
 
 <u>Commande :</u>
 
-```
+```groovy
 def c = virtualbook.getHolesCopy()
 print c[0] // on prends le premier
 ```
@@ -59,7 +59,7 @@ pour connaitre les proprietes du trou, vous pouvez utiliser la fonction "dump" :
 
 <u>Commande :</u>
 
-```
+```groovy
 def d = virtualbook.getHolesCopy()
 d[0].dump()
 ```
@@ -86,7 +86,7 @@ Pour accéder aux propriétés il suffit de mentionner son nom.
 
 <u>Commande :</u>
 
-```
+```groovy
 def d = virtualbook.getHolesCopy()
 def n = d[0]
 println n.dump()
@@ -122,7 +122,7 @@ Modifions le debut d'un trou
 
 <u>Commande :</u> 
 
-```
+```groovy
 import groovy.aprint.transform.*
 
 
@@ -143,7 +143,7 @@ use(HoleCategory) {
 
 <u>Resultat :</u>
 
-```
+```t
 >> start script execution
 <org.barrelorgandiscovery.virtualbook.Hole@4983ae77 timestamp=900000 length=100000 piste=44>
 <org.barrelorgandiscovery.virtualbook.Hole@1353d7 timestamp=0 length=100000 piste=44>

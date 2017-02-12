@@ -12,7 +12,7 @@ Il est fréquent de vouloir effectuer des transformations de fichiers midi / ou 
 
 ### Jouer avec la gamme d'un carton pour transformation
 
-```
+```groovy
 import groovy.aprint.transform.*
 import org.barrelorgandiscovery.scale.*
 import org.barrelorgandiscovery.tools.MidiHelper
@@ -39,9 +39,6 @@ use (NoteCategory, ScaleCategory, HoleCategory)
 
     // transpose la liste des notes ... 
     println listeNotes.collect { it + 1 } // [C#4, D4, D#4, E4, F4, F#4, G4, G#4, A4, A#4, B4, C5, C#5, D5, D#5]
-```
-
-​        
 
 
         // liste des pistes du carton 
@@ -146,7 +143,6 @@ use (NoteCategory, ScaleCategory, HoleCategory)
       // Recherche la piste du Do dans les basses : Track no 37 -> NoteDef - 50 - BASSE
 
 
-​      
         println ""
         println "Liste les pistes de percussion " + h.percussionTracks.join("\n")
         
@@ -231,3 +227,4 @@ use (NoteCategory, ScaleCategory, HoleCategory)
     }
 
 
+```
