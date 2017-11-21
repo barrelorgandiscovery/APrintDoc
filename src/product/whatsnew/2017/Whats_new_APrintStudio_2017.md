@@ -1,6 +1,6 @@
 #APrint Studio - 2017
 
-*Patrice Freydiere - Avril 2017*
+*Patrice Freydiere - Novembre 2017*
 
 ![](splash-aprint-studio-2017.jpg)
 
@@ -9,6 +9,8 @@
 Cette version majeure 2017 introduit les fonctionnalités et développements réalisés cette année 2016-2017 ainsi que des évolutions sur des développements initiés en 2016.
 
 APrint Studio 2017 progresse sur la partie récupération de cartons d'origine, et manipulation de transformations sur les cartons. 
+
+Des améliorations sont également réalisées sur l'utilisation quotidienne et occasionnelle.
 
 
 
@@ -25,6 +27,8 @@ Vous trouverez plus d'informations dans l'aide en ligne du logiciel, avec un gui
 ![Reconnaissance de cartons](../../recognition/acces.png)
 
 
+
+Une rubrique d'aide complete dans l'aide, documente l'utilisation de la fonction.
 
 
 
@@ -45,9 +49,35 @@ Cette fonction peut également compléter les fonctions de gestion de marquage e
 
 
 
+### Ajout d'un choix de tempo au cours du jeu
+
+Une fonctionnalité très demandée était de pouvoir régler la vitesse de jeu du carton, ceci est maintenant possible 
+
+![](tempo.png)
+
+La molette située au centre, propose un jeu dans la vitesse de l'instrument, en déplaçant à gauche le curseur il est possible de ralentir le jeu. En déplaçant à droite le curseur, le jeu du carton s'accélère.
+
+
+
+### Nouvel optimiseur pour le perçage
+
+La version 2017 propose une nouvelle méthode d'optimisation, spécialement dédiée au perforation papier. Cette optimisation permet d'éviter un balayement complet de la tête de perforation, en perforant en remontant ou en redescendant.
+
+![](optimizer.png)
+
+Ce choix d'optimisation est une amélioration du 1er optimiseur ("Optimisé en déplacement"), en réduisant les déplacements, donc en accélérant l'opération de perçage.
+
+
+
 
 
 ## Améliorations sur les fonctions existantes
+
+### Simplification de l'interface
+
+L'interface principale a été simplifiée, en enlevant les textes inutiles, améliorant la lisibilité de l'application. L'infobulle permettant la description de la fonction en survol est conservée.
+
+![](simplified_gui.png)
 
 ### Aide en ligne
 
@@ -55,7 +85,11 @@ L'aide en ligne suit les versions des logiciels, avec la documentation et des in
 
 ![](aide_en_ligne.png)
 
+Cette nouvelle interface d'aide, demande un accès internet pour fonctionner.
 
+
+
+## Améliorations - Evolutions
 
 ### Proposition d'accès aux scripts à partir du menu principal
 
@@ -63,6 +97,6 @@ Pour les développeurs, il est possible maintenant de proposer des scripts, dire
 
 ![](extensions_developpement_front.png)
 
-
+pour plus d'information référez vous à la rubrique de développement associées.
 
 ![](aide_creation_script.png)

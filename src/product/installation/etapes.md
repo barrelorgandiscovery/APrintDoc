@@ -57,7 +57,7 @@ En cas de problèmes, vous pouvez résoudre ceux ci en lançant une ligne de com
 Lancez la ligne suivante sur une seule ligne :
 
 ```
-java -Xmx3go -jar -cp aprint.jar org.barrelorgandiscovery.gui.aprintng.APrintApplicationBootStrap
+java -Xmx3go -cp aprint.jar org.barrelorgandiscovery.gui.aprintng.APrintApplicationBootStrap
 ```
 
 

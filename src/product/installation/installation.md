@@ -1,25 +1,19 @@
-# Installation
+# Installation avancée
 
 
-
-APrint Studio contient une installation intégrée pour les version windows, 
-
-
-
-## Installation Avancée
 
 Depuis la version 2017, une option avancées permet de choisir pour l'installation donnée, le répertoire contenant les fichiers utilisateurs
 
 ![](installation.png)
 
-plusieurs usages sont couvert avec cette possibilité :
+plusieurs usages sont couverts avec ce choix de répertoire :
 
-- installation de plusieurs version indépendantes (par exemple, la dernière version et une version utilisée en production).
-- choix de plusieurs configurations
+- Installation de plusieurs versions indépendantes (par exemple, la dernière version et une version utilisée en production).
+- Choix de plusieurs configurations (combinaisons d'instruments).
 
 
 
-### Installation conjointe de plusieures version APrint Studio
+### Installation sur l'ordinateur de plusieures version APrint Studio
 
 Par défaut lors de l'installation APrint Studio, l'ensemble des informations d'instruments, de gammes, et paramétrages sont stockés dans le répertoire `aprintstudio` situé dans le répertoire **utilisateur** (dans c:\users\\[utilisateur]\\aprintstudio pour windows, ou /home/[utilisateur]/aprintstudio)
 
