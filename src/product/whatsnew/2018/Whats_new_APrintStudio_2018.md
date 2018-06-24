@@ -6,7 +6,7 @@
 
 ## Introduction
 
-2018 annonce une maturité sur un ensemble de fonctionnalités, ainsi que quelques nouveautés intéressantes en cours d'évolution. 
+2018 annonce une maturité sur un ensemble de fonctionnalités, ainsi que quelques nouveautés intéressantes en cours d'évolution. Nous innovons toujours autours, ainsi cette version propose une première implémentation du model editor.
 
 Les évolutions et amélioration ont été beaucoup travaillées par Freddy, notamment sur la partie perforation, traduction en allemand, et retours sur l'utilisation. Ainsi nos amis germain pourront utiliser cette version dans leur langue maternelle, et peut être faire des retours sur l'utilisation. Et une bonne maturité sur la partie perçage.
 
@@ -90,6 +90,8 @@ Et toujours une amélioration sur la partie aide en ligne, permettant de simplif
 
 ## Et toujours, de petites améliorations
 
-- le jeu du morceau maintenant se termine de façon moins abrupte
+- Le jeu du morceau maintenant se termine de façon moins abrupte
 - Bouton "refaire", pour permettre de revenir à l'état après annulation
 - Corrections sur la fermetures des fenetres
+- Meilleures métriques sur le perçage de cartons
+- Prise en charge de commandes électrique pour les machines de perforation.
