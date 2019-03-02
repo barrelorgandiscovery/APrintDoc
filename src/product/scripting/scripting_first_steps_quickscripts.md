@@ -10,7 +10,7 @@ Nous allons voir ci dessous les éléments principaux de l'utilisation de cette 
 
 # virtualbook
 
-La variable virtualbook contient le carton en cours de manipulation. on peut alors connaitre sur cet objet :
+La variable virtualbook contient le carton en cours de manipulation. On peut alors connaitre sur cet objet :
 
 - La gamme (Scale)
 - les trous (Hole)

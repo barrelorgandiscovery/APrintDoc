@@ -14,11 +14,19 @@ L'installation est rendue simple sous windows grace à l'installeur. 7 étapes r
 
 Choix des composants additionels (extensions + documentation ..)
 
+
+
 ![](steps/s2.png)
 
 
 
+
+
 ![](steps/s3.png)
+
+
+
+
 
 **Nouveau en version 2017**,  choix du répertoire contenant les fichiers instruments, scripts. Le choix par défaut est le choix habituel de vos fichiers existants. (dans le cas d'une mise à jour). Vous pouvez consulter la rubrique avancée pour plus de détails.
 

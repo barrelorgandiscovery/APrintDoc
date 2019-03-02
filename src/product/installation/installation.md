@@ -4,11 +4,15 @@
 
 Depuis la version 2017, une option avancées permet de choisir pour l'installation donnée, le répertoire contenant les fichiers utilisateurs
 
+
+
 ![](installation.png)
 
-plusieurs usages sont couverts avec ce choix de répertoire :
 
-- Installation de plusieurs versions indépendantes (par exemple, la dernière version et une version utilisée en production).
+
+Plusieurs usages sont couverts avec ce choix de répertoire :
+
+- Installation de plusieurs versions indépendantes côte à côte (par exemple, la dernière version et une version utilisée en production).
 - Choix de plusieurs configurations (combinaisons d'instruments).
 
 
