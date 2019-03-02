@@ -1,4 +1,4 @@
-# APrint Studio - 2018 - aka "Freddy version"
+# APrint Studio - 2018 - "Freddy version"
 
 *Patrice Freydiere - Juin 2018*
 

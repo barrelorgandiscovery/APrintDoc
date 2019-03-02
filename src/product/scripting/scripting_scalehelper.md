@@ -10,14 +10,14 @@ Le scale helper est une category groovy ajoutant la propriété helper aux objet
 
     import groovy.aprint.transform.*
     import groovy.aprint.midi.*
-
+    
     use (ScaleCategory) {
-
+    
         def ins = services.repository.getInstrument("27 / 29 Flutes")
-
+    
         def scaleHelper = ins.scale.helper
-
-
+    
+    
     }
 
 Que peut-on alors demander au scale helper? Si l'instrument possède une définition de partie Basse / Accompagnement / Chant, il est possible d'avoir les informations suivantes :
@@ -28,16 +28,16 @@ Lister les pistes
 
     import groovy.aprint.transform.*
     import groovy.aprint.midi.*
-
-
+    
+    
     use (ScaleCategory) {
-
+    
         def ins = services.repository.getInstrument("52 Limonaire Origine")
-
+    
         def scaleHelper = ins.scale.helper
-
+    
         scaleHelper.tracks.each { println  it.toString() }
-
+    
     }
 
 On récupère la définition de la gamme :
@@ -95,8 +95,8 @@ On récupère la définition de la gamme :
     Track no 49 -> org.barrelorgandiscovery.scale.RegisterCommandStartDef@1f4ba51
     Track no 50 -> org.barrelorgandiscovery.scale.RegisterCommandStartDef@1f45022
     Track no 51 -> org.barrelorgandiscovery.scale.RegisterCommandStartDef@b8fba5
-
-
+    
+    
      Script executed in  0: 1:  8 
 
 Décrire les notes des sections de registres
@@ -106,23 +106,21 @@ Dans le cas où l'instrument dispose de section de registres, les informations p
 
     import groovy.aprint.transform.*
     import groovy.aprint.midi.*
-
-
+    
+    
     use (ScaleCategory, NoteCategory) {
-
+    
         def ins = services.repository.getInstrument("52 Limonaire Origine")
-
+    
         def scaleHelper = ins.scale.helper
-
+    
         scaleHelper.bass.notes.each { println it }
-
+    
         println "liste des pistes :"
-
+    
         scaleHelper.bass.tracks.each { println it }
-​        
-
     }
-
+    
     le resultat de la console affiche :
 
 ​     
@@ -146,8 +144,8 @@ Dans le cas où l'instrument dispose de section de registres, les informations p
     Track no 40 -> NoteDef - 58 - BASSE
     Track no 41 -> NoteDef - 57 - BASSE
     Track no 42 -> NoteDef - 55 - BASSE
-
-
+    
+    
      Script executed in  0: 0:343 
 
 Rechercher une piste associée à une note
@@ -157,36 +155,34 @@ Il est possible de faire des recherches de notes sur la gamme :
 
     import groovy.aprint.transform.*
     import groovy.aprint.midi.*
-
-
+    
+    
     use (ScaleCategory, NoteCategory) {
-
+    
         def ins = services.repository.getInstrument("52 Limonaire Origine")
-
+    
         def scaleHelper = ins.scale.helper
-
-​        
-        scaleHelper.track("C5".note)
-​        
-
+    
+        scaleHelper.track("C5".note)    
+    
     }
 
 Diverses autres variantes sont également disponibles pour effectuer des recherches. La fonction track peut prendre en paramètre la section de registre :
 
     import groovy.aprint.transform.*
     import groovy.aprint.midi.*
-
-
+    
+    
     use (ScaleCategory, NoteCategory) {
-
+    
         def ins = services.repository.getInstrument("52 Limonaire Origine")
-
+    
         def scaleHelper = ins.scale.helper
-
+    
         // recherche d'un note dans la mélodie
         scaleHelper.track("C6".note, scaleHelper.MELODY) // on aurai pu mettre BASS ou ACCOMPAGNMENT, COUNTER_MELODY
-
-
+    
+    
     }
 
 Le résultat de la console affiche :
@@ -196,5 +192,5 @@ Le résultat de la console affiche :
 ​     
 
      Script executed in  0: 0: 63 
-
+    
     >>  Track no 18 -> NoteDef - 72 - CHANT

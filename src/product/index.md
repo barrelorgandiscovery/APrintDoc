@@ -11,11 +11,13 @@ Bienvenue dans l'aide en ligne du programme APrint Studio
 APrint / Studio
 ---------------------------
 
-APrint Studio a été concu comme un **environnement de travail** pour les arrangeurs **d'orgues de barbarie** pour faciliter la **création** et **récupération** de morceaux de musique, il permet entre autres, la vérification de musique vis à vis des capacités des instruments de musique mécanique. Une attention toute particulière est donnée à la simplicité d'utilisation (grand public / amateur / professionnel).
+APrint Studio a été concu comme un **environnement de travail** pour les arrangeurs **d'orgues de barbarie** pour faciliter la **création** et **récupération** de morceaux de musique. Le logiciel permet la vérification de la notation musical en fonction des capacités des instruments de musique mécanique. 
 
-APrint Studio est réalisé en tant que logiciel Libre, permettant aux utilisateurs d'adapter le programme en fonction de leurs besoins. Le code source du programme est accessible dans chaque installation, dans le fichier .jar.
+Une attention toute particulière est donnée à la simplicité d'utilisation (grand public / amateur / professionnel).
 
-Un mécanisme d'extension et de scripts permet d'ajouter facilement des fonctionnalités dans le logiciel sans avoir à connaitre fondamentalement tous les détails du fonctionnement du programme et permettre d'ajouter la ou les fonctions manquante(s) assez simplement.
+APrint Studio est réalisé en tant que **logiciel Libre**, permettant aux utilisateurs d'adapter le programme en fonction de leurs besoins. Le code source du programme est accessible dans chaque installation, dans le fichier .jar (archive ZIP).
+
+Un mécanisme d'extension et de scripts permet de brancher des fonctionnalités dans le logiciel sans avoir à connaitre fondamentalement tous les détails du fonctionnement. Ceci permet d'ajouter la ou les fonctions manquante(s) assez simplement.
 
 
 Concepts
