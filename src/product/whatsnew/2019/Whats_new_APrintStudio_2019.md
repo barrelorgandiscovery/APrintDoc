@@ -1,8 +1,8 @@
-# APrint Studio - 2019 - "XXXXX version"
+# APrint Studio - 2019 - "Jean Pierre version"
 
 *Patrice Freydiere - Janvier 2019*
 
-![](splash-aprint-studio-2018.jpg)
+![](splash-aprint-studio-2019.jpg)
 
 ## Introduction
 

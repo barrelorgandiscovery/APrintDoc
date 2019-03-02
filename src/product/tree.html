@@ -217,16 +217,13 @@
           }
         ]
       },
- {
+      {
         "href": "mdwiki.html#!scripting.md",
           "isFolder":true,
           "text":"Etendre les fonctionnalités",
         "hrefTarget": "content",
         "children": [
-
-    
-
-      {
+         {
         "href": "mdwiki.html#!scripting/scripting.md",
           "isFolder":true,
           "text":"Scripting",
@@ -285,7 +282,7 @@
               "hrefTarget": "content"
             }
           }
-                 ]
+          ]
       },
       {
         "href": "mdwiki.html#!dev.md",
@@ -342,7 +339,45 @@
 </div>
 
 <script>
-    $('#demo2_menu').easytree();
+    // handling the anchor for browsing page
+    function stateChanged(nodes, status) {
+        if (nodes) {
+             // find activated nodes
+           var reducedFunction = function(acc, e) { 
+                        if (e.isActive) {
+                            return [e] ; 
+                        }
+                        if (e.children && e.children.length > 0) {
+                            return acc.concat(e.children.reduce(
+                                        reducedFunction, [])); 
+                        }
+                        return acc;
+               };
+           var sel = nodes.reduce(reducedFunction, []);
+           if (sel && sel.length > 0) {
+               var currentNode = sel[0];
+               var regex = /[#](.*)/g;
+               if (currentNode.href) {
+                   var found = currentNode.href.match(regex);
+                   if (found && found[0] && found[0].startsWith("#!")) {
+                       var page = found[0].substr(2);
+                       console.log(page);
+                       parent.history.pushState({}, "","#" + page);
+                   }
+               }
+           }
+           // parent.location.hash=currentNode.href;
+        }
+        //console.log(status);
+
+    }
+
+    var t = $('#demo2_menu').easytree(
+    {
+        stateChanged: stateChanged
+    });
+
+
 </script>
         
 </body>
