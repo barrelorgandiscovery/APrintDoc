@@ -6,7 +6,7 @@
 
 ## Introduction
 
-APrint 2019, intègre maintenant des fonctionnalités permettant la numérisation de cartons d'orgue.  Ces nouvelles fonctions permettent de pouvoir construire une version numérique d'un carton à partir de prises de vues fixes à intervalles de temps fixes, ou vidéos.
+APrint 2019, intègre maintenant des fonctionnalités permettant la numérisation de cartons d'orgue.  Ces nouvelles fonctions permettent de pouvoir construire une version numérique d'un carton à partir de prises de vues fixes ou vidéos.
 
 
 
@@ -22,47 +22,48 @@ APrint 2019 intègre également de nombreuses améliorations, simplifiant l'util
 
 Une nouvelle extension propose deux options :
 
-- reconstruction d'une image de carton à partir d'images
+- reconstruction d'une image de carton à partir de différentes prises de vues
 
-- prise de vues en utilisant une webcam.
+- la création de prises de vues avec une webcam.
 
 
 ![](scan_01.png)
 
 
 
-La première possibilité, de fusion d'image, permet à partir d'un ensemble d'image, reconstruit une image de carton à partir des différents fragments. 
+La première possibilité de fusion d'images, permet à partir des prises de vues, de reconstruit une image complète du carton. 
 
 ![](scan_02.png)
 
-Une vision interactive permet de régler les différents paramètres, ainsi que de sauvegarder une image unique du carton. Les tranches du cartons sont extraites de l'image d'origine, pour construire une image complète. 
+Une vision interactive permet de régler les différents paramètres, ainsi que de sauvegarder une image unique du carton. 
 
 ![](scan_03.png)
 
-il est alors plus aisé de construite ses propre numérisation et d'obtenir une image complète du carton.
+Il est alors plus aisé de construire une bibliothèque d'images de cartons.
 
 
 
-La seconde option permet de numériser directement des cartons à partir d'une webcam 
+Dans le panneau de l'extension, la seconde option propose une numérisation directe en utilisant une webcam directement connectée à l'ordinateur.
 
 ![](scan_04.png)
 
-L'avancement peut être définit :
+Dans la numérisation, l'avancement du carton peut être réglé sur une base de temps. 
 
- - en fonction du temps
- - en utilisant une machine spéciale utilisant GRBL Punch
-
-
+Si l'ordinateur est connecté à la machine de perforation, il est possible de réutiliser l'avancement automatique de celle ci pour les prises de vues.
 
 
 
 ## Reconnaissance de carton
 
-Pour simplifier les étapes de reconnaissance de carton, l'ergonomie a été améliorée pour simplifier la mise en place de la grille sur le carton, des info bulles permettent la vision des pistes associées.
+Pour simplifier les étapes de reconnaissance de carton, l'ergonomie a été améliorée.  La mise en place de grille sur le vision carton, ainsi que les info bulles associées, permettent de mieux comprendre l'orientation et le calibrage.
 
 ![](rec_01.png)
 
-Le choix du modèle de reconnaissance permet maintenant d'ouvrir la reconnaissance à des modèles spécifiques mis en place par l'utilisateur. Si les choix de modèles proposés en standard ne conviennent pas, cette option permet de réutiliser un modèle de reconnaissance plus adapté au type de support utilisé ou augmenter le taux de reconnaissance.
+
+
+L'outil a été également ouvert pour permettre le choix d'un modèle algorithmique de vision personnalisé.
+
+Cette ouverture, permet de personnaliser et d'améliorer la reconnaissance, dans des cas de prises de vues spécifiques. Ainsi avec cette spécialisation du modèle algorithmique de vision,  les opérations de retouche manuelles sont largement diminuées, voir, supprimées. 
 
 ![](rec_02.png)
 
@@ -76,26 +77,17 @@ De nouvelles améliorations sur le model editor.
 
 
 
-
-
-## Perforations de cartons
-
-
-
-
-
-
-
 ## Aide en ligne
 
-Et toujours une amélioration sur la partie aide en ligne, permettant de simplifier l'utilisation, et servant de référence sur l'utilisation, compréhension du fonctionnement.
+Des améliorations et compléments sur la partie aide en ligne, permettant de simplifier l'utilisation, et servant de référence sur l'utilisation, compréhension du fonctionnement.
 
 
 
-## Et toujours, de petites améliorations
+## Et toujours de petites évolutions ...
 
-- Le jeu du morceau maintenant se termine de façon moins abrupte
-- Bouton "refaire", pour permettre de revenir à l'état après annulation
-- Corrections sur la fermetures des fenetres
-- Meilleures métriques sur le perçage de cartons
-- Prise en charge de commandes électrique pour les machines de perforation. (via GRBL)
+- Le jeu du morceau se termine de façon moins abrupte (la fonction "play")
+- Un nouveau Bouton "refaire", permettre de remettre en place des opérations annulées
+- Des corrections sur la fermeture des fenêtres
+- Meilleures métriques sur le perçage de cartons (évolution sur la fenêtre de perforation)
+- Prise en charge des commandes électriques pour les machines de perforation. (via GRBL)
+  - Utilisation possible de moteurs pas à pas ou électriques dans la performation
