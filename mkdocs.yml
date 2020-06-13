@@ -1,0 +1,58 @@
+nav:
+- Aide en ligne: gindex.md
+- "Nouveaut\xE9s": gwhatsnew/index.md
+- '2019': gwhatsnew/2019/Whats_new_APrintStudio_2019.md
+- '2018': gwhatsnew/2018/Whats_new_APrintStudio_2018.md
+- '2017': gwhatsnew/2017/Whats_new_APrintStudio_2017.md
+- Installation: ginstallation/etapes.md
+- "Installation, param\xE9trage": ginstallation/installation.md
+- "Description des fichiers install\xE9s": ginstallation/description_folder.md
+- Premiers Pas: gdocumentation_utilisateur_welcome.md
+- Ecouter un fichier Midi: g1-premiers-pas.md
+- Piloter des instruments MIDI: g3-piloterinstrumentmidi.md
+- Travailler avec les cartons: gwork_with_books.md
+- Carton Virtuel: gCartonVirtuel.md
+- Modifier / Adjuster un carton: gmodify_book.md
+- "Utiliser la s\xE9lection": gmodify_book_sel.md
+- Exports vers Midi: g2-exportmidi.md
+- Transformation visuelles (Model Editor): gmodeleditor/transformations_visuelles.md
+- Prendre en main le model editor: gmodeleditor/introduction.md
+- Ecrire son processeur: gmodeleditor/write_your_processor.md
+- Documentation sur les processeurs: gmodeleditor/model_step_implementation.md
+- "Num\xE9riser": gnumeriser.md
+- Utiliser une WebCam: gscan/use_webcam.md
+- Construction d'un image du carton: gscan/scanning_books_intro.md
+- Reconnaissance d'une image de carton d'orgue: grecognition/books.md
+- "Cr\xE9er son mod\xE8le de ML": grecognition/training.md
+- Instruments et gammes: gwork_with_books.md
+- "R\xE9cup\xE9rer des instruments existants": ggetinstruments.md
+- Note sur l'enregistrement d'instruments: gCreationInstrument.md
+- "Machines sp\xE9ciales de perforation": gperforation_cartons.md
+- Comment perforer un carton: gkrunch/utilisation_perforatrice.md
+- APrint Commander ou comment perforer sans PC: gaprintcommander/index.md
+- Concepts: gconcepts_introduction.md
+- Gestion des instruments: grepositories.md
+- Carton Virtuel: gCartonVirtuel.md
+- "Etendre les fonctionnalit\xE9s": gscripting.md
+- Scripting: gscripting/scripting.md
+- Scripting Groovy: gscripting/scripting_groovy.md
+- Premiers pas avec le scripting: gscripting/scripting_first_steps_quickscripts.md
+- "Cr\xE9er une extension principale en script": gscripting/extension_principale.md
+- Scripts midi: gscripting/scripting_midiscripts.md
+- Note Helper: gscripting/scripting_notehelper.md
+- Scale Helper: gscripting/scripting_scalehelper.md
+- Transformer un carton: gscripting/TransformerCarton.md
+- "Creer une fen\xEAtre": gscripting/scripting_gui.md
+- "Scripting \xE9tendu avec Java": gscripting/scripting_extended_using_java.md
+- Developpement en Java: gdev.md
+- Choix dans le developpement du logiciel: gTechnology.md
+- "D\xE9veloppement d'extensions": gdev-extension.md
+- "D\xE9veloppement d'extensions d'import / transformation de carton": gdev-extension-import.md
+- API Reference: greferenceapi.md
+plugins:
+- search
+#- pdf-export:
+#    combined: true
+site_name: APrint Documentation
+theme:
+  name: material
