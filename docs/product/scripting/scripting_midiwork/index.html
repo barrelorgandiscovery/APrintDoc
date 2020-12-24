@@ -1,0 +1,1331 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="APrint Studio documentation utilisateur">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.2">
+    
+    
+      
+        <title>Scripting midiwork - APrint Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.73f7c429.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.39b8e14a.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#travailler-avec-les-fichiers-midi-en-scripts" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="APrint Documentation" class="md-header-nav__button md-logo" aria-label="APrint Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            APrint Documentation
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              Scripting midiwork
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="APrint Documentation" class="md-nav__button md-logo" aria-label="APrint Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    APrint Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" >
+    
+    <label class="md-nav__link" for="nav-1">
+      Nouveautés
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Nouveautés" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon"></span>
+        Nouveautés
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../whatsnew/" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../whatsnew/2019/Whats_new_APrintStudio_2019/" class="md-nav__link">
+      2019
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../whatsnew/2018/Whats_new_APrintStudio_2018/" class="md-nav__link">
+      2018
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../whatsnew/2017/Whats_new_APrintStudio_2017/" class="md-nav__link">
+      2017
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+    
+    <label class="md-nav__link" for="nav-2">
+      Installation
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Installation" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Installation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/download/" class="md-nav__link">
+      Récupérer les fichiers d'installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/etapes/" class="md-nav__link">
+      Windows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/installation/" class="md-nav__link">
+      Installation, paramétrage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/description_folder/" class="md-nav__link">
+      Description des fichiers installés
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+    
+    <label class="md-nav__link" for="nav-3">
+      Premiers Pas
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Premiers Pas" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Premiers Pas
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../1-premiers-pas/" class="md-nav__link">
+      Utiliser un fichier Midi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../3-piloterinstrumentmidi/" class="md-nav__link">
+      Piloter des instruments MIDI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../work_with_books/" class="md-nav__link">
+      Travailler avec les cartons
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+    
+    <label class="md-nav__link" for="nav-4">
+      Carton Virtuel
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Carton Virtuel" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Carton Virtuel
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../modify_book/" class="md-nav__link">
+      Modifier / Adjuster un carton
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../modify_book_sel/" class="md-nav__link">
+      Utiliser la sélection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../2-exportmidi/" class="md-nav__link">
+      Exports vers Midi
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+    
+    <label class="md-nav__link" for="nav-5">
+      Transformation interactives (Model Editor)
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Transformation interactives (Model Editor)" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        Transformation interactives (Model Editor)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../modeleditor/transformations_visuelles/" class="md-nav__link">
+      Model Editor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../modeleditor/introduction/" class="md-nav__link">
+      Prendre en main le model editor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../modeleditor/write_your_processor/" class="md-nav__link">
+      Ecrire son processeur
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../modeleditor/model_step_implementation/" class="md-nav__link">
+      Documentation sur les processeurs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" >
+    
+    <label class="md-nav__link" for="nav-6">
+      Numériser
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Numériser" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon"></span>
+        Numériser
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../numeriser/" class="md-nav__link">
+      Numeriser un carton
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../scan/use_webcam/" class="md-nav__link">
+      Utiliser une WebCam
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../scan/scanning_books_intro/" class="md-nav__link">
+      Construction d'un image du carton
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../recognition/books/" class="md-nav__link">
+      Reconnaissance d'une image de carton d'orgue
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../recognition/training/" class="md-nav__link">
+      Créer son modèle de ML
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" >
+    
+    <label class="md-nav__link" for="nav-7">
+      Instruments et gammes
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Instruments et gammes" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon"></span>
+        Instruments et gammes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../getinstruments/" class="md-nav__link">
+      Récupérer des instruments existants
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../CreationInstrument/" class="md-nav__link">
+      Note sur l'enregistrement d'instruments
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" >
+    
+    <label class="md-nav__link" for="nav-8">
+      Machines spéciales de perforation
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Machines spéciales de perforation" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon"></span>
+        Machines spéciales de perforation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../perforation_cartons/" class="md-nav__link">
+      Perforer un carton
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../krunch/utilisation_perforatrice/" class="md-nav__link">
+      Comment perforer un carton
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../aprintcommander/" class="md-nav__link">
+      APrint Commander ou comment perforer sans PC
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" >
+    
+    <label class="md-nav__link" for="nav-9">
+      Concepts
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Concepts" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        <span class="md-nav__icon md-icon"></span>
+        Concepts
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../CartonVirtuel/" class="md-nav__link">
+      Carton Virtuel
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../concepts_introduction/" class="md-nav__link">
+      Comprendre le logiciel
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../repositories/" class="md-nav__link">
+      Gestion des instruments
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10" >
+    
+    <label class="md-nav__link" for="nav-10">
+      Etendre les fonctionnalités
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Etendre les fonctionnalités" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        <span class="md-nav__icon md-icon"></span>
+        Etendre les fonctionnalités
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../scripting/" class="md-nav__link">
+      Scripting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../scripting_groovy/" class="md-nav__link">
+      Scripting Groovy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../scripting_first_steps_quickscripts/" class="md-nav__link">
+      Premiers pas avec le scripting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../extension_principale/" class="md-nav__link">
+      Créer une extension principale en script
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../scripting_midiscripts/" class="md-nav__link">
+      Scripts midi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../scripting_notehelper/" class="md-nav__link">
+      Note Helper
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../scripting_scalehelper/" class="md-nav__link">
+      Scale Helper
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../TransformerCarton/" class="md-nav__link">
+      Transformer un carton
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../scripting_gui/" class="md-nav__link">
+      Creer une fenêtre
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../scripting_extended_using_java/" class="md-nav__link">
+      Scripting étendu avec Java
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11" >
+    
+    <label class="md-nav__link" for="nav-11">
+      Developpement sur le logiciel
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Developpement sur le logiciel" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        <span class="md-nav__icon md-icon"></span>
+        Developpement sur le logiciel
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../dev/" class="md-nav__link">
+      Developpement Java
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../Technology/" class="md-nav__link">
+      Choix dans le developpement du logiciel
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../dev-extension/" class="md-nav__link">
+      Développement d'extensions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../dev-extension-import/" class="md-nav__link">
+      Développement d'extensions d'import / transformation de carton
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../referenceapi/" class="md-nav__link">
+      API Reference
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lire-un-fichier-midi-en-scripting" class="md-nav__link">
+    Lire un fichier midi en scripting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manipulation-du-fichier-midi" class="md-nav__link">
+    Manipulation du fichier midi ...
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enregistrement-du-fichier-midi" class="md-nav__link">
+    Enregistrement du fichier midi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outils-supplementaires-pour-la-manipulation-des-fichiers-midi" class="md-nav__link">
+    Outils supplémentaires pour la manipulation des fichiers midi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aller-plus-loin-dans-lutilisation-fine-midi-a-partir-de-lapi-standard-java" class="md-nav__link">
+    Aller plus loin dans l'utilisation fine Midi à partir de l'API Standard Java
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="travailler-avec-les-fichiers-midi-en-scripts">Travailler avec les fichiers midi en scripts</h1>
+<h2 id="introduction">Introduction</h2>
+<p>L'Environnement groovy permet de travailler sur le contenu des fichiers midi. Cette manipulation de fichier midi permet de retravailler le contenu des fichiers midi et de mieux les adapter aux capacités de l'orgue de barbarie.</p>
+<p>En effet, certains fichiers midi sont utilisés comme "commande" pour piloter des instruments midifiés, par exemple certaines notes ou évènements n'ont rien à voir avec la musique elle-même mais plus sur des commandes ayant été câblées sur des notes de musique.</p>
+<p>La notion de carton virtuel est donc ici pour permettre une description adaptée de la musique avec les notions prises en charge par les instruments d'orgue de barbarie (registres, percussions etc ..)</p>
+<p>Deux approches sont disponibles avec le logiciel :</p>
+<ul>
+<li>Transformer le fichier midi en carton virtuel</li>
+<li>Transformer le fichier midi pour un autre instrument</li>
+</ul>
+<p>Nous présenterons dans la suite, la méthode simplifiée, le dernier chapitre précisera comment revenir à une utilisation plus rigoureuse du fichier midi.</p>
+<h3 id="lire-un-fichier-midi-en-scripting">Lire un fichier midi en scripting</h3>
+<p>Un ensemble d'objets permet de lire et d'écrire le contenu d'un fichier midi de façon simplifiée, ces outils simplifiés ne donne pas accès à l'ensemble des possibilités du midi mais permettent de couvrir beaucoup de cas d'utilisation.</p>
+<p>L'objet <strong>MidiFileIO</strong> du package <strong>org.barrelorgandiscovery.virtualbook.transformation.importer</strong> permet d'effectuer des lectures et écritures de fichiers midi</p>
+<p>la méthode "<strong>read</strong>" permet la lecture du fichier midi.</p>
+<pre><code>import org.barrelorgandiscovery.virtualbook.transformation.importer.*
+
+def folder = new File("C:\\Documents and Settings\\pfr\\midi")
+
+def fichier_original = "A tous les filles.mid"
+
+def m = MidiFileIO.read(new File(folder, fichier_original))
+
+-- ou directement avec les noms de répertoires / fichiers --
+
+def m = MidiFileIO.read(new File("c:\\mes documents\\midi.mid"))
+</code></pre>
+<p>Le script ci dessus retourne dans la variable <strong>m</strong> un objet <strong>MidiFile</strong> contenant la liste des éléments du fichier midi</p>
+<p>ci dessous le résultat de la console après exécution du programme</p>
+<pre><code>&gt;&gt; start script execution
+
+
+ Script executed in  0:10:828
+
+&gt;&gt;  MidiFile 
+MidiNote piste:0, Channel : 15Timestamp:80645Note Midi:0Longueur:173387
+MidiNote piste:0, Channel : 15Timestamp:673387Note Midi:0Longueur:173387
+MidiNote piste:0, Channel : 15Timestamp:782258Note Midi:4Longueur:153225
+MidiNote piste:0, Channel : 15Timestamp:842741Note Midi:121Longueur:96775
+MidiNote piste:0, Channel : 15Timestamp:875000Note Midi:122Longueur:68548
+MidiNote piste:0, Channel : 15Timestamp:907258Note Midi:116Longueur:96774
+MidiNote piste:0, Channel : 4Timestamp:967742Note Midi:100Longueur:112903
+MidiNote piste:0, Channel : 6Timestamp:967742Note Midi:93Longueur:120967
+MidiNote piste:0, Channel : 6Timestamp:967742Note Midi:88Longueur:125000
+MidiNote piste:0, Channel : 15Timestamp:782258Note Midi:13Longueur:370967
+MidiNote piste:0, Channel : 15Timestamp:782258Note Midi:14Longueur:379032
+MidiNote piste:0, Channel : 15Timestamp:778225Note Midi:12Longueur:383065
+MidiNote piste:0, Channel : 4Timestamp:1088709Note Midi:90Longueur:76613
+MidiNote piste:0, Channel : 15Timestamp:842741Note Midi:6Longueur:322581
+MidiNote piste:0, Channel : 6Timestamp:1169354Note Midi:92Longueur:72581
+MidiNote piste:0, Channel : 4Timestamp:1209677Note Midi:93Longueur:120968
+MidiNote piste:0, Channel : 4Timestamp:1209677Note Midi:98Longueur:125000
+MidiNote piste:0, Channel : 4Timestamp:1209677Note Midi:102Longueur:125000
+MidiNote piste:0, Channel : 1Timestamp:967742Note Midi:38Longueur:463709
+MidiNote piste:0, Channel : 15Timestamp:1391129Note Midi:117Longueur:96774
+......
+</code></pre>
+<p>L'environnement de script affiche le contenu de l'objet MidiFile retourné</p>
+<h3 id="manipulation-du-fichier-midi">Manipulation du fichier midi ...</h3>
+<p>l'objet MidiFile est une collection d'objets <strong>MidiNote</strong> qui peut être manipulée directement.</p>
+<p>exemple de parcours de la liste des notes</p>
+<pre><code>m.each {
+
+    println "Note : " +  it.midiNote + " Channel : " + it.channel + " track : " + it.track + " debut : " + it.timeStamp + " longueur : " + it.length
+}
+</code></pre>
+<p>On parcourt ici l'ensemble des notes, en affichant le code midi, le "channel" de restitution et le track, le timing de début de la note (timestamp) en microsecondes et la longueur de la note en microsecondes.</p>
+<p>Les propriétés de chaque note peuvent être modifiées comme suit.</p>
+<pre><code>m.each {
+
+    it.midiNote = it.midiNote + 12
+
+}
+</code></pre>
+<p>Ici nous rajoutons une octave à chaque note (une octave est constituée de 12 demi tons)</p>
+<h3 id="enregistrement-du-fichier-midi">Enregistrement du fichier midi</h3>
+<p>une fois l'objet <strong>MidiFile</strong> modifié, il est possible de l'enregistrer. La méthode "<strong>write_midi_0</strong>" de l'objet <strong>MidiFileIO</strong> permet d'enregistrer le résultat dans un fichier midi au format Midi 0</p>
+<pre><code>def m = MidiFileIO.read(new File(folder, fichier_original))
+
+m.each {
+
+
+    it.midiNote = it.midiNote + 12
+
+}
+
+MidiFileIO.write_midi_0(m, new File("c:\\monnouveaufichier.mid"))
+</code></pre>
+<p>Le fichier "<strong>monnouveaufichier.mid</strong>" a été sauvegardé.</p>
+<h3 id="outils-supplementaires-pour-la-manipulation-des-fichiers-midi">Outils supplémentaires pour la manipulation des fichiers midi</h3>
+<p>D'autres outils sont disponibles pour faciliter la manipulation de fichiers midi.</p>
+<p>La classe <strong>MidiHelper</strong> permet de faciliter la manipulation des notes</p>
+<p>Ci dessous un exemple d'utilisation des différentes méthodes :</p>
+<pre><code>import org.barrelorgandiscovery.tools.*
+
+println "getMidiNote :" + MidiHelper.getMidiNote(34)
+
+println "midiLibelle :" + MidiHelper.midiLibelle(34)
+
+println "midiCode " + MidiHelper.midiCode("C#3")
+
+println "getOctave " + MidiHelper.getOctave(35)
+</code></pre>
+<p>L'exécution de ce script retourne :</p>
+<pre><code>&gt;&gt; start script execution
+getMidiNote :A#
+midiLibelle :A#2
+midiCode 37
+getOctave 2
+
+
+ Script executed in  0: 0: 47
+&gt;&gt;  (null) returned from evaluation
+</code></pre>
+<h3 id="aller-plus-loin-dans-lutilisation-fine-midi-a-partir-de-lapi-standard-java">Aller plus loin dans l'utilisation fine Midi à partir de l'API Standard Java</h3>
+<p>L'environnement Java contient un modèle objet associé à l'utilisation des fichiers midi, ceci est porté par le package javax.sound.midi. Des exemples sont disponibles dans le javadoc associé à l'API Java</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.08c56446.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.8c7e0a7e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
