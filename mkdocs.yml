@@ -9,6 +9,7 @@ nav:
 #- Aide en ligne: product/index.md
 - "Nouveaut\xE9s": 
   - 'Introduction': product/whatsnew/index.md
+  - '2020': product/whatsnew/2020/Whats_new_APrintStudio_2020_q2.md
   - '2019': product/whatsnew/2019/Whats_new_APrintStudio_2019.md
   - '2018': product/whatsnew/2018/Whats_new_APrintStudio_2018.md
   - '2017': product/whatsnew/2017/Whats_new_APrintStudio_2017.md
@@ -19,6 +20,7 @@ nav:
     #  - "Linux": 
   - "Installation, param\xE9trage": product/installation/installation.md
   - "Description des fichiers install\xE9s": product/installation/description_folder.md
+  - "Lancement manuel en ligne de commande": product/installation/lancement_manuel_application.md
 - Premiers Pas: 
   - Utiliser un fichier Midi: product/1-premiers-pas.md
   - Piloter des instruments MIDI: product/3-piloterinstrumentmidi.md
@@ -41,6 +43,7 @@ nav:
 - Instruments et gammes: 
   - "R\xE9cup\xE9rer des instruments existants": product/getinstruments.md
   - Note sur l'enregistrement d'instruments: product/CreationInstrument.md
+  - Utilisation de l'éditeur d'instruments: product/UtilisationEditeurInstrument.md
 - "Machines sp\xE9ciales de perforation": 
   - Perforer un carton: product/perforation_cartons.md
   - Comment perforer un carton: product/krunch/utilisation_perforatrice.md
