@@ -1,6 +1,0 @@
-
-== first document
-
-this a first document to test the gradle build process
-
-
