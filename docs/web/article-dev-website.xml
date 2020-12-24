@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<page>
+	<head>
+		<meta xml:lang="fr" name="keywords" content="article,web,xml,xsl,gestion site web multilingue,statique,xslproc"/>
+		<meta xml:lang="en" name="keywords" content="article,web,xml,xsl,managing multiligue site,static,xmlproc"/>
+		<link href="../site.css" type="text/css" media="screen" rel="StyleSheet"/>
+		<title xml:lang="fr">Mise en place du site multiligue</title>
+		<title xml:lang="en">Internationalized web site</title>
+	</head>
+	<body>
+		<a href="articles.html">
+			<span xml:lang="fr">
+[Retour]</span>
+			<span xml:lang="en">
+[Back]</span>
+		</a>
+		<br/>
+		<h1 xml:lang="fr">Mise en place du site multiligue
+		</h1>
+		<h1 xml:lang="en">Internationalized web site
+		</h1>
+		<p xml:lang="fr">Ce site est géré en deux langues Anglais et Français, je souhaitais ne pas avoir à gérer avec un language dynamique cette gestion, et souhaitais avoir dans une même page les différentes traduction
+		un système simple a été utilisé ici, le XML, permettant par application d'un XSL de générer les pages dans les différentes langue. Ceci pour avoir un 
+		même contenu décliné en plusieures languages. Vous trouverez ci dessous les éléments utilisés pour cela
+		</p>
+		<p xml:lang="en">This site is maintained in two languages: French and English, i wished not having to manage it with a dynamic language (php, ...) and wish to have the two languages in the same page to maintain it more easily.
+		In this case, a simple solution has been used : XML. With a XSL stylesheet i can filter the language. The xml offer also to ease the manipulation of the content by bots (robots) for automatic translation by google or babelfish.
+		</p>
+		
+		<h2 xml:lang="fr">Arborescence du site
+		</h2>
+		<h2 xml:lang="en">Web site organisation
+		</h2>
+		
+		<p xml:lang="fr">L'arborescence du site est très simple, des sous répertoire /en et /fr sont créé pour les pages dans les
+		 langues données (anglais et français). les images ou les éléments communs sont mis dans un répertoire dédié (/common)
+		</p>
+		<p xml:lang="en">The organisation is simple, two subfolder are used for the localized pages (/en fo english, /fr for french). Common items are put in
+		the /common subfolder.
+		</p>
+		
+		<h2 xml:lang="fr">Définition du contenu dans un fichier XML
+		</h2>
+		<h2 xml:lang="en">Content definition in an XML file
+		</h2>
+
+		<p xml:lang="fr">Le contenu de chaque page est un fichier XML utilisant principalement le format XHTML. (un HTML xmlisé)
+, ci dessous un exemple de page XML utilisé
+		</p>
+		<p xml:lang="en">Each page is written in an xml file (using editix) this xml is in XHTML format.
+		</p>
+		
+		<p xml:lang="en"> The attribute xml:lang is used to specified the language of the content.
+		</p>
+
+		<p xml:lang="fr"> L'attribut xml:lang est utilisé pour spécifier sur les balises la langue du contenu.
+		</p>
+				
+		
+<p xml:lang="fr">Ci dessous, un exemple de page définie en XML ...
+		
+</p>
+
+		
+<p xml:lang="en">Here is an example of an XML page :
+		
+</p>
+		
+		<pre>
+<![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<page>
+<head>
+
+<title xml:lang="fr">Informations sur le développement de l'application</title>
+<title xml:lang="en">Information about APrint development</title>
+
+<meta xml:lang="en" name="keywords"
+	content="dev,progress,aprint,news,road map, improvements" />
+<meta xml:lang="fr" name="keywords"
+	content="developpement,logiciel,aprint,nouvelles,plan de développement,améliorations" />
+	
+	
+</head>
+
+<body>
+
+<a href="aprint.html"> <span xml:lang="fr">
+[Retour]</span> <span xml:lang="en">[Back]
+</span></a>
+
+<h1 xml:lang="fr">Information sur le développement du logiciel</h1>
+<h1 xml:lang="en">Information about the software development</h1>
+
+<h2 xml:lang="fr">Où en somme nous, le travail déja réalisé</h2>
+
+<h2 xml:lang="en">Where are we and the work done</h2>
+
+<p xml:lang="fr">APrint a beaucoup évolué. Il contient maintenant un ensemble de
+composants permettant de résoudre des problematiques associées aux orgues
+de barbarie / boites à musique</p>
+
+<p xml:lang="en">APrint has a lot evolved. it now contains a lot of components that permit to solve common domain related issues.</p>
+
+<p xml:lang="fr">Une attention particuliére a été portée sur l'architecture pour
+permettre un réutilisation simple des différents composants</p>
+
+<p xml:lang="en">A Special attention has been the main concern for the component usage in several contexts</p>
+
+<p xml:lang="fr">Ce framework est toujours en évolution.</p>
+<p xml:lang="en">This framework is still in constant evolution</p>
+
+
+<h3 xml:lang="fr">Documentation des composants du logiciel</h3>
+<h3 xml:lang="en">Components Documentation</h3>
+
+
+<p xml:lang="fr">
+La page
+<a href="javadoc/index.html">Javadoc</a>
+décrit l'ensemble des composants du framework, et la documentation développeur 
+associée.
+
+</p>
+
+
+<p xml:lang="en">
+this page :
+<a href="javadoc/index.html">Javadoc</a>
+describe the components and the developper associated documentation.
+
+</p>
+
+
+<h3 xml:lang="fr">APrint source</h3>
+
+<h3 xml:lang="en">APrint software source</h3>
+
+
+<p xml:lang="fr">Vous pouvez télécharger les sources du logiciel à cette <a
+	href="src.zip">page</a>. Les sources vous permettent de pouvoir
+adapter, modifier et faire evoluer le logiciel à votre guise.</p>
+
+<p xml:lang="en">You can download the software source at this pointer <a
+	href="src.zip">pointer to the sources</a>. The sources permit you to see, learn and adapt the software to your own usage.</p>
+
+
+<p xml:lang="fr">Si vous souhaitez contribuer plus précisement sur le logiciel,
+contactez nous pour voir un accès à la forge d'APrint</p>
+
+<p xml:lang="en">If you wish to contribute, please contact us to have a source forge access.</p>
+
+
+<h2 xml:lang="fr">Propositions pour les version futures d'APrint</h2>
+
+<h2 xml:lang="en">Proposal for the future version of APrint</h2>
+
+
+<p xml:lang="fr">Toujours en cours d'évolution :-)</p>
+<p xml:lang="en">Still in constant evolution :-)</p>
+
+<h3 xml:lang="fr">Objectifs du logiciel</h3>
+<h3 xml:lang="en">Software goals</h3>
+
+<p xml:lang="fr">APrint a deux utilisations principales :
+<ul>
+	<li>pour des non musiciens qui souhaitent découvrir d'anciens
+	instruments, ou des morceaux de musique pouvant être sur carton.</li>
+	<li>pour les spécialistes qui souhaitent pouvoir travailler sur le
+	rendu, l'arrangement des cartons</li>
+</ul>
+</p>
+
+
+<p xml:lang="en">APrint has two main usage :
+<ul>
+	<li>one for the non musician who wish to discover old instruments of pieces of music that could be barrelized</li>
+	<li>fo specialists, who wish to have a more precise opinion on the arrangement</li>
+</ul>
+</p>
+
+
+<p xml:lang="fr">Nous souhaitons que APrint reste simple d'utilisation, et
+efficace dans l'utilisation. (Ce qui ne veux pas dire simpliste !). Des
+extensions à APrint ont été développées pour permettre l'evaluation de
+transposition d'un carton sur un autre instrument, perçer le carton avec
+des machines spéciales, et ajouter d'autres fonctionnalités évoluées.</p>
+
+
+<p xml:lang="en">We want aprint to be simple to use, and efficient. Some application extension have been setup to permit add and test new functionnalities.</p>
+
+
+
+<h3 xml:lang="fr">Amélioration du logiciel</h3>
+<h3 xml:lang="en">Software improvements</h3>
+
+
+
+<p xml:lang="fr">APrint peut évoluer et s'améliorer sur pas mal de points
+(nécessitant des compétences différentes, sans être développeur
+informatique).</p>
+
+<p xml:lang="en">APrint can evolve and be improved on lot of points. (needing several skills without being a developper)</p>
+
+<ul xml:lang="fr">
+	<li>Nous aider dans la mise en place d'instruments (créer les
+	fichiers de gammes, enregistrer des instruments)</li>
+	<li>Concevoir et proposer des fonctionnalités intéressantes pour
+	les utilisateurs (sous formes d'extensions, ou ajoutée au logiciel
+	standard), des documents, dessins peuvent grandement aider à la
+	conception, choix des fonctionnalités :-)</li>
+	<li>Dessiner des logos, images, travailler sur le site web</li>
+	<li>En traduisant le logiciel dans différentes langues (une fonctionnalités permettant la traduction a été intégrée dans la dernière version beta)</li>
+</ul>
+
+<ul xml:lang="en">
+	<li>create your instrument, by recording the samples, builing the instrument</li>
+	<li>Design and manage functionnalities, (plugins or included in the software), tests or software validation ..</li>
+	<li>Design the graphical rendering of the web site of the software.</li>
+	<li>Translate the software in several languages, a specific functionnality has been included in the latest beta version</li>
+</ul>
+
+</body>
+</page>
+]]>
+		
+		</pre>
+		
+		
+		<h2 xml:lang="fr">Fichier XSL
+		</h2>
+		<h2 xml:lang="en">XSL
+ File
+		</h2>
+
+		<p xml:lang="fr">Le fichier XSL associé est mis en place pour filtrer les balises des langues différentes, et rajouter quelques éléments globaux aux pages (feuilles de styles CSS, ... etc)
+. La feuille
+		de style prend un paramètre language qui sera spécifié lors de la création de la page HTML pour la génération de la page dans la langue définie
+		</p>
+		
+
+		<p xml:lang="en">The XSL file is put in place for filtering the localized elements in the XML,  the XSL take a "language" parameter for the XSL processor to filter the content.
+		here is the XSL file i used for the rendering ...</p>
+
+
+		
+		
+		
+<pre>
+<![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	<xsl:param name="language"/>
+	
+	<xsl:output method="html" encoding="UTF-8"/>
+
+	<xsl:template match="page">
+	<html>
+		<xsl:apply-templates/>
+	</html>
+	</xsl:template>
+	
+	<xsl:template match="head">
+		<head>
+			<!-- Adding the style sheet -->
+			<meta name="robots" content="all, index, follow" />
+			<meta name="revisit-after" content="14 days" />
+
+			<link href="../site.css" type="text/css" media="screen" rel="StyleSheet" />
+
+			<xsl:apply-templates/>
+		</head>
+	</xsl:template>
+	
+	
+	<xsl:template match="localizedlink">
+		<a>
+		<xsl:copy-of select="attribute::*[name()!='xml:lang']"/>
+		<xsl:apply-templates/>
+		</a>	
+	</xsl:template>
+	
+	<xsl:template match="*">
+	<xsl:choose>
+	<xsl:when test="@xml:lang = $language ">
+		<xsl:copy>
+		<xsl:copy-of select="attribute::*[name()!='xml:lang']"/>
+		  <xsl:apply-templates/>
+		</xsl:copy>
+	</xsl:when>
+	
+	<xsl:when test="@xml:lang">
+	</xsl:when>
+	
+	<xsl:otherwise>
+	<xsl:copy>
+		  <xsl:copy-of select="@*">  </xsl:copy-of>  <xsl:apply-templates/>
+		</xsl:copy>
+	</xsl:otherwise>
+	
+	</xsl:choose>
+	
+	</xsl:template>
+
+</xsl:stylesheet>
+	]]>	
+		
+</pre>
+		
+		
+		<h2 xml:lang="fr">Création des fichier html propres aux différentes langues
+		</h2>
+		
+		<h2 xml:lang="en">Command line for creating the html files in the /en and /fr folders ...
+		</h2>
+		
+		
+		<p xml:lang="fr">Pour la création des fichiers html, l'outil XSLPROC est utilisé (disponible sur windows et d'autres plateformes). un fichier de script lance la transformation pour les différentes languages.
+		</p>
+		
+		
+		<p xml:lang="en">We use XSLPROC to create the final html files. a command file is used to create all the html files. here is the command line ...
+		</p>
+		
+		
+		
+<pre>
+<![CDATA[path tools\bin;%PATH%
+
+xsltproc --stringparam language "en" --output web_output\en\aprint.html web\base.xsl web\aprint.xml
+xsltproc --stringparam language "fr" --output web_output\fr\aprint.html web\base.xsl web\aprint.xml
+
+xsltproc --stringparam language "en" --output web_output\en\articles.html web\base.xsl web\articles.xml
+xsltproc --stringparam language "fr" --output web_output\fr\articles.html web\base.xsl web\articles.xml
+
+
+xsltproc --stringparam language "en" --output web_output\en\dev.html web\base.xsl web\dev.xml
+xsltproc --stringparam language "fr" --output web_output\fr\dev.html web\base.xsl web\dev.xml
+
+xsltproc --stringparam language "en" --output web_output\en\article-creationinstrument.html web\base.xsl web\article-creationinstrument.xml
+xsltproc --stringparam language "fr" --output web_output\fr\article-creationinstrument.html web\base.xsl web\article-creationinstrument.xml
+
+xsltproc --stringparam language "en" --output web_output\en\dev-virtualbook-rfc.html web\base.xsl web\dev-virtualbook-rfc.xml
+xsltproc --stringparam language "fr" --output web_output\fr\dev-virtualbook-rfc.html web\base.xsl web\dev-virtualbook-rfc.xml
+
+xsltproc --stringparam language "en" --output web_output\en\doc.html web\base.xsl web\doc.xml
+xsltproc --stringparam language "fr" --output web_output\fr\doc.html web\base.xsl web\doc.xml
+
+xsltproc --stringparam language "en" --output web_output\en\contributeurs.html web\base.xsl web\contributeurs.xml
+xsltproc --stringparam language "fr" --output web_output\fr\contributeurs.html web\base.xsl web\contributeurs.xml
+
+xsltproc --stringparam language "en" --output web_output\en\article-uninstall.html web\base.xsl web\article-uninstall.xml
+xsltproc --stringparam language "fr" --output web_output\fr\article-uninstall.html web\base.xsl web\article-uninstall.xml
+
+xsltproc --stringparam language "en" --output web_output\en\article-pdf-printing.html web\base.xsl web\article-pdf-printing.xml
+xsltproc --stringparam language "fr" --output web_output\fr\article-pdf-printing.html web\base.xsl web\article-pdf-printing.xml
+
+xsltproc --stringparam language "en" --output web_output\en\article-dev-website.html web\base.xsl web\article-dev-website.xml
+xsltproc --stringparam language "fr" --output web_output\fr\article-dev-website.html web\base.xsl web\article-dev-website.xml
+
+pause	
+]]>
+		
+		
+</pre>
+		
+		
+	</body>
+</page>

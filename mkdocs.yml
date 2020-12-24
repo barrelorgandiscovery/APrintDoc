@@ -1,0 +1,72 @@
+site_name: APrint Documentation
+site_description: APrint Studio documentation utilisateur
+site_dir: docs
+theme:
+  name: material
+use_directory_urls: true
+docs_dir: 'src'
+nav:
+#- Aide en ligne: product/index.md
+- "Nouveaut\xE9s": 
+  - 'Introduction': product/whatsnew/index.md
+  - '2019': product/whatsnew/2019/Whats_new_APrintStudio_2019.md
+  - '2018': product/whatsnew/2018/Whats_new_APrintStudio_2018.md
+  - '2017': product/whatsnew/2017/Whats_new_APrintStudio_2017.md
+- Installation: 
+  - "Récupérer les fichiers d'installation": product/installation/download.md
+  - "Windows": product/installation/etapes.md
+    #  - "MacOS":  
+    #  - "Linux": 
+  - "Installation, param\xE9trage": product/installation/installation.md
+  - "Description des fichiers install\xE9s": product/installation/description_folder.md
+- Premiers Pas: 
+  - Utiliser un fichier Midi: product/1-premiers-pas.md
+  - Piloter des instruments MIDI: product/3-piloterinstrumentmidi.md
+  - Travailler avec les cartons: product/work_with_books.md
+- Carton Virtuel: 
+  - Modifier / Adjuster un carton: product/modify_book.md
+  - "Utiliser la s\xE9lection": product/modify_book_sel.md
+  - Exports vers Midi: product/2-exportmidi.md
+- Transformation interactives (Model Editor): 
+  - "Model Editor": product/modeleditor/transformations_visuelles.md
+  - Prendre en main le model editor: product/modeleditor/introduction.md
+  - Ecrire son processeur: product/modeleditor/write_your_processor.md
+  - Documentation sur les processeurs: product/modeleditor/model_step_implementation.md
+- "Num\xE9riser": 
+  - Numeriser un carton: product/numeriser.md
+  - Utiliser une WebCam: product/scan/use_webcam.md
+  - Construction d'un image du carton: product/scan/scanning_books_intro.md
+  - Reconnaissance d'une image de carton d'orgue: product/recognition/books.md
+  - "Cr\xE9er son mod\xE8le de ML": product/recognition/training.md
+- Instruments et gammes: 
+  - "R\xE9cup\xE9rer des instruments existants": product/getinstruments.md
+  - Note sur l'enregistrement d'instruments: product/CreationInstrument.md
+- "Machines sp\xE9ciales de perforation": 
+  - Perforer un carton: product/perforation_cartons.md
+  - Comment perforer un carton: product/krunch/utilisation_perforatrice.md
+  - APrint Commander ou comment perforer sans PC: product/aprintcommander/index.md
+- Concepts: 
+  - Carton Virtuel: product/CartonVirtuel.md
+  - Comprendre le logiciel: product/concepts_introduction.md
+  - Gestion des instruments: product/repositories.md
+- "Etendre les fonctionnalit\xE9s": 
+  - 'Scripting': product/scripting/scripting.md
+  - Scripting Groovy: product/scripting/scripting_groovy.md
+  - Premiers pas avec le scripting: product/scripting/scripting_first_steps_quickscripts.md
+  - "Cr\xE9er une extension principale en script": product/scripting/extension_principale.md
+  - Scripts midi: product/scripting/scripting_midiscripts.md
+  - Note Helper: product/scripting/scripting_notehelper.md
+  - Scale Helper: product/scripting/scripting_scalehelper.md
+  - Transformer un carton: product/scripting/TransformerCarton.md
+  - "Creer une fen\xEAtre": product/scripting/scripting_gui.md
+  - "Scripting \xE9tendu avec Java": product/scripting/scripting_extended_using_java.md
+- Developpement sur le logiciel:
+  - Developpement Java: product/dev.md
+  - Choix dans le developpement du logiciel: product/Technology.md
+  - "D\xE9veloppement d'extensions": product/dev-extension.md
+  - "D\xE9veloppement d'extensions d'import / transformation de carton": product/dev-extension-import.md
+  - API Reference: product/referenceapi.md
+plugins:
+- search
+#- pdf-export:
+#    combined: true
