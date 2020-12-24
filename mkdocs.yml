@@ -5,6 +5,9 @@ theme:
   name: material
 use_directory_urls: true
 docs_dir: 'src'
+repo_url: 'https://github.com/barrelorgandiscovery/APrintDoc'
+edit_uri: edit/master/src/
+
 nav:
 #- Aide en ligne: product/index.md
 - "Nouveaut\xE9s": 
