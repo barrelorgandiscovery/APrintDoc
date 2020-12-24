@@ -4,7 +4,7 @@ Bienvenue dans l'aide en ligne du programme APrint Studio
 
 
 
-![Ecran d'accueil](firstsc.png)
+![Ecran d'accueil](product/firstsc.png)
 
 
 
