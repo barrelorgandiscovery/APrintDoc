@@ -46,7 +46,7 @@ nav:
 - Instruments et gammes: 
   - "R\xE9cup\xE9rer des instruments existants": product/getinstruments.md
   - Note sur l'enregistrement d'instruments: product/CreationInstrument.md
-  - "Creer un instrument pas à pas": product/instrumentcreation/CreerUnInstrument.md
+  - "Creer un instrument pas Ã  pas": product/instrumentcreation/CreerUnInstrument.md
 - "Machines sp\xE9ciales de perforation": 
   - Perforer un carton: product/perforation_cartons.md
   - Comment perforer un carton: product/krunch/utilisation_perforatrice.md
