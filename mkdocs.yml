@@ -18,10 +18,17 @@ nav:
   - '2017': product/whatsnew/2017/Whats_new_APrintStudio_2017.md
 - Installation: 
   - "Récupérer les fichiers d'installation": product/installation/download.md
+<<<<<<< HEAD
   - "Installation, param\xE9trage": product/installation/installation.md
   - "Installation sous Windows": product/installation/etapes.md
     #  - "MacOS":  
     #  - "Linux": 
+=======
+  - "Windows": product/installation/etapes.md
+    #  - "MacOS":  
+    #  - "Linux": 
+  - "Installation, param\xE9trage": product/installation/installation.md
+>>>>>>> 449cf87d264ac8b37efe6a020f343e8ecf1006c2
   - "Description des fichiers install\xE9s": product/installation/description_folder.md
   - "Lancement manuel en ligne de commande": product/installation/lancement_manuel_application.md
 - Premiers Pas: 
@@ -49,10 +56,15 @@ nav:
   - "Creer un instrument pas à pas": product/instrumentcreation/CreerUnInstrument.md
 - "Machines sp\xE9ciales de perforation": 
   - Perforer un carton: product/perforation_cartons.md
+<<<<<<< HEAD
   - Comment perforer un carton avec Krunch: product/krunch/utilisation_perforatrice.md
   - Fenetre de pilotage du poiçonnage: product/krunch/fenetre_de_pilotage_machine.md
   - Perforation lazer: product/krunch/perfo_lazer.md
   - Boitier APrint Commander ou comment perforer sans PC: product/aprintcommander/index.md
+=======
+  - Comment perforer un carton: product/krunch/utilisation_perforatrice.md
+  - APrint Commander ou comment perforer sans PC: product/aprintcommander/index.md
+>>>>>>> 449cf87d264ac8b37efe6a020f343e8ecf1006c2
 - Concepts: 
   - Carton Virtuel: product/CartonVirtuel.md
   - Comprendre le logiciel: product/concepts_introduction.md

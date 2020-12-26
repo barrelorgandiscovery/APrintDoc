@@ -21,3 +21,4 @@ La numérisation est effectuée à partir de prise de vue image du carton. Plusi
 
 3 - utilisation d'un fichier video, réalisé avec un téléphone ou autre méthode d'acquisition
 
+
