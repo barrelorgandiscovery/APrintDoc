@@ -26,7 +26,6 @@ nav:
   - "Lancement manuel en ligne de commande": product/installation/lancement_manuel_application.md
 - Premiers Pas: 
   - Utiliser un fichier Midi: product/1-premiers-pas.md
-  - Piloter des instruments MIDI: product/3-piloterinstrumentmidi.md
   - Travailler avec les cartons: product/work_with_books.md
 - Instruments et gammes: 
   - "R\xE9cup\xE9rer des instruments existants": product/getinstruments.md
@@ -53,6 +52,7 @@ nav:
   - Fenetre de pilotage du poiçonnage: product/krunch/fenetre_de_pilotage_machine.md
   - Perforation lazer: product/krunch/perfo_lazer.md
   - Boitier APrint Commander ou comment perforer sans PC: product/aprintcommander/index.md
+- Piloter des instruments MIDI: product/3-piloterinstrumentmidi.md
 - Concepts: 
   - Carton Virtuel: product/CartonVirtuel.md
   - Comprendre le logiciel: product/concepts_introduction.md
