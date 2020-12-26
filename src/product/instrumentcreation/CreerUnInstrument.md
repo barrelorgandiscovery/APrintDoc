@@ -2,9 +2,11 @@
 
 *Patrice Freydiere - Decembre 2020*
 
-Une bibliothèque d'instruments présaisis sont [accessible à partir du site web](http://www.barrel-organ-discovery.org/instruments/),  [cet article également, vous indique comment les récupérer et les utiliser dans le logiciel](https://barrelorgandiscovery.github.io/APrintDoc/product/getinstruments/). 
+Une bibliothèque d'instruments est [accessible à partir du site web](http://www.barrel-organ-discovery.org/instruments/),  [cet article également, vous indique comment les récupérer et les utiliser dans le logiciel](https://barrelorgandiscovery.github.io/APrintDoc/product/getinstruments/). 
 
-Vous pouvez donc partir d'un instrument et l'ajuster, ou en créer un nouveau. Pour créer un instrument, il vous faudra :
+
+
+Pour créer un nouvel instrument, il vous faudra :
 
 - Les caractéristiques de la gammes (dimensions, distance inter-piste, distance de la 1ere piste par rapport à la 1ere piste)
 - La signification des pistes (notes, percussion, registration)
@@ -123,6 +125,10 @@ Pour permettre l'écoute de l'instrument, il est possible d'ajouter un son assoc
 Il est possible d'ajouter dans l'onglet "Association de son", un fichier wav. Le son alors ajouté, initialement assigné à une note particulière, peut être étendu à plusieures notes par "glissé déposé" au niveau du clavier, 
 
 ![](son_ajout.png)
+
+
+
+
 
 
 

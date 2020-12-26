@@ -1,12 +1,12 @@
-#Récupérer un instrument existant
+# Récupérer un instrument existant
 
 par Freddy Meyer
 
 APrint s’occupe de tous les paramètres de votre orgue (téléchargeable depuis une bibliothèque) avec toutes les subtilités que je vais vous expliquer pour une utilisation des plus aisées.
 
-Ouvrir APrint et importer un instrument
+## Ouvrir APrint et importer un instrument
 
-![](aprint_fenetre_principale.jpg)
+![](fenetre_principale_aprint.png)
 
 
 Avant toute chose, il faudra importer l’instrument pour lequel vous voulez perforer le carton. Vous aurez ainsi tous les paramètres (nombres de touches, pas, mesure depuis le bord de référence…)
