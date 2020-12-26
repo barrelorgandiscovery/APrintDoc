@@ -1,6 +1,7 @@
 site_name: APrint Documentation
 site_description: APrint Studio documentation utilisateur
 site_dir: docs
+site_url: 'https://barrelorgandiscovery.github.io/APrintDoc/'
 theme:
   name: material
 use_directory_urls: true
