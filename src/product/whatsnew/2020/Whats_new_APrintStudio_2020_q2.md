@@ -2,15 +2,29 @@
 
 *Patrice Freydiere - Novembre 2020*
 
-![](splash-aprint-studio-2020.jpg)
+![](splash-aprint-studio-2020-beta.jpg)
+
+
+
+<u>Nota</u> : Cette version est actuellement en "test", et disponible uniquement pour **les utilisateurs rapprochés**.  Les fonctionnalités sont gelées.
+
+
+
+
 
 ## Introduction
 
-**APrint 2020**, est une mise à jour technique importante, avec de nouvelles fonctionnalités clefs. 
+**APrint 2020**, est une mise à jour importante, avec de nouvelles fonctionnalités clefs. 
 
-- Support des **machines à pilotage Lazer**
+- Support des **machines à pilotage Lazer**, intégré, aussi simple à utiliser que la version punch, intégrant
+  - Export CAD (DXF et SVG)
+  - De multiples paramètres pour les différents cas d'utilisation (plusieures passes, support des pliures, reglage des puissances ... )
 - Amélioration de l'ergonomie de **l'explorateur de fichier**.
+  - Ajout de bookmark, permettant de naviguer plus facilement dans vos arborescences
 - Support simplifié du **scan par webcam** et **Video**
+  - Possibilité d'utiliser des vidéos au format mp4, avi, ...
+  - Simplification de la reconstruction de carton (1-Click)
+  - Visualisation de la gamme de destination .... etc ...
 
 APrint 2020, supporte désormais les **nouvelles versions de java**, son utilisation depuis les plateformes MacOS, Linux, est donc simplifié.
 
@@ -22,21 +36,23 @@ L'ensemble de ces nouvelles fonctionnalités sont décrites ci dessous, vous pou
 
 ## Export CAD et prise en charge perforation Laser
 
-Cette évolution fait partie des ajouts majeurs de cette version, propulsé par les Tests de Yann et Jean Pierre, ceci a pu permettre de simplifier et élargir les possibilités de commandes pour d'autres machines de perforation. Ainsi, APrint supporte avec les même facilité les nouveaux dialects de machine et permet l'intégration par développement de nouveaux types de machine.
+Cette évolution fait partie des ajouts majeurs de cette version, propulsé par les tests de Yann et Jean Pierre, ceci a permis de largement simplifier l'utilisation et la mise en oeuvre et ainsi de démarrer en quelques heures. 
 
-### Prise en charge en standard du perçage Laser, avec découpage intégré
+Une évolution appliquée, permet maintenant d'introduire de nouveaux types de machine. Ainsi, APrint propose avec les même facilité d'utilisation, de nouveaux types de dialects machine.
 
-Bien que possible depuis quelques années, cette possibilité a été libérée par Gérard. Celle ci a été donc retravaillée, pour intégrer le noyau logiciel d'APrint. Un ensemble de parmètres ont été mis en place, et validés en pratique, pour s'adapter aux différentes productions.
+### Perforation Laser et Export CAD
+
+![](exportCAD.png)
+
+Bien que possible depuis quelques années.  Cette possibilité a <u>été libérée par Gérard et Ludwig</u>. Initialement développée pour eux, cette extension est maintenant disponible dans le produit.
+
+Néanmoins, des amélioration significatives ont été apportées pour intégrer le noyau logiciel d'APrint.
 
 Le middleware GRBL 1.1 a été ciblée pour cette première intégration (très utilisé), il est possible par développement d'en ajouter d'autres. 
 
-Plusieures capacités de parmétrage :
 
 
-
-
-
-et des méliorations : nouvelle communication machine, nouveau "dialect GCODE", permettant de gérer plus finement le GCODE généré. Et s'adapter en fonction des machines (Krunch, GRBL 1.1).
+et des améliorations : nouvelle communication machine, nouveau "dialect GCODE", permettant de gérer plus finement le GCODE généré. Et s'adapter en fonction des machines (Krunch, GRBL 1.1).
 
 
 
@@ -46,19 +62,21 @@ Pour ceux qui disposent d'une machine externe, il est possible d'exporter la dé
 
 
 
+### Pilotage GRBL 1.1 - Lazer direct
 
-
-
-
-### Pilotage GRBL - Lazer direct
-
-Plusieures nouvelles machines ont été ajoutées dans l'extension de punch. Initialement concu pour les machines à poiçons, cette extension s'est vu reconstruite pour prendre en charge les découpes linéaires de carton, ceci avec la même interface très simple.
+Plusieures nouvelles machines ont été ajoutées dans l'extension de punch. Initialement concu pour les machines à poinçons, cette extension s'est vu reconstruite pour prendre en charge les découpes linéaires de carton, ceci avec les mêmes écrans de pilotages.
 
 L' utilisation reste aussi simple que la perforation, une fois la machine connectée.
 
 La reprise après panne est également disponible, ainsi que les statistiques.
 
-@@
+
+
+![](l1.png)
+
+
+
+![](perfolazer.png)
 
 
 
@@ -66,15 +84,29 @@ La reprise après panne est également disponible, ainsi que les statistiques.
 
 ### Nouveau format de fichier bookimage
 
-Cette version 2020 _Q2, apporte un nouveau format de fichier: le fichier bookimage. Ce format de fichier permet de stocker une images visuelle de carton, permettant de faire des **retouches interactives** sur une numérisation. 
+Cette version 2020 _Q2, apporte un nouveau format de fichier: le fichier **bookimage**. Ce format de fichier permet de stocker une images visuelle de carton, permettant de faire des **retouches interactives** sur une numérisation. 
 
-Une f
-
-@@@
-
-### Numérisation,à partir de video
+Ces images sont supperposables sur la vue carton, pour retouche ou numérisation manuelle, ou assistée.
 
 
+
+![](bookimage.png)
+
+
+
+### Numérisation,à partir de fichiers video mp4
+
+L'utilisation de telephone ou webcam, permet de créer des videos du défilement du carton. Ces video peuvent maintenant être utilisée pour construire une image complète du carton, au format BookImage
+
+![](scan.png)
+
+
+
+L'interface de reconstruction a été largement améliorée pour SIMPLIFIER l'utilisation, quelques clicks suffisent pour reconstruire le scan.
+
+
+
+![](scan_and_recognition.gif)
 
 
 
@@ -126,9 +158,13 @@ Dans cette version des améliorations ont été apportées :
 
 Nouvelle présentation de l'aide en ligne. Cette évolution a été proposée pour permettre des traductions automatiques plus simple dans les différentes langues. 
 
-D'autre part, l'aide en ligne est maintenant modifiable par tous. Pour cela il vous suffit d'avoir un compte Github (plateforme hébergeant le code source), de "forker" le repository APrintDoc. Vous pourrez alors par le web, ou sur le poste faire des modifications directement, et proposer des "pull request" pour que celle ci soit intégrées.
+D'autre part, l'aide en ligne est maintenant modifiable par tous. Pour cela il vous suffit d'avoir un compte Github (plateforme hébergeant le code source)
 
-L'aide en ligne est automatiquement publiée sur [https://barrelorgandiscovery.github.io/APrintDoc/](https://barrelorgandiscovery.github.io/APrintDoc/) après intégration.
+L'aide en ligne est automatiquement publiée sur [https://barrelorgandiscovery.github.io/APrintDoc/](https://barrelorgandiscovery.github.io/APrintDoc/).
+
+
+
+Sur chaque Page un icone "crayon", vous permet d'annoter et proposer des corrections pour tous.
 
 
 
