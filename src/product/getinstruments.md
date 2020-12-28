@@ -4,6 +4,9 @@ par Freddy Meyer
 
 APrint s’occupe de tous les paramètres de votre orgue (téléchargeable depuis une bibliothèque) avec toutes les subtilités que je vais vous expliquer pour une utilisation des plus aisées.
 
+[Video d'explication](https://www.youtube.com/watch?v=95aqUBCLP54&t=1s)
+
+
 ## Ouvrir APrint et importer un instrument
 
 ![](fenetre_principale_aprint.png)
