@@ -41,6 +41,7 @@ nav:
   - Prendre en main le model editor: product/modeleditor/introduction.md
   - Ecrire son processeur: product/modeleditor/write_your_processor.md
   - Documentation sur les processeurs: product/modeleditor/model_step_implementation.md
+  - "Un cas d'utilisation : 49 Limonaire": product/modeleditor/midi249/converting_midi49_book.md
 - "Num\xE9riser": 
   - Numeriser un carton: product/numeriser.md
   - Utiliser une WebCam: product/scan/use_webcam.md
