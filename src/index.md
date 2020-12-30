@@ -11,7 +11,7 @@ Bienvenue dans l'aide en ligne du programme APrint Studio
 APrint / Studio
 ---------------------------
 
-__APrint Studio__ a été conçu comme un **environnement de travail** pour les arrangeurs **d'orgues de barbarie** pour faciliter la **création** et **récupération** de morceaux de musique. Le logiciel permet la vérification de la notation musicale en tenant compte des capacités des instruments de musique mécanique. 
+__APrint Studio__ a été conçu comme un **environnement de travail** pour les arrangeurs **d'orgues de barbarie** pour faciliter la **création** et la **préservation** de morceaux de musique. Le logiciel permet également la création de nouvelles oeuvres, et propose une validation numérique de la notation musicale vis à vis des capacités des instruments de musique mécanique. 
 
 Une attention toute particulière est donnée à la simplicité d'utilisation (grand public / amateur / professionnel). 
 
