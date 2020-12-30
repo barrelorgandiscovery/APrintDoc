@@ -15,9 +15,9 @@ __APrint Studio__ a été conçu comme un **environnement de travail** pour les 
 
 Une attention toute particulière est donnée à la simplicité d'utilisation (grand public / amateur / professionnel).
 
-APrint Studio est réalisé en tant que **logiciel Libre**, permettant aux utilisateurs d'adapter le programme en fonction de leurs besoins. Le code source du programme est accessible dans chaque installation, dans le fichier .jar (archive ZIP).
+APrint Studio est réalisé en tant que **logiciel Libre**, permettant aux utilisateurs d'adapter le programme en fonction de leurs besoins. Le code source du programme est accessible dans chaque installation, dans le fichier .jar (archive ZIP). APrint Studio utilise des **standard ouverts** pour les fichiers (fichiers textes, fichier zip, fichiers wav), pour garantir la lisibilité des données avec n'importe quel logiciel complémentaire.
 
-Un mécanisme d'extension et de scripts permettent de brancher des fonctionnalités dans le logiciel sans avoir à connaître fondamentalement tous les détails du fonctionnement. Ceci permet d'ajouter la ou les fonctions manquante(s) assez simplement.
+APrint Studio est extensible. Des scripts et Un mécanisme d'extension permettent de brancher de nouvelles fonctionnalités dans le logiciel sans avoir à connaître les détails du fonctionnement interne. Ce qui prenait les jours, prend maintenant des minutes.
 
 
 Concepts
