@@ -23,6 +23,21 @@ APrint Studio est réalisé en tant que **logiciel Libre**, permettant aux utili
 APrint Studio est extensible. Des scripts et Un mécanisme d'extension permettent de brancher de nouvelles fonctionnalités dans le logiciel sans avoir à connaître les détails du fonctionnement interne. Ce qui prenait les jours, prend maintenant des minutes.
 
 
+Principales Fonctionnalités offertes
+------------------------
+
+- Définition d'instrument, et impression de gammes, de patrons de cartons (incluant la définition sonore)
+- Import de fichiers midi, et vérification des contraintes associées à l'instrument
+- Numérisation de cartons à partir de divers systèmes d'acquisition, reconnaissance I.A. des trous
+- Perforation de carton, en utilisant des machines CNC, (GRBL), poinçonnage et Lazer
+- Export de video, fichier Wav, Ogg des créations
+- Création de PDF, impression de poncifs
+- Création de fichier DXF/SVG de cartons, pianorolls, patron de rouleaux de boites à musique
+- Support des instruments type Artiston avec des Disques cartons ou métal
+- Support des boites à musiques à rouleaux ou cylindres
+- Atelier de transformation / transposition d'un instrument à un autre (Model editor)
+
+
 Concepts
 ------------------------
 
