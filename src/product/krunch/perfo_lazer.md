@@ -6,11 +6,13 @@ La perforation Laser est intégrée dans la version 2020. Autrefois mis en place
 
 
 
-<video src="../2020-09_preview_lazer_aprint2020.mp4" width="400" ></video>
+__Videos: (pour ouvrir la video, clickez avec le bouton droit et ouvrez la video dans un nouvel onglet)__
 
-En utilisation réelle
+<video src="../2020-09_preview_lazer_aprint2020.mp4" width="600" ></video>
 
-<video src="../video-1600703608.mp4" width="400"></video>
+En utilisation réelle (video)
+
+<video src="../video-1600703608.mp4" width="600"></video>
 
 
 
