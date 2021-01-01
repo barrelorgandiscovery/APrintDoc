@@ -4,7 +4,7 @@
 
 Un répertoire est spécifié dans cette fonction pour indexer les différents fichiers book, 
 
-<video src="fonction_recherche.mp4"/>
+<video src="../fonction_recherche.mp4"/>
 
 plusieurs modes de recherche sont possibles :
 
