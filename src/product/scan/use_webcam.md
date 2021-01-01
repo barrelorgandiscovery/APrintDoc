@@ -2,13 +2,15 @@
 
 *2019 - Patrice Freydiere*
 
+![](s1.png)
 
 
-L'utilisation d'une web cam pour la numérisation est possible. En prenant une série d'images à intervalles régulier, il est possible de créer un ensemble d'image pouvant être reconstruits. 
+
+L'utilisation d'une web cam prenant des clichés régulier du carton, pour la numérisation,  est possible. En prenant une série d'images à intervalles régulier, il est possible de créer un ensemble d'image pouvant être reconstruits. 
 
 ![](imageview.png)
 
-image complète, une fois reconstruite :
+ci dessous une image complète, une fois reconstruite du carton :
 
 ![](full_sample.png)
 

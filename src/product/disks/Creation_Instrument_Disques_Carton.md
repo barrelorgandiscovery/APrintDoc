@@ -2,7 +2,7 @@
 
 APrint Studio peut être utilisé pour la construction de carton perforés type Ariston. La gamme peut être décrite de la même façon, certains paramètres ajoutés à la définition de l'instrument peuvent avoir une signification adaptée aux disques, et permettent la génération des disques au format DXF pour être percé au lazer, ou autre machine de découpe.
 
-<img src="DSCN2604.jpg" width=400 />
+![](DSCN2604.jpg)
 
 # Installation du script d'export en DXF des disques
 
@@ -17,7 +17,7 @@ L'installation est terminée,
 
 vous avez alors dans la vision carton, un quick script __DXF Disque__ créant le fichier DXF associé au carton
 
-<img src="execution.png" width=400 />
+![](execution.png)
 
 
 Le fichier résultat est placé dans le répertoire affiché dans la console
@@ -31,7 +31,7 @@ Le fichier résultat est placé dans le répertoire affiché dans la console
 
 La gamme est décrite dans aprint studio par rapport au centre du disque. La référence est alors indiquée en bas, comme ci dessous.
 
-<img src="position.jpg" width=400 />
+![](position.jpg)
 
 Ainsi : 
 
@@ -42,14 +42,14 @@ Les autres paramètres restent valables (axe de la 1ere piste, entre piste, larg
 
 dans l'éditeur de gamme, ceci se présente ainsi :
 
-<img src="imagegamme.png" width=400 />
+![](imagegamme.png)
 
 ## Autres paramètres associés à la gamme
 
 D'autres paramètres doivent être indiqués dans la gamme pour pouvoir générer l'image DXF du disque. Les gammes peuvent mémoriser des paramètres supplémentaires pouvant être exploitées par des outils spécifiques. 
 On indique ici les paramètres supplémentaires
 
-<img src="parametresetendus.png" width=400 />
+![](parametresetendus.png)
 
 ### Parametre central\_hole\_size
 
@@ -63,7 +63,7 @@ ce paramètre indique le **rayon des trous d'entrainement**
 
 ce paramètre indique la distance au centre des trous entraînement.
 
-<img src="parametres.png" width=400 />
+![](parametres.png)
 
 # Programme associé
 
