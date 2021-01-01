@@ -37,6 +37,8 @@ nav:
   - "Utiliser la s\xE9lection": product/modify_book_sel.md
   - "Montage de poncifs ou cartons": product/montage/Montage_Cartons.md
   - Exports vers Midi: product/2-exportmidi.md
+  - Definition des informations du carton: product/metadata/book_metadata.md
+  - Constitution d'une bibliotheque: product/metadata/constitution_bibliotheque.md
 - Disques En carton:
   - Creer des disques de cartons: product/disks/Creation_Instrument_Disques_Carton.md
 - Transformation interactives (Model Editor): 
