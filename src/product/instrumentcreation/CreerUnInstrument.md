@@ -17,6 +17,12 @@ Les sons ne sont pas nécessaires si vous n'utilisez que la perforation, néanmo
 
 
 
+La création d'un instrument en video : (click droit et ouvrir la video dans un nouvel onglet)
+
+<video src="../create_instrument.mp4" ></video>
+
+
+
 ## Création d'un instrument
 
 La gestion des instruments est accessible depuis le menu principal :
