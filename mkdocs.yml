@@ -35,7 +35,10 @@ nav:
 - Carton Virtuel: 
   - Modifier / Adjuster un carton: product/modify_book.md
   - "Utiliser la s\xE9lection": product/modify_book_sel.md
+  - "Montage de poncifs ou cartons": product/montage/Montage_Cartons.md
   - Exports vers Midi: product/2-exportmidi.md
+- Disques En carton:
+  - Creer des disques de cartons: product/disks/Creation_Instrument_Disques_Carton.md
 - Transformation interactives (Model Editor): 
   - "Model Editor": product/modeleditor/transformations_visuelles.md
   - Prendre en main le model editor: product/modeleditor/introduction.md
@@ -47,7 +50,7 @@ nav:
   - Utiliser une WebCam: product/scan/use_webcam.md
   - Construction d'un image du carton: product/scan/scanning_books_intro.md
   - Reconnaissance d'une image de carton d'orgue: product/recognition/books.md
-  - "Cr\xE9er son mod\xE8le de ML": product/recognition/training.md
+  - "Cr\xE9er son mod\xE8le d'I.A.": product/recognition/training.md
 - "Machines sp\xE9ciales de perforation": 
   - Perforer un carton: product/perforation_cartons.md
   - Comment perforer un carton avec Krunch: product/krunch/utilisation_perforatrice.md
