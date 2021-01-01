@@ -11,13 +11,31 @@ Bienvenue dans l'aide en ligne du programme APrint Studio
 APrint / Studio
 ---------------------------
 
-__APrint Studio__ a été conçu comme un **environnement de travail** pour les arrangeurs **d'orgues de barbarie** pour faciliter la **création** et **récupération** de morceaux de musique. Le logiciel permet la vérification de la notation musical en fonction des capacités des instruments de musique mécanique. 
+__APrint Studio__ a été conçu comme un **environnement de travail** pour les arrangeurs **d'orgues de barbarie** pour faciliter la **création** et la **préservation** de morceaux de musique. Le logiciel permet également la création de nouvelles oeuvres, et propose une validation numérique de la notation musicale vis à vis des capacités des instruments de musique mécanique. 
 
-Une attention toute particulière est donnée à la simplicité d'utilisation (grand public / amateur / professionnel).
+Une attention toute particulière est donnée à la simplicité d'utilisation (grand public / amateur / professionnel). 
 
-APrint Studio est réalisé en tant que **logiciel Libre**, permettant aux utilisateurs d'adapter le programme en fonction de leurs besoins. Le code source du programme est accessible dans chaque installation, dans le fichier .jar (archive ZIP).
+   La perfection est atteinte, non pas lorsqu'il n'y a plus rien à ajouter, mais lorsqu'il n'y a plus rien à retirer.
+      - Antoine de Saint-Exupéry. 
 
-Un mécanisme d'extension et de scripts permettent de brancher des fonctionnalités dans le logiciel sans avoir à connaître fondamentalement tous les détails du fonctionnement. Ceci permet d'ajouter la ou les fonctions manquante(s) assez simplement.
+APrint Studio est réalisé en tant que **logiciel Libre**, permettant aux utilisateurs d'adapter le programme en fonction de leurs besoins. Le code source du programme est accessible dans chaque installation, dans le fichier .jar (archive ZIP). APrint Studio utilise des **standard ouverts** pour les fichiers (fichiers textes, fichier zip, fichiers wav), pour garantir la lisibilité des données avec n'importe quel logiciel complémentaire.
+
+APrint Studio est extensible. Des scripts et Un mécanisme d'extension permettent de brancher de nouvelles fonctionnalités dans le logiciel sans avoir à connaître les détails du fonctionnement interne. Ce qui prenait les jours, prend maintenant des minutes.
+
+
+Principales Fonctionnalités offertes
+------------------------
+
+- Définition d'instrument, et impression de gammes, de patrons de cartons (incluant la définition sonore)
+- Import de fichiers midi, et vérification des contraintes associées à l'instrument
+- Numérisation de cartons à partir de divers systèmes d'acquisition, reconnaissance I.A. des trous
+- Perforation de carton, en utilisant des machines CNC, (GRBL), poinçonnage et Lazer
+- Export de video, fichier Wav, Ogg des créations
+- Création de PDF, impression de poncifs
+- Création de fichier DXF/SVG de cartons, pianorolls, patron de rouleaux de boites à musique
+- Support des instruments type Artiston avec des Disques cartons ou métal
+- Support des boites à musiques à rouleaux ou cylindres
+- Atelier de transformation / transposition d'un instrument à un autre (Model editor)
 
 
 Concepts
