@@ -20,6 +20,7 @@ before_deploy:
 deploy: # Deploy documentation to Github in the gh_pages branch
     provider: pages
     github_token: $github_token
+    target_branch: gh-pages-fixed
     local_dir: docs
     verbose: true
     on:
