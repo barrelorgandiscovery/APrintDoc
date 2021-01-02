@@ -16,13 +16,13 @@ script: true # Skip script (Don't use this if one already exists)
 
 before_deploy:
     - mkdocs build --verbose --clean # Build a local version of the docs
-    - git add docs
+#    - git add docs
 
-deploy: # Deploy documentation to Github in the gh_pages branch
-    provider: pages
-    github_token: $github_token
-    target_branch: gh-pages-fixed
-    local_dir: docs
-    verbose: true
-    on:
-        branch: master
+#deploy: # Deploy documentation to Github in the gh_pages branch
+#    provider: pages
+#    github_token: $github_token
+#    target_branch: gh-pages-fixed
+#    local_dir: docs
+#    verbose: true
+#    on:
+#        branch: master
