@@ -49,7 +49,8 @@ nav:
   - "Un cas d'utilisation : 49 Limonaire": product/modeleditor/midi249/converting_midi49_book.md
 - "Num\xE9riser": 
   - Numeriser un carton: product/numeriser.md
-  - Utiliser une WebCam: product/scan/use_webcam.md
+  - Utiliser une WebCam, avec prise de vues: product/scan/use_webcam.md
+  - Utiliser une Video pour scanner le carton: product/scan/createBookVideo.md
   - Construction d'un image du carton: product/scan/scanning_books_intro.md
   - Reconnaissance d'une image de carton d'orgue: product/recognition/books.md
   - "Cr\xE9er son mod\xE8le d'I.A.": product/recognition/training.md
