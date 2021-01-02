@@ -4,6 +4,10 @@ python: 3.8 # Set the version of Python to use
 
 branches: master # Set the branch to build from
 
+before_install:
+    - echo -e "machine github.com\n  login $github_token" > ~/.netrc
+    - git lfs pull
+    
 install:
     - pip install mkdocs # Install the required dependencies
     - pip install mkdocs-material # Install the required dependencies
