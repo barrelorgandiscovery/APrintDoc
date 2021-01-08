@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<MyProject path="C:\patrice\newsitexml\web\projet.pre">
+ <item path="./base.xsl" type="XSLT2" encoding="AUTOMATIC" open="true" test="true">
+  <property name="encoding" value="AUTOMATIC"/>
+ </item>
+ <item path="./dev-virtualbook-rfc.xml" type="XML" test="true" open="true">
+  <property name="xslt.param.value.0" value="fr"/>  <property name="xslt.displayFile" value="false"/>  <property name="xslt.data.file" value="./dev-virtualbook-rfc.xml"/>  <property name="xslt.fop" value="false"/>  <property name="reload.res" value="ok"/>  <property name="xslt.openFile" value="false"/>  <property name="xslt.result.file" value="./result.html"/>  <property name="xslt.xslt.file" value="./base.xsl"/>  <property name="xslt.param.name.0" value="language"/>  <property name="xslt.ok" value="true"/>
+ </item>
+ <item path="./articles.xml" type="XML" encoding="AUTOMATIC" open="true" test="true">
+  <property name="encoding" value="AUTOMATIC"/>
+ </item>
+ <item path="./dev.xml" type="XML" open="true" test="true"/> <item path="./article-creationinstrument.xml" type="XML" encoding="UTF-8" open="true" test="true">
+  <property name="encoding" value="UTF-8"/>
+ </item>
+ <item path="./aprint.xml" type="XML" encoding="UTF-8" open="true" test="true">
+  <property name="encoding" value="UTF-8"/>
+ </item>
+ <item path="./doc.xml" type="XML" open="true" test="true"/> <item path="./contributeurs.xml" type="XML" open="true" test="true"/> <item path="./article-uninstall.xml" type="XHTML" encoding="UTF-8" test="true" open="true">
+  <property name="encoding" value="UTF-8"/>
+ </item>
+ <item path="./article-pdf-printing.xml" type="XHTML" encoding="UTF-8" test="true" open="true">
+  <property name="encoding" value="UTF-8"/>
+ </item>
+ <item path="./article-dev-website.xml" type="XML" encoding="UTF-8" test="true" open="true">
+  <property name="xslt.param.value.0" value="en"/>  <property name="xslt.displayFile" value="false"/>  <property name="xslt.data.file" value="./article-dev-website.xml"/>  <property name="xslt.fop" value="false"/>  <property name="encoding" value="UTF-8"/>  <property name="reload.res" value="ok"/>  <property name="xslt.openFile" value="false"/>  <property name="xslt.result.file" value="./result.html"/>  <property name="xslt.xslt.file" value="./base.xsl"/>  <property name="xslt.param.name.0" value="language"/>  <property name="xslt.ok" value="true"/>
+ </item>
+ <item path="../../webfree/aprint/aprint.rss" type="XML" encoding="UTF-8" test="true" open="true">
+  <property name="encoding" value="UTF-8"/>
+ </item>
+ <item path="./article-translate-aprint.xml" type="XML" encoding="UTF-8" test="true" open="true">
+  <property name="encoding" value="UTF-8"/>
+ </item>
+
+</MyProject>

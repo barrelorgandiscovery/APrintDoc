@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <meta charset="UTF-8">
+
+    <title id='Description'>In this demo the jqxTree is built from JSON data.</title>
+    <link rel="stylesheet" href="../scripts/skin-lion/ui.easytree.css" type="text/css" /> 
+    <script type="text/javascript" src="../scripts/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.easytree.js"></script>
+
+    <script type="text/css" >
+       body, h5 { font-family : "Lato","Helvetica Neue",Helvetica,Arial,sans-serif
+       }
+    </script>
+
+</head>
+<body>
+<h5 style='font-family : "Lato","Helvetica Neue",Helvetica,Arial,sans-serif '>Table des matières</h5>
+<div id="demo2_menu" content="tree">
+  [{
+    "href": "mdwiki.html#!index.md",
+          "isFolder":true,
+    "hrefTarget": "content",
+    "isExpanded":true,
+    "text":"Aide en ligne",
+    "children": [
+    {
+        "text":"Nouveautés",
+        "isFolder":true,
+        "href": "mdwiki.html#!whatsnew/index.md",
+        "hrefTarget": "content",
+        "children": [
+          {
+            "href": "mdwiki.html#!whatsnew/2019/Whats_new_APrintStudio_2019.md",
+            "text":"2019",
+            "hrefTarget": "content"
+          },
+          {
+            "href": "mdwiki.html#!whatsnew/2018/Whats_new_APrintStudio_2018.md",
+            "text":"2018",
+            "hrefTarget": "content"
+          },
+          { 
+            "href": "mdwiki.html#!whatsnew/2017/Whats_new_APrintStudio_2017.md",
+            "text":"2017",
+            "hrefTarget": "content"
+          }
+
+        ]
+
+    },
+     {
+        "text":"Installation",
+        "href": "mdwiki.html#!installation/etapes.md",
+        "isFolder":true,
+        "hrefTarget": "content",
+        "children": [
+          {
+            "href": "mdwiki.html#!installation/installation.md",
+            "text":"Installation, paramétrage",
+            "hrefTarget": "content"
+          },
+          {
+            "href": "mdwiki.html#!installation/description_folder.md",
+            "text":"Description des fichiers installés",
+            "hrefTarget": "content"
+          }
+
+        ]
+
+      },
+
+      {
+        "href": "mdwiki.html#!documentation_utilisateur_welcome.md",
+        "text":"Premiers Pas",
+        "isFolder":true,
+        "hrefTarget": "content",
+        "children": [
+          {
+            "href": "mdwiki.html#!1-premiers-pas.md",
+            "text":"Ecouter un fichier Midi",
+            "hrefTarget": "content"
+          },
+          {
+            "href": "mdwiki.html#!3-piloterinstrumentmidi.md",
+            "text":"Piloter des instruments MIDI",
+            "hrefTarget": "content"
+          }
+        ]
+      },
+           {
+        "href": "mdwiki.html#!work_with_books.md",
+        "text":"Travailler avec les cartons",
+          "isFolder":true,
+        "hrefTarget": "content",
+        "children": [
+          {
+            "href": "mdwiki.html#!CartonVirtuel.md",
+            "text":"Carton Virtuel",
+            "hrefTarget": "content"
+          },
+          {
+            "href": "mdwiki.html#!modify_book.md",
+            "text":"Modifier / Adjuster un carton",
+            "hrefTarget": "content"
+          },
+          {
+            "href": "mdwiki.html#!modify_book_sel.md",
+            "text":"Utiliser la sélection",
+            "hrefTarget": "content"
+          },
+          {
+            "href": "mdwiki.html#!2-exportmidi.md",
+            "text":"Exports vers Midi",
+            "hrefTarget": "content"
+          } ]
+      },
+      {
+        "text":"Creer ou modifier un instrument",
+        "href":"mdwiki.html#!CreationInstrumentTechniqueAPrint.md",
+        "isFolder": true,
+        "hrefTarget": "content",
+     "children":[
+            {
+                "href":"mdwiki.html#!UtilisationEditeurInstrument.md",
+                "text":"Utilisation de l'éditeur de gamme",
+                "hrefTarget":"content"
+            }]
+    
+          },
+
+      {
+        "text":"Transformation visuelles (Model Editor)",
+        "href":"mdwiki.html#!modeleditor/transformations_visuelles.md",
+        "isFolder":true,
+        "hrefTarget": "content",
+        "children":[
+            {
+                "href":"mdwiki.html#!modeleditor/introduction.md",
+                "text":"Prendre en main le model editor",
+                "hrefTarget":"content"
+            },
+            {
+                "href":"mdwiki.html#!modeleditor/write_your_processor.md",
+                "text":"Ecrire son processeur",
+                "hrefTarget":"content"
+            },
+             {
+                "href":"mdwiki.html#!modeleditor/model_step_implementation.md",
+                "text":"Documentation sur les processeurs",
+                "hrefTarget":"content"
+            }
+            
+        ]
+
+      },
+      {
+        "href":"mdwiki.html#!numeriser.md",
+        "text":"Numériser",
+        "isFolder":true,
+        "hrefTarget": "content",
+        "children":[
+            {
+                "href":"mdwiki.html#!scan/use_webcam.md",
+                "text":"Utiliser une WebCam",
+                "hrefTarget":"content"
+            },{
+                "href":"mdwiki.html#!scan/scanning_books_intro.md",
+                "text":"Construction d'un image du carton",
+                "hrefTarget":"content"
+            },
+             {
+                "href":"mdwiki.html#!recognition/books.md",
+                "text":"Reconnaissance d'une image de carton d'orgue",
+                "hrefTarget":"content"
+            },
+            {
+                "href":"mdwiki.html#!recognition/training.md",
+                "text":"Créer son modèle de ML",
+                "hrefTarget":"content"
+            }
+        ]
+      },
+      {
+        "href": "mdwiki.html#!work_with_books.md",
+        "text":"Instruments et gammes",
+          "isFolder":true,
+        "hrefTarget": "content",
+        "children": [
+          {
+            "href": "mdwiki.html#!getinstruments.md",
+            "text":"Récupérer des instruments existants",
+            "hrefTarget": "content"
+          },
+          {
+        "href": "mdwiki.html#!CreationInstrument.md",
+        "text":"Note sur l'enregistrement d'instruments",
+          "isFolder":true,
+        "hrefTarget": "content"
+        }]
+
+      },
+      {
+        "href": "mdwiki.html#!perforation_cartons.md",
+        "text":"Machines spéciales de perforation",
+          "isFolder":true,
+        "hrefTarget": "content",
+        "children": [
+          {
+            "href": "mdwiki.html#!krunch/utilisation_perforatrice.md",
+            "text":"Comment perforer un carton",
+            "hrefTarget": "content"
+          },
+          {
+            "href": "mdwiki.html#!aprintcommander/index.md",
+            "text":"APrint Commander ou comment perforer sans PC",
+            "hrefTarget": "content"
+          }
+        ]
+      },
+      {
+        "href": "mdwiki.html#!concepts_introduction.md",
+        "text":"Concepts",
+          "isFolder":true,
+        "hrefTarget": "content",
+        "children": [
+          {
+            "href": "mdwiki.html#!repositories.md",
+            "text":"Gestion des instruments",
+            "hrefTarget": "content"
+          },
+          {
+            "href": "mdwiki.html#!CartonVirtuel.md",
+            "text":"Carton Virtuel",
+            "hrefTarget": "content"
+          }
+        ]
+      },
+      {
+        "href": "mdwiki.html#!scripting.md",
+          "isFolder":true,
+          "text":"Etendre les fonctionnalités",
+        "hrefTarget": "content",
+        "children": [
+         {
+        "href": "mdwiki.html#!scripting/scripting.md",
+          "isFolder":true,
+          "text":"Scripting",
+        "hrefTarget": "content",
+        "children": [
+          {
+            "href": "mdwiki.html#!scripting/scripting_groovy.md",
+            "text":"Scripting Groovy",
+          "isFolder":true,
+            "hrefTarget": "content",
+            "children": [
+             {
+                "href": "mdwiki.html#!scripting/scripting_first_steps_quickscripts.md",
+                "text":"Premiers pas avec le scripting",
+                "hrefTarget": "content"
+              },
+              {
+                "href": "mdwiki.html#!scripting/extension_principale.md",
+                "text":"Créer une extension principale en script",
+                "hrefTarget": "content"
+              },
+              {
+                "href": "mdwiki.html#!scripting/scripting_midiscripts.md",
+                "text":"Scripts midi",
+                "hrefTarget": "content"
+              },
+              {
+                "href": "mdwiki.html#!scripting/scripting_notehelper.md",
+                "text":"Note Helper",
+                "hrefTarget": "content"
+              },
+              {
+                "href": "mdwiki.html#!scripting/scripting_scalehelper.md",
+                "text":"Scale Helper",
+                "hrefTarget": "content"
+              },
+              {
+                "href": "mdwiki.html#!scripting/TransformerCarton.md",
+                "text":"Transformer un carton",
+                "hrefTarget": "content"
+              },
+              {
+                "href": "mdwiki.html#!scripting/scripting_gui.md",
+                "text":"Creer une fenêtre",
+                "hrefTarget": "content"
+              }
+            ]
+          },
+          {
+            "href": "mdwiki.html#!scripting/scripting_extended_using_java.md",
+            "text":"Scripting étendu avec Java",
+            "hrefTarget": "content",
+          "isFolder":true,
+            "children": {
+              "href": "scripting/scriptexamples",
+              "hrefTarget": "content"
+            }
+          }
+          ]
+      },
+      {
+        "href": "mdwiki.html#!dev.md",
+        "text":"Developpement en Java",
+          "isFolder":true,
+        "hrefTarget": "content",
+        "children": [
+          {
+            "href": "mdwiki.html#!Technology.md",
+            "text":"Technologie",
+            "hrefTarget": "content",
+            "text": "Choix dans le developpement du logiciel"
+          },
+          {
+            "href": "mdwiki.html#!dev-extension.md",
+            "hrefTarget": "content",
+            "text": "Développement d'extensions"
+          },
+          {
+            "href": "mdwiki.html#!dev-extension-import.md",
+            "hrefTarget": "content",
+            "text": "Développement d'extensions d'import / transformation de carton"
+          }
+        ]
+      },
+       {
+            "text": "API Reference",
+            "isFolder":true,
+            "href": "mdwiki.html#!referenceapi.md",
+            "hrefTarget": "content",
+            "children": [
+              {
+                "href": "../groovydoc/overview-summary.html",
+                "hrefTarget": "content",
+                "text": "APrint Groovy Scripting Documentation"
+              },
+              {
+                "href": "../javadoc/overview-summary.html",
+                "hrefTarget": "content",
+                "text": "APrint Developement Documentation"
+              },
+              {
+                "href": "../groovyhelp/api/overview-summary.html",
+                "hrefTarget": "content",
+                "text": "Groovy Std API documentation"
+              }
+            ]
+          }
+
+      
+       ]}
+    ]
+  }]
+</div>
+
+<script>
+    // handling the anchor for browsing page
+    function stateChanged(nodes, status) {
+        if (nodes) {
+             // find activated nodes
+           var reducedFunction = function(acc, e) { 
+                        if (e.isActive) {
+                            return [e] ; 
+                        }
+                        if (e.children && e.children.length > 0) {
+                            return acc.concat(e.children.reduce(
+                                        reducedFunction, [])); 
+                        }
+                        return acc;
+               };
+           var sel = nodes.reduce(reducedFunction, []);
+           if (sel && sel.length > 0) {
+               var currentNode = sel[0];
+               var regex = /[#](.*)/g;
+               if (currentNode.href) {
+                   var found = currentNode.href.match(regex);
+                   if (found && found[0] && found[0].startsWith("#!")) {
+                       var page = found[0].substr(2);
+                       console.log(page);
+                       parent.history.pushState({}, "","#" + page);
+                   }
+               }
+           }
+           // parent.location.hash=currentNode.href;
+        }
+        //console.log(status);
+
+    }
+
+    var t = $('#demo2_menu').easytree(
+    {
+        stateChanged: stateChanged
+    });
+
+
+</script>
+        
+</body>
+</html>

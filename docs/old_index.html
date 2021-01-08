@@ -1,0 +1,21 @@
+<html>
+<head>
+<script>
+   
+    window.addEventListener('load',function() {
+            // console.log("executed");
+            if (location.hash) {
+                // console.log("Found hash :" + location.hash);
+                // console.log(frames); 
+                frames[1].location.href = "product/mdwiki.html#!" + location.hash.substr(1);
+        }
+    });
+
+</script>
+</head>
+<frameset cols="300px,*" border="0">
+    <frame src="product/tree.html"/>
+    <frame name="content" src="product/mdwiki.html"/>
+</frameset>
+
+</html>
