@@ -47,6 +47,3 @@ En jaune apparait les déplacements et poinçonnages déjà réalisés.
 
 
 
-
-
-

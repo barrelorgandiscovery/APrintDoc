@@ -26,13 +26,17 @@ L'utilisation des fonctions de perçage nécessite l'utilisation du GRBL 1.1 ave
 
 ### Activation et paramétrage perfo laser
 
-La perforation lazer est réalisée, à partir de la fenetre de perforation du carton
+La perforation lazer est réalisée, à partir de la fenetre de perforation du carton, sélectionnez la machine connectée, l'utilisation de la Krunch Laser peut être réalisée avec "Laser Machine GRBL 1.1", le bouton à coté permet de régler : le port de connexion, et les paramètres de découpe.
+
+
 
 ![](k2.png)
 
 
 
-Les paramètrages de du mode lazer sont accessible dans le bouton "...".
+![](k2bis.png)
+
+
 
 
 
@@ -40,7 +44,7 @@ Les paramètrages de du mode lazer sont accessible dans le bouton "...".
 
 Les paraamétrage de puissance `SXXXX`  et de vitesse `FXXXXX` sont réglés initialement dans la fenetre de paramétrage du lazer. Ce sont les valeures MAXIMALES qui sont spécifiées.
 
-Ainsi dans les autres parmétrages utilisés dans les propriétés de planification, il sera retenu la définition de la fraction de la puissance MAXIMALE.
+Ainsi dans les autres paramétrages utilisés dans les propriétés de planification, il sera retenu la définition de la fraction de la puissance MAXIMALE.
 
 Par exemple, si dans la vitesse maximale, la valeur 500 est retenue, en paramétrant ensuite une fraction de 0.5, la puissance retenue sera donné par la valeur 500 * 0.5 = 250 pour l'envoi machine.
 
@@ -62,6 +66,14 @@ les paramétrages de taille max de découpe, ponts, ou espacement entre les pont
 
 L'affichage est actualisé en temps réel en fonction des paramètres saisie, permettant de controler le resultat.
 
+L'optimisation du trajet du laser est effectué par PAGE pour l'optimisation est défini par le paramètre. Taille de la page d'optimisation. (en CM), dans la limite des 1000 objets à optimiser.
+
+![](k6.png)
+
+
+
+
+
 #### Choix des paramètres de découpe
 
 
@@ -70,7 +82,7 @@ L'affichage est actualisé en temps réel en fonction des paramètres saisie, pe
 
 Le choix de l'export des trous, permet de préparer une découpe uniquement avec les pliures. Il a été constaté que la réalisation des pliures, sans allers et retours améliorait la régularité des pages de cartons et donc l'apparence du carton une fois pliée (les cartons ne font pas l'accordéon une fois pliés).
 
-La taille des trous et pont, permettent de définir le resultat comme suit :
+La taille des trous et pont, permettent de définir le résultat comme suit :
 
 ![](SchemaTransformationPneumatique.png)
 
@@ -96,4 +108,4 @@ Des paramètres de pliures, permettent de définir des pliures sous forme de poi
 
 Plusieures passent de découpe peuvent être réaliseé pour les trous, ou les pliures, en fonction de la puissance maximale du lazer.
 
-Le choix d'utilisation de la 2eme passe est réalisée par l'activation de la coche 'deux passes', les facteurs de réglage de la vitesse et de la puissance peuvent être spécifiés. 
+Le choix d'utilisation de la 2eme passe est réalisée par l'activation de la coche '**deux passes**', les facteurs de réglage de la vitesse et de la puissance peuvent être spécifiés. 
