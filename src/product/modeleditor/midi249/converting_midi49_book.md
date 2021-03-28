@@ -32,7 +32,7 @@ Une image ci dessous, montre l'organisation d'un fichier Midi arrangé pour le 4
 
 ![](organisation_fichier_midi.png)
 
-Le canal "10" est utilisé pour les percussions, les autres cannaux, pour les différentes sections de registre
+Le canal "10" est utilisé pour les percussions, les autres canaux sont utilisés ici pour les différentes sections de registre
 
 
 

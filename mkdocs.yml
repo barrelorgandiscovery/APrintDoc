@@ -44,16 +44,19 @@ nav:
 - Transformation interactives (Model Editor): 
   - "Model Editor": product/modeleditor/transformations_visuelles.md
   - Prendre en main le model editor: product/modeleditor/introduction.md
-  - Ecrire son processeur: product/modeleditor/write_your_processor.md
-  - Documentation sur les processeurs: product/modeleditor/model_step_implementation.md
   - "Un cas d'utilisation : 49 Limonaire": product/modeleditor/midi249/converting_midi49_book.md
+  - Utilisation Avancées:
+    - Ecrire un processeur script: product/modeleditor/write_your_processor.md
+    - Documentation sur les processeurs: product/modeleditor/model_step_implementation.md
 - "Num\xE9riser": 
   - Numeriser un carton: product/numeriser.md
   - Utiliser une WebCam, avec prise de vues: product/scan/use_webcam.md
   - Utiliser une Video pour scanner le carton: product/scan/createBookVideo.md
-  - Construction d'un image du carton: product/scan/scanning_books_intro.md
-  - Reconnaissance d'une image de carton d'orgue: product/recognition/books.md
-  - "Cr\xE9er son mod\xE8le d'I.A.": product/recognition/training.md
+  - Construction d'un fichier bookimage du carton: product/scan/scanning_books_intro.md
+  - Reconnaissance du carton: product/recognition/extension.md
+  - Ancien Module de reconnaissance d'image:
+          - Reconnaissance d'une image de carton d'orgue: product/recognition/books.md
+          - "Cr\xE9er son mod\xE8le d'I.A.": product/recognition/training.md
 - "Machines sp\xE9ciales de perforation": 
   - Perforer un carton: product/perforation_cartons.md
   - Comment perforer un carton avec Krunch: product/krunch/utilisation_perforatrice.md
@@ -67,21 +70,21 @@ nav:
   - Gestion des instruments: product/repositories.md
 - "Etendre les fonctionnalit\xE9s": 
   - 'Scripting': product/scripting/scripting.md
-  - Scripting Groovy: product/scripting/scripting_groovy.md
-  - Premiers pas avec le scripting: product/scripting/scripting_first_steps_quickscripts.md
-  - "Cr\xE9er une extension principale en script": product/scripting/extension_principale.md
-  - Scripts midi: product/scripting/scripting_midiscripts.md
-  - Note Helper: product/scripting/scripting_notehelper.md
-  - Scale Helper: product/scripting/scripting_scalehelper.md
-  - Transformer un carton: product/scripting/TransformerCarton.md
-  - "Creer une fen\xEAtre": product/scripting/scripting_gui.md
-  - "Scripting \xE9tendu avec Java": product/scripting/scripting_extended_using_java.md
+  - Scripting Groovy: 
+    - Premiers pas avec le scripting: product/scripting/scripting_first_steps_quickscripts.md
+    - "Cr\xE9er une extension principale en script": product/scripting/extension_principale.md
+    - Scripts midi: product/scripting/scripting_midiscripts.md
+    - Note Helper: product/scripting/scripting_notehelper.md
+    - Scale Helper: product/scripting/scripting_scalehelper.md
+    - Transformer un carton: product/scripting/TransformerCarton.md
+    - Ajout d'un nouvel outil: product/scripting/implementation_outil.md
+    - "Creer une fen\xEAtre": product/scripting/scripting_gui.md
 - Developpement sur le logiciel:
   - Developpement Java: product/dev.md
   - Choix dans le developpement du logiciel: product/Technology.md
   - "D\xE9veloppement d'extensions": product/dev-extension.md
   - "D\xE9veloppement d'extensions d'import / transformation de carton": product/dev-extension-import.md
-  - API Reference: product/referenceapi.md
+  - APrint API Reference: product/referenceapi.md
 plugins:
 - search
 #- pdf-export:

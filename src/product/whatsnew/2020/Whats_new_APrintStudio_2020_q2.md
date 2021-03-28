@@ -2,12 +2,7 @@
 
 *Patrice Freydiere - Novembre 2020*
 
-![](splash-aprint-studio-2020-beta.jpg)
-
-
-
-<u>Nota</u> : Cette version est actuellement en "test", et disponible uniquement pour **les utilisateurs rapprochés**.  Les fonctionnalités sont gelées.
-
+![](splash-aprint-studio-2020.jpg)
 
 
 
@@ -78,6 +73,12 @@ La reprise après panne est également disponible, ainsi que les statistiques.
 
 ![](perfolazer.png)
 
+
+
+### Extensibilité machine
+
+Une nouvelle possibilité offerte pour les développeurs, et permettre l'ajout de nouvelles machine de perforation (lazer, punch ou autre), par extension.
+La mise en place d'une extension .machine permet l'ajout d'une machine de perforation non prévue initialement, de gérer son pilotage, tout en récupérant les logiques d'optimisation et de calcul de plan de perforation.
 
 
 ## Amelioration de la numérisation de cartons
@@ -195,3 +196,17 @@ Une réorganisation technique permet maintenant de pouvoir avoir un descriptif X
 ## Breaking Changes - Changements impactants
 
 - Cette version intègre une nouvelle version de la reconnaissance de carton, les modèles de reconnaissance créé avec l'ancienne version ne seront pas compatible avec celle ci. Il sera donc nécessaire de les reconstruire. Pour simplifier, une version associée de Fiji est disponible maintenant dans l'installation d'aprint.
+
+
+
+## Contributions sur cette version
+
+- Yann Baraffe : test pilotage laser, + extension machine (pour la mise en place dans les atelier Baraffe Charial)
+- Pierre Louis Freydiere, sur la partie reconnaissance (numérisation d'une base de 80 poncifs d'origin limonaire, patrimoine récupéré avec ces outils).
+- Jean Pierre Rosset : test sur la machine laser + documents sur la mise en place laser.
+- Joseph Loiseau , sur des retours associés au logiciels et les tests sur sa perfo laser
+- Gerard et Ludwig !! 
+...
+
+
+

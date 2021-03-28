@@ -1,8 +1,8 @@
-# Ecrire son processeur
+# Ecrire son processeur script
 
 *Patrice Freydiere - 2018*
 
-Il est possible de compléter les fonctionnalités "bloc" dans le model editor. Le composant programmable de  scripting permet d'étendre ses capacités en intégrant les transformations manquante.
+Dans le cas où un bloc manque dans la panoplie de ceux existants, Il est possible d'en définir de nouveau avec un script.
 
 Cette extensibilité nécessite des compétences de programmation en language Java / Groovy.  
 
@@ -12,7 +12,7 @@ Cette extensibilité nécessite des compétences de programmation en language Ja
 
 
 
-Situé dans la palette, un glissé / déposé, permet l'ajout du script dans le modèle. Un double click permet de définir le programme associé.
+Situé dans la palette, un glissé / déposé, permet l'ajout du script dans le modèle. Un double click permet de définir le script associé.
 
 ![](scriptprocessor.png)
 
@@ -20,7 +20,7 @@ Situé dans la palette, un glissé / déposé, permet l'ajout du script dans le 
 
 Le processeur script, est une classe groovy, dérivant de ModelGroovyScript. Cette dérivation permet la prise en charge de la classe par le proceseur de scripts. Dans cette classe, deux méthodes sont à définir / ou surcharger. La méthode **configureParameters** impose de retourner la liste des paramètres qui seront exposés par le processeur. La liste des paramètres est retournée dans un tableau de **ModelParameter**. 
 
-Une seconde méthode pour définir la logique éxécutée lors de l'éxécution du processeur : **Map execute(Map m)** . Cette méthode prends la liste des paramètres passés et retourne les paramètres de sortie.
+Une seconde méthode pour définir la logique éxécutée lors de l'éxécution du processeur : `Map execute(Map m)` . Cette méthode prends la liste des paramètres passés et retourne les paramètres de sortie.
 
 
 
