@@ -7,6 +7,18 @@ APrint studio est un outil proposé aux arrangeurs de cartons d'orgue de barbari
 La première étape du logiciel est donc la récupération d'une composition musicale réalisée avec un instrument avec un logiciel d'arrangement, que l'on souhaite finaliser en carton.
 
 
+
+<video controls autoplay="true" width="600">
+    <source src="../Premiers pas avec APrint Studio 2020Q2.mp4" />
+</video>
+
+
+
+
+
+
+
+
 Premier Import à partir d'un fichier MIDI
 -----------------------------------------
 
@@ -22,7 +34,7 @@ Dans son fonctionnement, plusieurs transformations sont réalisées au préalabl
 
 -   **La seconde transformation concerne les percussions**, en effet certaines percussions sont décalées par rapport à leur pilotage. Ceci est pris en charge par le logiciel dans la définition de la percussion (retard + longueur fixe).
 
-    ​
+    
 
     Glissez le fichier midi sur la fenêtre principale
 

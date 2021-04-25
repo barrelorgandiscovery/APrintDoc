@@ -32,7 +32,7 @@ nav:
   - "R\xE9cup\xE9rer des instruments existants": product/getinstruments.md
   - Note sur l'enregistrement d'instruments: product/CreationInstrument.md
   - "Creer un instrument pas à pas": product/instrumentcreation/CreerUnInstrument.md
-- Carton Virtuel: 
+- Fenetre de Carton Virtuel: 
   - Modifier / Adjuster un carton: product/modify_book.md
   - "Utiliser la s\xE9lection": product/modify_book_sel.md
   - "Montage de poncifs ou cartons": product/montage/Montage_Cartons.md
@@ -45,7 +45,7 @@ nav:
   - "Model Editor": product/modeleditor/transformations_visuelles.md
   - Prendre en main le model editor: product/modeleditor/introduction.md
   - "Un cas d'utilisation : 49 Limonaire": product/modeleditor/midi249/converting_midi49_book.md
-  - Utilisation Avancées:
+  - Extension en développement:
     - Ecrire un processeur script: product/modeleditor/write_your_processor.md
     - Documentation sur les processeurs: product/modeleditor/model_step_implementation.md
 - "Num\xE9riser": 
@@ -64,9 +64,8 @@ nav:
   - Perforation lazer: product/krunch/perfo_lazer.md
   - Boitier APrint Commander ou comment perforer sans PC: product/aprintcommander/index.md
 - Piloter des instruments MIDI: product/3-piloterinstrumentmidi.md
-- Concepts: 
+- Concepts et formats de fichiers: 
   - Carton Virtuel: product/CartonVirtuel.md
-  - Comprendre le logiciel: product/concepts_introduction.md
   - Gestion des instruments: product/repositories.md
 - "Etendre les fonctionnalit\xE9s": 
   - 'Scripting': product/scripting/scripting.md
@@ -84,7 +83,10 @@ nav:
   - Choix dans le developpement du logiciel: product/Technology.md
   - "D\xE9veloppement d'extensions": product/dev-extension.md
   - "D\xE9veloppement d'extensions d'import / transformation de carton": product/dev-extension-import.md
-  - APrint API Reference: product/referenceapi.md
+  - APrint API Reference: 
+    - "Reference developpement Java API": javadoc
+    - "Reference developpement Groovy API": groovydoc
+
 plugins:
 - search
 #- pdf-export:

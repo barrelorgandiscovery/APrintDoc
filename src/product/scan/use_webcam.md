@@ -4,7 +4,9 @@
 
 ![](s1.png)
 
-
+<video controls width="600" autoplay="true">
+   <source src="../fonction_recherche.mp4" />
+</video>
 
 L'utilisation d'une web cam prenant des clichés régulier du carton, pour la numérisation,  est possible. En prenant une série d'images à intervalles régulier, il est possible de créer un ensemble d'image pouvant être reconstruits. 
 
@@ -42,7 +44,7 @@ Pour l'aquision, il est possible de réutiliser un guidage de carton, ci dessous
 L'interface de numérisation permet l'utilisation de GRBL pour l'avancement automatique du carton entre les différentes prises de vues.
 
 
-<video width="420" controls="true" muted="true">
+<video width="420" controls="true" muted="true" autoplay="true">
    <source src="scan/pilotage_machine.mp4" type="video/mp4">
 </video>
 

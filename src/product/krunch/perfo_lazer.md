@@ -8,11 +8,21 @@ La perforation Laser est intégrée dans la version 2020. Autrefois mis en place
 
 __Videos: (pour ouvrir la video, clickez avec le bouton droit et ouvrez la video dans un nouvel onglet)__
 
-<video src="../2020-09_preview_lazer_aprint2020.mp4" width="600" ></video>
+<video controls width="600" autoplay="true">
+   <source src="../2020-09_preview_lazer_aprint2020.mp4" />
+</video>
+
+
+
+
+
+
 
 En utilisation réelle (video)
 
-<video src="../video-1600703608.mp4" width="600"></video>
+<video controls width="600" autoplay="true">
+   <source src="../video-1600703608.mp4" />
+</video>
 
 
 
@@ -28,7 +38,9 @@ L'utilisation des fonctions de perçage nécessite l'utilisation du GRBL 1.1 ave
 
 La perforation lazer est réalisée, à partir de la fenetre de perforation du carton, sélectionnez la machine connectée, l'utilisation de la Krunch Laser peut être réalisée avec "Laser Machine GRBL 1.1", le bouton à coté permet de régler : le port de connexion, et les paramètres de découpe.
 
-
+<video controls width="600" autoplay="true">
+   <source src="../create_instrument.mp4" />
+</video>
 
 ![](k2.png)
 

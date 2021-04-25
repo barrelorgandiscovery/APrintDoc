@@ -1,6 +1,22 @@
 # Numériser un carton
 
+Un carton, Disque, rouleau de papier peuvent être numérisés et transformé en Book ou fichier midi.
+
+
+
+
+La numérisation pour l'utilisation, la modification, la reperforation, est découpée en deux phases: 
+
+- une phase de construction d'une image complète du carton à partir de toutes les prises de vues.
+- puis reconnaissance de l'image pour créer un fichier book ou midi
+
+![](scan/process.png)
+
+
+
 Plusieures méthodes de numérisation sont possibles directement avec le logiciel
+
+
 
 ## Numerisation en utilisant un lecteur physique MIDI, 
 
@@ -25,15 +41,6 @@ La numérisation est effectuée à partir de prise de vue image du carton. Plusi
 3 - utilisation d'un fichier video, réalisé avec un téléphone ou autre méthode d'acquisition
 
 
-### Les étapes de numérisation en utilisant des photos ou des vidéos
-
-
-La numérisation pour l'utilisation, la modification, la reperforation, est découpée en deux phases: 
-
-- une phase de construction d'une image complète du carton à partir de toutes les prises de vues.
-- puis reconnaissance de l'image pour créer un fichier book ou midi
-
-![](scan/process.png)
 
 
 

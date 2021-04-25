@@ -5,7 +5,9 @@ Le scripting ne se limite pas à des transformations sur les cartons, mais peut 
 ci dessous est expliqué comment créer un nouvel outil, utilisable dans la fenetre de carton. Cet outil présenté propose un action de "Punch" pour faire des trous calibrés dans le carton.
 
 
-<video src="../tool_scripting_demo.mp4" width=600 title="click droit et ouvrir la video"></video>
+<video width="600" controls="true" muted="true" autoplay="true">
+   <source src="../tool_scripting_demo.mp4" type="video/mp4">
+</video>
 
 Cet outil montre le coup de poinçon donné sur le carton,
 Les touches + et - permettent de régler la taille du poinçon
@@ -15,16 +17,16 @@ Le code source associé à l'outil
 
 	import org.barrelorgandiscovery.gui.aedit.*
 	import org.barrelorgandiscovery.virtualbook.*
-
+	
 	import javax.swing.*
 	import java.awt.event.*
 	import java.awt.*
 
 
 	// JOptionPane.showMessageDialog(null,"Punch Tool Activated")
-
+	
 	class PunchTool extends Tool {
-
+	
 	    def pianoroll
 	    
 	    // position actuelle de la souris
@@ -119,7 +121,7 @@ Le code source associé à l'outil
 		}
 	    }
 	}
-
+	
 	// création de l'outil
 	def p = new PunchTool( pianoroll: pianoroll  );
 	// activation de l'outil dans la fenetre

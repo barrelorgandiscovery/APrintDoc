@@ -4,6 +4,22 @@ APrint Studio peut être utilisé pour la construction de carton perforés type 
 
 ![](DSCN2604.jpg)
 
+
+
+<video controls width="800" >
+    <source src="../travaux_disques_ariston_reconnaissance.mp4" />
+</video>
+
+
+
+
+
+
+
+
+
+
+
 # Installation du script d'export en DXF des disques
 
 Les étapes doivent être exécutées scrupuleusement en attendant la mise en place d'une extension.
