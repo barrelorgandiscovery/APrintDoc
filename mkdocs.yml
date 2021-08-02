@@ -63,9 +63,11 @@ nav:
   - Fenetre de pilotage du poiçonnage: product/krunch/fenetre_de_pilotage_machine.md
   - Perforation lazer: product/krunch/perfo_lazer.md
   - Boitier APrint Commander ou comment perforer sans PC: product/aprintcommander/index.md
+  - Ajouter en développement une nouvelle machine: product/scripting/adding_new_machine_control/machine_control_adding.md
 - Piloter des instruments MIDI: product/3-piloterinstrumentmidi.md
 - Concepts et formats de fichiers: 
   - Carton Virtuel: product/CartonVirtuel.md
+  - Le format Bookimalge : product/file_format/bookimage.md
   - Gestion des instruments: product/repositories.md
 - "Etendre les fonctionnalit\xE9s": 
   - 'Scripting': product/scripting/scripting.md

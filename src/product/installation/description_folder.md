@@ -4,7 +4,7 @@
 
 Conformément à la rubrique [Installation](mdwiki.html#!installation/installation.md), APrint utilise un répertoire dédié pour l'utilisateur pour le stockage des différentes informations associées au logiciel.
 
-Situé initialement dans le répertoire "aprintstudio" du profil utilisateur, celui ci peut être déplacé ou renommé à partir de la version 2017.
+Situé initialement dans le répertoire "**aprintstudio**" du profil utilisateur, celui ci peut être déplacé ou renommé à partir de la version 2017, en l'indiquant dans l'installeur windows ou sur la ligne de commande pour linux et macOsX
 
 ## Détails du contenu du répertoire
 
@@ -12,9 +12,11 @@ on trouve dans ce répertoire plusieurs fichiers / répertoire
 
 ![](image_aprintstudio.png)
 
-### Fichiers .extensions
+### Fichiers .extensions et .extensionlazy
 
-Ces fichiers contiennent des extentions logicielles apportant de nouvelles fonctionnalités
+Ces fichiers contiennent des extentions logicielles apportant de nouvelles fonctionnalités, ces fichiers sont disposés dans le répertoire aprintstudio et sont automatiquement chargés lors du démarrage d'APrint. 
+
+
 
 ### Répertoires private, private.cache
 
@@ -28,7 +30,7 @@ un fichier de controle .sha1 permet uns détection de changement du fichier, ce 
 
 Au démarrage du programme ce répertoire est scanné pour détecter les instruments. Une structure de cache est créé si non existante (dans le répertoire private.cache), pour accélérer la prise en main des instruments par le logiciel. par exemple, on retrouve dans la structure des caches, la construction des banques de sons SF2 (soundfont 2 ), utilisé pour le jeu des cartons.
 
-Le répertoire private.cache est entretenu automatiquement et recréé si non présent.
+Le répertoire private.cache est entretenu automatiquement et recréé si non présent pour accélérer l'utilisation.
 
 ### Répertoire quickscript
 
