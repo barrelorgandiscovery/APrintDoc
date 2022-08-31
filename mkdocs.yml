@@ -13,6 +13,8 @@ nav:
 #- Aide en ligne: product/index.md
 - "Nouveaut\xE9s": 
   - 'Introduction': product/whatsnew/index.md
+  - '2022': product/whatsnew/2022/Whats_new_APrintStudio_2022.md
+  - '2020 Fix1': product/whatsnew/2020_Q2_Fix/Whats_new_APrintStudio_2020_q2_Fix.md
   - '2020': product/whatsnew/2020/Whats_new_APrintStudio_2020_q2.md
   - '2019': product/whatsnew/2019/Whats_new_APrintStudio_2019.md
   - '2018': product/whatsnew/2018/Whats_new_APrintStudio_2018.md
@@ -54,7 +56,7 @@ nav:
   - Utiliser une Video pour scanner le carton: product/scan/createBookVideo.md
   - Construction d'un fichier bookimage du carton: product/scan/scanning_books_intro.md
   - Reconnaissance du carton: product/recognition/extension.md
-  - Ancien Module de reconnaissance d'image:
+  - Ancien Module de reconnaissance d'image (Avant APrint 2020):
           - Reconnaissance d'une image de carton d'orgue: product/recognition/books.md
           - "Cr\xE9er son mod\xE8le d'I.A.": product/recognition/training.md
 - "Machines sp\xE9ciales de perforation": 

@@ -1,0 +1,70 @@
+@startuml
+
+title Modèle Objet Machine APrint Studio
+
+
+AbstractMachine ..> GCodeCompiler
+
+abstract class AbstractMachine {
+
+     +getTitle() : String;
+     +getDescription() : String
+
+    +open(parameters :AbstractMachineParameters): MachineControl
+    
+    +createNewGCodeCompiler(parameters: AbstractMachineParameters ) : GCodeCompiler
+    
+}
+
+interface MachineControl {
+
+	+setMachineControlListener(MachineControlListener listener);
+
+	+sendCommand(Command command) 
+	+prepareForWork() 
+
+    +endingForWork()
+
+	+close()
+
+    +flushCommands()
+
+	+reset()
+	
+    + getStatus(): MachineStatus
+
+}
+
+
+AbstractMachine ..> AbstractMachineParameters
+
+
+
+abstract class AbstractMachineParameters {
+
+}
+
+
+abstract class CommandVisitor {
+
+   +visit( index: int,  punchCommand: PunchCommand) 
+
+	+visit(index: int , displacementCommand: DisplacementCommand )
+	
+	+visit(index: int , CutToCommand cutToCommand) 
+
+	+visit(index: int , command: HomingCommand ) 
+}
+
+GCodeCompiler -|> CommandVisitor
+
+abstract class GCodeCompiler {
+
+    +reset()
+    +getPreludeCommands() : List<String>
+    +getGCODECommands() : List<String>
+    +getEndingCommands() : List<String>
+
+}
+
+@enduml
