@@ -11,14 +11,11 @@ Bienvenue dans l'aide en ligne du programme APrint Studio
 APrint / Studio
 ---------------------------
 
-__APrint Studio__ a été conçu comme un **environnement de travail** pour les arrangeurs **d'orgues de barbarie** pour faciliter la **création** et la **préservation** de morceaux de musique. Le logiciel permet également la création de nouvelles oeuvres, et propose une validation numérique de la notation musicale vis à vis des capacités des instruments de musique mécanique. 
+__APrint Studio__ a été conçu comme un **environnement de travail** pour les arrangeurs **d'orgues de barbarie** pour faciliter la **création** et la **préservation** de morceaux de musique. Le logiciel permet également la création de nouvelles œuvres, et propose une validation numérique "à priori" de la notation musicale et ajuster les création en fonction de la capacités des instruments de musique mécanique visés.
 
-Une attention toute particulière est donnée à la simplicité d'utilisation (grand public / amateur / professionnel). 
+Une attention toute particulière est donnée à la simplicité d'utilisation. 
 
-   La perfection est atteinte, non pas lorsqu'il n'y a plus rien à ajouter, mais lorsqu'il n'y a plus rien à retirer.
-      - Antoine de Saint-Exupéry. 
-
-APrint Studio est réalisé en tant que **logiciel Libre**, permettant aux utilisateurs d'adapter le programme en fonction de leurs besoins. Le code source du programme est accessible dans chaque installation, dans le fichier .jar (archive ZIP). APrint Studio utilise des **standard ouverts** pour les fichiers (fichiers textes, fichier zip, fichiers wav), pour garantir la lisibilité des données avec n'importe quel logiciel complémentaire.
+APrint Studio est réalisé en tant que **logiciel Libre**, permettant aux utilisateurs d'adapter le programme en fonction de leurs besoins. Le code source du programme est accessible dans chaque installation, dans le fichier .jar (archive ZIP). APrint Studio utilise des **standard ouverts** pour les fichiers (fichiers textes, fichier zip, fichiers wav), pour garantir la lisibilité des données avec n'importe quel logiciel complémentaire. Le code source est accessible et ajustable à l'adresse suivante : [Code source APrint studio](https://github.com/barrelorgandiscovery/aprintproject)
 
 APrint Studio est extensible. Des scripts et Un mécanisme d'extension permettent de brancher de nouvelles fonctionnalités dans le logiciel sans avoir à connaître les détails du fonctionnement interne. Ce qui prenait les jours, prend maintenant des minutes.
 
@@ -28,7 +25,7 @@ Principales Fonctionnalités offertes
 
 - Définition d'instrument, et impression de gammes, de patrons de cartons (incluant la définition sonore)
 - Import de fichiers midi, et vérification des contraintes associées à l'instrument
-- Numérisation de cartons à partir de divers systèmes d'acquisition, reconnaissance I.A. des trous
+- Numérisation de cartons à partir de divers systèmes d'acquisition, reconnaissance utilisant l'I.A. des trous
 - Perforation de carton, en utilisant des machines CNC, (GRBL), poinçonnage et Lazer
 - Export de video, fichier Wav, Ogg des créations
 - Création de PDF, impression de poncifs
@@ -41,7 +38,7 @@ Principales Fonctionnalités offertes
 Concepts
 ------------------------
 
-__APrint Studio__ utilise des fichiers __Book__, pouvant être directement créé à partir de fichier MIDI. Ce type de fichier préserve l'ensemble des spécificités des instruments simples ou complexes (registres, commandes diverses).
+__APrint Studio__ utilise des fichiers __Book__, pouvant être directement créé à partir de fichier MIDI. Le format **Book** préserve l'ensemble des spécificités des instruments simples ou complexes (registres, commandes diverses).
 Des scan de cartons à partir de Video, Machine spéciales, ou Scanner peuvent également être sauvegardés au format __BookImage__ (Version 2020)
 
 L'utilisation des sons réels d'instruments influe également de façon importante sur la composition ou l'arrangement de morceaux spécifiquement écrits pour les orgues de barbarie.

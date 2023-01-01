@@ -1,15 +1,19 @@
 # APrint Studio - Fix - 2022 - "Pierre Louis"
 
-*Patrice Freydiere - Aout 2022*
+*Patrice Freydiere - Decembre 2022*
 
 
 
-![](splash-aprint-studio-2020.jpg)
+![](splash.jpg)
+
+
 
 
 ## Introduction
 
-**APrint 2022**, version corrective, pas de grosse fonctionnalités ajoutées.
+
+
+**APrint 2022 Q2**, version corrective, et de migration technique sur les dernières versions de java. Pas de grosse fonctionnalités ajoutées.
 
 L'ensemble des problèmes corrigés peuvent être consultés sur [Les Issues fermé sur Github, ](https://github.com/barrelorgandiscovery/aprintproject/issues?q=is%3Aissue+is%3Aclosed)
 
@@ -26,8 +30,6 @@ Amélioration du panneau, une nouvelle IHM, avec des onglets et moins de boutons
 
 Les outils d'apprentissage, proposent maintenant la possibilité de saisie de rectangle (en complément de la saisie piste). Ce point est particulièrement intéressant lorsque les trous ne font pas la même taille que l'entre piste défini dans la gamme.
 
-
-
 ### Reconnaissance de carton video, images
 
 Suite à Un problème rencontré,par un utilisateur, lorsque le programme, sous windows a son répertoire de donnée dans un répertoire contient un espace. Ce point pose problème à la librairie de vision utilisée dans APrint. 
@@ -39,3 +41,9 @@ Si vous etes dans ce cas, déplacer le répertoire de données dans un répertoi
 
 Peu de retours, ou contribution, cette rubrique n'a pas évoluée
 
+
+
+## Changements impactants
+
+- Passage à la version 17 de java, l'utilisation du système de déploiement a été mis en place pour simplifier la création des installeurs et utilisation depuis GitHub. Cette évolution permet la contribution sur la logiciel et permettre la mise en place d'une méthode unique de distribution (vis github), pour permettre les ajouts de fonctionnalités et création des artéfacts associés.
+- La référence de compilation est désormait maintenant sur github. 
