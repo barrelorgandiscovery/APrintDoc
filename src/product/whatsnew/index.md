@@ -1,5 +1,7 @@
 # Nouveautés des dernières versions
 
+[Version 2022 "Pierre Louis"](2022/Whats_new_APrintStudio_2022.md)
+
 [Version 2020 "Gérard et Ludwig"](2020/Whats_new_APrintStudio_2020_q2.md)
 
 [Version 2019 "Freddy"](2019/Whats_new_APrintStudio_2019.md)
