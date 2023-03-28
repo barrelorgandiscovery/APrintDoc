@@ -57,15 +57,15 @@ __APrint Studio__ a été testée et est utilisé sur les OS suivants (Windows X
 
 ## Les liens Barrel Organ Discovery
 
-Site Web - Toutes les ressources sont accessibles de cette page
+Site Web - Toutes les ressources sont accessibles à partir de cette page :
 
 \- [http://www.barrel-organ-discovery.org](http://www.barrel-organ-discovery.org/?fbclid=IwAR0lQdj3-ClpIs7YH8AUzRsJjOajCcKZo6lvIgMYRsePiQGJ8_81Ln6mixY)
 
-Qui Sommes nous, que faisons nous, pourquoi ? 
+Qui sommes nous, que faisons nous, pourquoi ? 
 
 \- [http://www.barrel-organ-discovery.org/site/about.html](http://www.barrel-organ-discovery.org/site/about.html?fbclid=IwAR0XAySaomtEqc4WY-LkhpIFNNPTSCxf1d-NS18nzrej-RLsvktLD0O-2ZE)
 
-Lien directe vers la page du logiciel APrint Studio :
+Lien direct vers la page du logiciel APrint Studio :
 
 \- [http://www.barrel-organ-discovery.org/site/download.html](http://www.barrel-organ-discovery.org/site/download.html?fbclid=IwAR2mRTbwg07JE3DaFTIozx0T9hQyyW6qTakXKhGL0VKg6blnGkVDFRftL9s)
 
