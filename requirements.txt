@@ -1,2 +1,4 @@
 mkdocs
 mkdocs-material
+mkdocs-pdf-export-plugin
+bs4
