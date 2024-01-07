@@ -4,7 +4,7 @@ Online and offline documentation for APrint Studio, made with mkdocs, and materi
 
 People will browse thoses pages when using the APrint Studio help function.
 
-Browsable documentation is accessible here: [https://barrelorgandiscovery.github.io/APrintDoc/](https://barrelorgandiscovery.github.io/APrintDoc/)
+Automatic generated browsable documentation is accessible here: [https://barrelorgandiscovery.github.io/APrintDoc/](https://barrelorgandiscovery.github.io/APrintDoc/)
 
 ## ChangeLog
 
