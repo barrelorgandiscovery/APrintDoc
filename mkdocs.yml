@@ -66,6 +66,7 @@ nav:
   - Perforation lazer: product/krunch/perfo_lazer.md
   - Boitier APrint Commander ou comment perforer sans PC: product/aprintcommander/index.md
   - Ajouter en développement une nouvelle machine: product/scripting/adding_new_machine_control/machine_control_adding.md
+  - Generer du GCode paramétrage pour les lazer: product/gcode/gcode_lazer_generation.md
 - Piloter des instruments MIDI: product/3-piloterinstrumentmidi.md
 - Concepts et formats de fichiers: 
   - Carton Virtuel: product/CartonVirtuel.md
